@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WhaleTheDvaa</string>
+    <string name="title_activity_vulnerability_selection">Vulnerability Selection</string>
+    <string name="title_activity_vuln_selection">Vulnability Selection</string>
+</resources>
