@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/whale_main_background"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".Settings">
+        </activity>
         <activity android:name=".TheWhala">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

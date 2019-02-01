@@ -3,6 +3,7 @@ package whalethedvaa.whalethedvaa
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_difficulty_selector.*
 
 class DifficultySelector : AppCompatActivity() {
@@ -56,10 +57,24 @@ class DifficultySelector : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Call information dialog creation
+        InformationBtn.setOnClickListener{
+            informationDialog()
+        }
+
         BackBtn.setOnClickListener{
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
 
-    }}
+    }
+    private fun informationDialog(){
+        val builder = AlertDialog.Builder(this)
+        // Set the alert dialog title
+        builder.setTitle("Difficulty Information")
+        builder.setMessage("Example Information")
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+}
 
