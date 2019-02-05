@@ -72,7 +72,7 @@ class SQLI : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("Example hint 1")
+            "Hint 1" -> builder.setMessage("Test test test")
             "Hint 2" -> builder.setMessage("Example hint 2")
             "Hint 3" -> builder.setMessage("Example hint 3")
         }
