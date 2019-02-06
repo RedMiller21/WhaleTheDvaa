@@ -1,9 +1,9 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_difficulty_selector.*
 
 class DifficultySelector : AppCompatActivity() {
@@ -15,9 +15,9 @@ class DifficultySelector : AppCompatActivity() {
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, SQLI::class.java)
-                3 -> intent = Intent(this, ManInTheMiddle::class.java)
+                3 -> intent = Intent(this, TwoFA::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
-                5 -> intent = Intent(this, UnencryptedHttp::class.java)
+                5 -> intent = Intent(this, PoorAuthentication::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
                 7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
@@ -30,9 +30,9 @@ class DifficultySelector : AppCompatActivity() {
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, SQLI::class.java)
-                3 -> intent = Intent(this, ManInTheMiddle::class.java)
+                3 -> intent = Intent(this, TwoFA::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
-                5 -> intent = Intent(this, UnencryptedHttp::class.java)
+                5 -> intent = Intent(this, PoorAuthentication::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
                 7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
@@ -45,9 +45,9 @@ class DifficultySelector : AppCompatActivity() {
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, SQLI::class.java)
-                3 -> intent = Intent(this, ManInTheMiddle::class.java)
+                3 -> intent = Intent(this, TwoFA::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
-                5 -> intent = Intent(this, UnencryptedHttp::class.java)
+                5 -> intent = Intent(this, PoorAuthentication::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
                 7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)

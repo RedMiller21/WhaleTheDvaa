@@ -1,28 +1,42 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_man_in_the_middle.*
+import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_poor_authentication.*
 
-class ManInTheMiddle : AppCompatActivity() {
+class PoorAuthentication : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_man_in_the_middle)
+        setContentView(R.layout.activity_poor_authentication)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
+        //Call function to change pin on screen
+        NumPad1.setOnClickListener{numPadInput('1')}
+        NumPad2.setOnClickListener{numPadInput('2')}
+        NumPad3.setOnClickListener{numPadInput('3')}
+        NumPad4.setOnClickListener{numPadInput('4')}
+        NumPad5.setOnClickListener{numPadInput('5')}
+        NumPad6.setOnClickListener{numPadInput('6')}
+        NumPad7.setOnClickListener{numPadInput('7')}
+        NumPad8.setOnClickListener{numPadInput('8')}
+        NumPad9.setOnClickListener{numPadInput('9')}
+
+        //Call function to reset the pin on screen
+        ResetBtn.setOnClickListener{reset()}
+
+        //Call function to confirm pin
+        ConfirmBtn.setOnClickListener {confirm()}
+
         //Call information dialog creation
-        InformationBtn.setOnClickListener{
-            informationDialog()
-        }
+        InformationBtn.setOnClickListener{informationDialog()}
 
         //call hint dialog creation function
-        HintBtn.setOnClickListener{
-            hintSelectionDialog()
-        }
+        HintBtn.setOnClickListener{hintSelectionDialog()        }
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener{
@@ -78,6 +92,44 @@ class ManInTheMiddle : AppCompatActivity() {
 
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+
+    private fun numPadInput(num: Char){
+        val text: String = PinOutput.text.toString()
+        val charText: CharArray = text.toCharArray()
+        println(text)
+        println(num)
+        var i = 0
+        while (i < 4) {
+            if(charText[i] == '-'){
+                charText[i] = num
+                break
+            }
+            i++
+        }
+        println(i)
+
+        //println(charText.toString())
+        val newText = String(charText)
+
+        println(newText)
+        PinOutput.text = newText
 
     }
+
+    private fun reset(){
+        PinOutput.text = "----"
+    }
+
+    private fun confirm(){
+        val text: String = PinOutput.text.toString()
+        val pin = "4252"
+        if (pin == text){
+            Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this,"WRONG", Toast.LENGTH_LONG).show()
+        }
+        PinOutput.text = "----"
+    }
 }
+

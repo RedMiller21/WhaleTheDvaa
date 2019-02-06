@@ -1,8 +1,8 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class Settings : AppCompatActivity() {
@@ -13,7 +13,7 @@ class Settings : AppCompatActivity() {
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener{
-            val intent = Intent(this, VulnSelection::class.java)
+            val intent = Intent(this, TheWhala::class.java)
             startActivity(intent)
         }
     }

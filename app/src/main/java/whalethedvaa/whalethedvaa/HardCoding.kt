@@ -1,9 +1,9 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_hard_coding.*
 
 class HardCoding : AppCompatActivity() {
@@ -71,7 +71,7 @@ class HardCoding : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("Example hint 1")
+            "Hint 1" -> builder.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
             "Hint 2" -> builder.setMessage("Example hint 2")
             "Hint 3" -> builder.setMessage("Example hint 3")
         }

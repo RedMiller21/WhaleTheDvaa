@@ -46,7 +46,7 @@
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"/>
     <Button
-            android:text="Man-In-\nThe-Middle"
+            android:text="Two-Factor\nAuthentication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln3"
@@ -75,7 +75,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Vuln1" android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
     <Button
-            android:text="Unencrypted\nHTTP"
+            android:text="Poor\nAuthentication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/Vuln5"
             android:layout_marginTop="24dp"

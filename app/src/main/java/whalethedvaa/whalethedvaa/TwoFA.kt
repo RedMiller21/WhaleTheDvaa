@@ -1,16 +1,16 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_unencrypted_http.*
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_base_menu.*
 
-class UnencryptedHttp : AppCompatActivity() {
+class TwoFA : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_unencrypted_http)
+        setContentView(R.layout.activity_sqli)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 

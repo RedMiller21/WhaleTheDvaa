@@ -9,6 +9,12 @@
             android:roundIcon="@mipmap/whale_main_background"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".TwoFA">
+        </activity>
+        <activity android:name=".PoorAuthentication">
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
         <activity android:name=".Settings">
         </activity>
         <activity android:name=".TheWhala">
