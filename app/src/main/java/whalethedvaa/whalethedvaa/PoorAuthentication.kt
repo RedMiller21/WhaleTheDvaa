@@ -48,7 +48,7 @@ class PoorAuthentication : AppCompatActivity(){
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
-        builder.setTitle("Hard Coding Information")
+        builder.setTitle("Poor Authentication Information")
         builder.setMessage("Example Information")
         val dialog: AlertDialog = builder.create()
         dialog.show()
@@ -62,7 +62,7 @@ class PoorAuthentication : AppCompatActivity(){
         builder.setTitle("Hints")
 
         // Display a message on alert dialog
-        //builder.setMessage("Which hint would you like")
+        builder.setMessage("Which hint would you like")
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
