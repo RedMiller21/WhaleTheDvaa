@@ -27,7 +27,7 @@
             android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
             android:textColor="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
-            android:text="Hardcoding\nIsuues"
+            android:text="Hardcoding\nIssues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln1"
@@ -83,7 +83,7 @@
             android:background="#4472C4" android:textColor="#FFFFFF" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
     <Button
-            android:text="Insecure\nData\nStoraage"
+            android:text="Insecure\nData\nStorage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln7"

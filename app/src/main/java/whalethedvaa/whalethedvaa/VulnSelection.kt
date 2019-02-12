@@ -30,41 +30,48 @@ class VulnSelection : AppCompatActivity() {
         Vuln1.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",1)
+            intent.putExtra("name",Vuln1.text)
             startActivity(intent)
         }
         Vuln2.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",2)
+            intent.putExtra("name",Vuln2.text)
             startActivity(intent)
         }
 
         Vuln3.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",3)
+            intent.putExtra("name",Vuln3.text)
             startActivity(intent)
         }
 
         Vuln4.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",4)
+            intent.putExtra("name",Vuln4.text)
             startActivity(intent)
         }
 
         Vuln5.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",5)
+            intent.putExtra("name",Vuln5.text)
             startActivity(intent)
         }
 
         Vuln6.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",6)
+            intent.putExtra("name",Vuln6.text)
             startActivity(intent)
         }
 
         Vuln7.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",7)
+            intent.putExtra("name",Vuln7.text)
             startActivity(intent)
         }
 
