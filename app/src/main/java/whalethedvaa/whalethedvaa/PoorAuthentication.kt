@@ -123,7 +123,7 @@ class PoorAuthentication : AppCompatActivity(){
 
     private fun confirm(){
         val text: String = PinOutput.text.toString()
-        val pin = "4252"
+        val pin = "3466"
         if (pin == text){
             Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
         } else {
