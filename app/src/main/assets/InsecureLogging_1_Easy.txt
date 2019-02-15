@@ -1,0 +1,84 @@
+01-24 10:23:34.781 2920-2920/? V/KeyguardServiceDelegate: onScreenTurnedOn(showListener = com.android.internal.policy.impl.PhoneWindowManager$17@41f3c3d0)
+01-24 10:23:34.781 2920-2953/? I/PowerManagerService: Waking up from sleep...
+01-24 10:23:34.861 2920-2920/? W/BluetoothManagerService: ACTION_SCREEN_ON
+01-24 10:23:34.941 2920-2920/? D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
+01-24 10:23:35.021 2920-27346/? V/KeyguardServiceDelegate: **** SHOWN CALLED ****
+01-24 10:23:35.021 2920-27346/? D/Sensors: AccelerationSensor::~enable(0, 1)
+01-24 10:23:35.021 2920-27346/? I/WindowManager: Lock screen displayed!
+01-24 10:23:35.031 2920-27346/? D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+01-24 10:23:35.071 2920-5077/? D/PowerManagerService-JNI: Excessive delay in autosuspend_disable() while turning screen on: 293ms
+01-24 10:23:35.081 1234-1234/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb847a450
+01-24 10:23:35.081 1234-1234/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test isT:true
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test ver:v20141010
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test ver:v20141010
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test go on 1...
+01-24 10:23:35.171 3887-3887/? I/System.out: test,sl:false
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test go on 2...
+01-24 10:23:35.171 3887-3887/? I/MainBroadcastReceiver: test go on 2_1...
+01-24 10:23:35.171 3887-3887/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+01-24 10:23:35.181 3887-3887/? I/MainBroadcastReceiver: test go on 4...
+01-24 10:23:35.201 3887-3887/? I/MainBroadcastReceiver: test go on 7...
+01-24 10:23:35.201 3887-3887/? I/MainBroadcastReceiver: test go on 8...
+01-24 10:23:35.201 3887-3887/? I/n: Launch sales thread
+01-24 10:23:35.201 3887-3887/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+01-24 10:23:35.211 3887-3887/? I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
+01-24 10:23:35.211 3887-3887/? I/b: Launch AndroidGetData thread
+01-24 10:23:35.371 2920-5077/? D/LightsService: Excessive delay setting light: 274ms
+01-24 10:23:36.901 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:23:40.021 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:23:40.051 2920-2935/? W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=3024, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
+01-24 10:23:40.091 2920-3070/? W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@419397b8 attribute=android.view.inputmethod.EditorInfo@41d23b78, token = android.os.BinderProxy@41aaadf0
+01-24 10:23:40.111 3024-3024/? D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
+01-24 10:31:04.901 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:31:11.181 3024-3028/? D/dalvikvm: GC_CONCURRENT freed 1916K, 36% free 5354K/8244K, paused 2ms+8ms, total 63ms
+01-24 10:31:11.481 2920-2952/? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher} from pid 2920
+01-24 10:31:11.491 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:31:11.641 2920-3017/? W/InputMethodManagerService: Focus gain on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@41cd3ef0 (uid=10012 pid=3024)
+01-24 10:31:14.431 3276-3279/? D/dalvikvm: GC_CONCURRENT freed 2259K, 50% free 5463K/10720K, paused 5ms+7ms, total 57ms
+01-24 10:31:14.651 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:31:18.451 2920-5018/? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=BankingCo/MobileBanking} from pid 3276
+01-24 10:31:18.461 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:31:18.591 5372-5372/? D/dalvikvm: Late-enabling CheckJNI
+01-24 10:31:18.591 2920-5020/? I/ActivityManager: Start proc BankingCo/MobileBanking for activity BankingCo/MobileBanking/Home: pid=5372 uid=10078 gids={50078}
+01-24 10:31:18.851 5372-5372/BankingCo/MobileBanking I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper; interface 2423 'Landroid/view/View$OnUnhandledKeyEventListener;'
+01-24 10:31:18.851 5372-5372/BankingCo/MobileBanking W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper;' failed
+01-24 10:31:18.851 5372-5372/BankingCo/MobileBanking D/dalvikvm: DexOpt: unable to opt direct call 0x2bbe at 0x1f in Landroid/support/v4/view/ViewCompat;.addOnUnhandledKeyEventListener
+01-24 10:31:18.851 5372-5372/BankingCo/MobileBanking D/dalvikvm: DexOpt: unable to opt direct call 0x5179 at 0x14 in Landroid/support/v4/view/ViewCompat;.dispatchApplyWindowInsets
+01-24 10:31:18.861 5372-5372/BankingCo/MobileBanking D/dalvikvm: DexOpt: unable to opt direct call 0x5179 at 0x14 in Landroid/support/v4/view/ViewCompat;.onApplyWindowInsets
+01-24 10:31:18.861 5372-5372/BankingCo/MobileBanking I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$1; interface 2413 'Landroid/view/View$OnApplyWindowInsetsListener;'
+01-24 10:31:18.861 5372-5372/BankingCo/MobileBanking W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$1;' failed
+01-24 10:31:18.861 5372-5372/BankingCo/MobileBanking D/dalvikvm: DexOpt: unable to opt direct call 0x2bbb at 0x0f in Landroid/support/v4/view/ViewCompat;.setOnApplyWindowInsetsListener
+01-24 10:31:19.141 5372-5372/BankingCo/MobileBanking D/OpenGLRenderer: Enabling debug mode 0
+01-24 10:31:19.231 2920-2934/? I/ActivityManager: Displayed BankingCo/MobileBanking/Home: +670ms
+01-24 10:31:40.132 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:32:22.821 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:32:51.281 2920-3409/? I/ActivityManager: START u0 {cmp=/BankingCo/MobileBanking/Login} from pid 5372
+01-24 10:32:51.291 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:32:51.611 2920-2934/? I/ActivityManager: Displayed /BankingCo/MobileBanking/Login: +320ms
+01-24 10:33:27.821 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: EMAL: MobyDick@whalemail.com
+01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: PASSWD: d1v3t34m
+01-24 10:34:02.002 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:34:10.232 2920-2931/? I/ActivityManager: START u0 {cmp=/BankingCo/MobileBanking/Accounts (has extras)} from pid 5372
+01-24 10:34:10.240 5372-5372//BankingCo/MobileBanking D/dalvikvm: GC_FOR_ALLOC freed 483K, 13% free 4239K/4828K, paused 24ms, total 25ms
+01-24 10:34:15.271 2920-2953/? I/PowerManagerService: Going to sleep by user request...
+01-24 10:34:15.271 2920-2920/? D/Sensors: AccelerationSensor::~enable(0, 0)
+01-24 10:34:15.291 3024-3024/? V/KeyguardHostView: Initial transport state: 0, pbstate=0
+01-24 10:34:15.331 2920-2920/? I/BluetoothManagerService: ACTION_SCREEN_OFF
+01-24 10:34:15.331 2920-2954/? W/BluetoothManagerService: rev ENABLE_TRAFFIC_STATS_POLL_BT
+01-24 10:34:15.351 2920-2920/? D/EthernetService: Intent.ACTION_SCREEN_OFF
+01-24 10:34:15.491 2920-5079/? D/LightsService: Excessive delay setting light: 235ms
+01-24 10:34:15.491 1234-1234/? D/SurfaceFlinger: Screen released, type=0 flinger=0xb847a450
+01-24 10:34:15.491 1234-1234/? I/hwcomposer: hwc_blank disp = 0 blank = 0x1
+01-24 10:34:15.541 3024-3024/? V/KeyguardHostView: hide transport, gen:15
+01-24 10:34:15.541 3024-3024/? V/KeyguardHostView: music state changed: 0
+01-24 10:34:15.591 1240-1943/? I/AudioHardware: open playback drv
+01-24 10:34:15.621 3024-3024/? V/KeyguardHostView: Initial transport state: 0, pbstate=0
+01-24 10:34:15.721 3024-3024/? V/KeyguardHostView: hide transport, gen:15
+01-24 10:34:15.721 3024-3024/? V/KeyguardHostView: music state changed: 0
+01-24 10:34:15.781 3024-3024/? D/PhoneStatusBar: disable: < expand icons alerts ticker system_info BACK* HOME* RECENT* CLOCK* search >
+01-24 10:34:15.871 2920-2932/? D/AlarmManager: overriden alarm callingpackages[0] com.google.android.gsf.login
+01-24 10:34:15.961 3276-3279/? D/dalvikvm: GC_CONCURRENT freed 2303K, 49% free 5561K/10720K, paused 3ms+16ms, total 50ms
+01-24 10:34:28.841 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+01-24 10:34:45.891 2920-2920/? D/EthernetService: ACTION_DEVICE_IDLE

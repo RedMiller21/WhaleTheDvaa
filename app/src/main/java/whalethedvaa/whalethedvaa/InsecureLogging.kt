@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_insecure_logging.*
 
 class InsecureLogging : AppCompatActivity() {
@@ -13,6 +14,32 @@ class InsecureLogging : AppCompatActivity() {
         setContentView(R.layout.activity_insecure_logging)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
+
+        fun readFromAssets(){
+
+            var fileName = "default"
+
+            when(level) {
+
+                1 -> fileName = "InsecureLogging_1_Easy.txt"
+                2 -> fileName = "InsecureLogging_2_Medium.txt"
+                3 -> fileName = "InsecureLogging_3_Killer.txt"
+
+            }
+
+            val content = application.assets.open(fileName).bufferedReader().use{
+                it.readText()
+            }
+            val textView: TextView = findViewById(R.id.txtField) as TextView
+            textView.text = content
+
+            if (fileName == "default"){
+                textView.text = "//ERROR// - - //DIFF_SELECT_LOGGING//"
+            }
+
+
+        }
+        readFromAssets()
 
         //Call information dialog creation
         InformationBtn.setOnClickListener{

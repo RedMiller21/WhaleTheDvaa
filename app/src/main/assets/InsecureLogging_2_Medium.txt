@@ -1,0 +1,197 @@
+09-08 22:55:30.910 2643-2673/system_process I/PowerManagerService: Waking up from sleep...
+09-08 22:55:31.040 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
+09-08 22:55:31.090 1246-1246/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb82d4450
+09-08 22:55:31.090 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
+09-08 22:55:31.180 2643-2883/system_process V/KeyguardServiceDelegate: **** SHOWN CALLED ****
+09-08 22:55:31.180 2643-2883/system_process D/Sensors: AccelerationSensor::~enable(0, 1)
+09-08 22:55:31.180 2643-2883/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 22:55:31.180 2643-2883/system_process I/WindowManager: Lock screen displayed!
+09-08 22:55:31.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:true
+09-08 22:55:31.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 1...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/System.out: test,sl:false
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2_1...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 22:55:31.330 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 4...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 7...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 8...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/n: Launch sales thread
+09-08 22:55:31.360 3379-3379/com.google.android.googlequicksearchbox I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
+09-08 22:55:31.370 3379-3379/com.google.android.googlequicksearchbox I/b: Launch AndroidGetData thread
+09-08 22:55:33.130 1250-2058/? I/AudioHardware: open playback drv
+09-08 22:55:33.150 2643-2883/system_process W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=2695, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
+09-08 22:55:33.210 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
+09-08 22:55:33.240 2643-2654/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@41ae6b38 attribute=android.view.inputmethod.EditorInfo@41ad33e0, token = android.os.BinderProxy@41c2cfb0
+09-08 22:55:34.530 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 22:56:12.760 2643-2654/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=WhaleCo.WhaleBook/Home} from pid 2817
+09-08 22:56:12.890 3684-3684/? D/dalvikvm: Late-enabling CheckJNI
+09-08 22:56:12.900 2643-2833/system_process I/ActivityManager: Start proc WhaleCo.WhaleBook for activity WhaleCo.WhaleBook/Home: pid=3684 uid=10078 gids={50078}
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper; interface 2425 'Landroid/view/View$OnUnhandledKeyEventListener;'
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper;' failed
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x2bc5 at 0x1f in Landroid/support/v4/view/ViewCompat;.addOnUnhandledKeyEventListener
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.dispatchApplyWindowInsets
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.onApplyWindowInsets
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$1; interface 2415 'Landroid/view/View$OnApplyWindowInsetsListener;'
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$1;' failed
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x2bc2 at 0x0f in Landroid/support/v4/view/ViewCompat;.setOnApplyWindowInsetsListener
+09-08 22:56:13.680 3684-3684/WhaleCo.WhaleBook D/OpenGLRenderer: Enabling debug mode 0
+09-08 22:56:15.080 1250-2058/? I/AudioHardware: open playback drv
+09-08 22:56:23.750 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/Home: +872ms
+09-08 22:56:34.240 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 22:57:00.970 2643-2940/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/LoginPage} from pid 3684
+09-08 22:57:01.310 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/LoginPage: +332ms
+
+09-08 22:57:06.400 3684-3684/WhaleCo.WhaleBook I/System.out: USING LOGIN FILE //todo PUT FILE LOCATION OF LOGS HERE
+
+09-08 22:57:06.400 2643-2833/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/Timeline (has extras)} from pid 3684
+09-08 22:57:06.420 1250-2058/? I/AudioHardware: open playback drv
+09-08 22:57:06.480 3684-3684/WhaleCo.WhaleBook D/dalvikvm: GC_FOR_ALLOC freed 345K, 10% free 4141K/4556K, paused 21ms, total 22ms
+09-08 22:57:06.650 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/Timeline: +238ms
+09-08 22:59:34.240 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:06:52.370 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:10:58.320 2643-2673/system_process I/PowerManagerService: Going to sleep by user request...
+09-08 23:10:58.760 2643-2643/system_process D/Sensors: AccelerationSensor::~enable(0, 0)
+09-08 23:10:58.790 2695-2695/com.android.systemui V/KeyguardHostView: Initial transport state: 0, pbstate=0
+09-08 23:10:58.850 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_OFF
+09-08 23:10:58.860 2643-3660/system_process D/LightsService: Excessive delay setting light: 103ms
+09-08 23:10:58.860 1246-1246/? D/SurfaceFlinger: Screen released, type=0 flinger=0xb82d4450
+09-08 23:10:58.860 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x1
+09-08 23:10:58.940 2695-2695/com.android.systemui V/KeyguardHostView: hide transport, gen:2
+09-08 23:10:58.940 2695-2695/com.android.systemui V/KeyguardHostView: music state changed: 0
+09-08 23:10:58.980 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:10:59.030 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info BACK* HOME* RECENT* CLOCK* search >
+09-08 23:10:59.280 2643-2804/system_process D/AlarmManager: overriden alarm callingpackages[0] com.google.android.backuptransport
+09-08 23:11:29.310 2643-2643/system_process D/EthernetService: ACTION_DEVICE_IDLE
+
+09-08 23:39:48.220 2643-2673/system_process I/PowerManagerService: Waking up from sleep...
+09-08 23:39:48.290 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
+09-08 23:39:48.300 2643-2686/system_process D/ConnectivityService: Sampling interval elapsed, updating statistics ..
+09-08 23:39:48.310 2643-2686/system_process D/ConnectivityService: Done.
+09-08 23:39:48.310 2643-2686/system_process D/ConnectivityService: Setting timer for 720seconds
+09-08 23:39:48.320 1246-1246/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb82d4450
+09-08 23:39:48.320 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
+09-08 23:39:48.390 2643-2833/system_process V/KeyguardServiceDelegate: **** SHOWN CALLED ****
+09-08 23:39:48.390 2643-2833/system_process D/Sensors: AccelerationSensor::~enable(0, 1)
+09-08 23:39:48.390 2643-2833/system_process I/WindowManager: Lock screen displayed!
+09-08 23:39:48.400 2643-2833/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:true
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 1...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/System.out: test,sl:false
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2_1...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 4...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 7...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 8...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/n: Launch sales thread
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/b: Launch AndroidGetData thread
+09-08 23:39:50.330 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:39:50.360 2643-2658/system_process W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=2695, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
+09-08 23:39:50.410 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
+09-08 23:39:50.420 2643-2654/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@419398c8 attribute=android.view.inputmethod.EditorInfo@41c57ea8, token = android.os.BinderProxy@41c2cfb0
+09-08 23:40:05.170 2695-2695/com.android.systemui V/PanelView: animationTick called with dtms=0; nothing to do (h=0.3154111 v=-0.0)
+09-08 23:40:05.170 2695-2695/com.android.systemui V/PanelView: animationTick called with dtms=-5; nothing to do (h=0.3154111 v=-0.0)
+09-08 23:40:05.270 2643-2851/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@418ca1a0 attribute=null, token = android.os.BinderProxy@41c2cfb0
+09-08 23:40:42.300 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:41:46.310 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:41:57.480 2643-2833/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.camera2/com.android.camera.CameraLauncher bnds=[130,685][198,753]} from pid 2817
+09-08 23:41:57.490 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:41:57.630 2643-2654/system_process I/ActivityManager: Start proc com.android.camera2 for activity com.android.camera2/com.android.camera.CameraLauncher: pid=4140 uid=10027 gids={50027, 3003, 1028, 1015}
+09-08 23:41:58.040 4140-4140/com.android.camera2 V/NFC: this device does not have NFC support
+09-08 23:41:58.050 2643-2882/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:41:58.070 1250-4058/? D/CameraService: ro.cameraservice.camerahotplug=0
+09-08 23:41:58.070 4140-4140/com.android.camera2 V/CameraHolder: open camera 0
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: Client(3) constructor
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: setDataSource(/system/media/audio/ui/camera_click.ogg)
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: player type = 3
+09-08 23:41:58.080 1250-2692/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.080 1250-2692/? I/AwesomePlayer: setDataSource_l(URL suppressed)
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService:  setDataSource
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: [3] prepareAsync
+09-08 23:41:58.090 1250-4160/? D/MediaExtractor: Autodetected media content as 'application/ogg' with confidence 0.20
+09-08 23:41:58.110 1250-4160/? D/AwesomePlayer: initAudioDecoder: using stagefright audio decoder
+09-08 23:41:58.110 1250-4160/? D/AwesomePlayer: initAudioDecoder: durationUs: 191904
+09-08 23:41:58.110 1250-4160/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: Client(4) constructor
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: setDataSource(/system/media/audio/ui/VideoRecord.ogg)
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: player type = 3
+09-08 23:41:58.120 1250-2692/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.120 1250-2692/? I/AwesomePlayer: setDataSource_l(URL suppressed)
+09-08 23:41:58.120 1250-2692/? W/MediaPlayerService:  setDataSource
+09-08 23:41:58.120 1250-2692/? W/MediaPlayerService: [4] prepareAsync
+09-08 23:41:58.130 1250-4164/? D/MediaExtractor: Autodetected media content as 'application/ogg' with confidence 0.20
+09-08 23:41:58.140 1250-4164/? D/AwesomePlayer: initAudioDecoder: using stagefright audio decoder
+09-08 23:41:58.140 1250-4164/? D/AwesomePlayer: initAudioDecoder: durationUs: 229750
+09-08 23:41:58.140 1250-4164/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.150 1250-2692/? I/CameraClient: Opening camera 0
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-In OMX_ComponentInit, allocating component,0xb7225f78
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-gomxcam_bIsInited -1,0,0,0
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-gomxcam_bIsInited is ok
+09-08 23:41:58.150 1250-2692/? D/OMX_CAM: OMX-Input openmaxStandPort is NULL!
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: IPP-IPP_Open
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: IPP-IPP_Open 0xb7249520
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-Get coda Handle Success!
+09-08 23:41:58.150 1250-2692/? E/AL_LIBC: MJPG open version 20131022:
+09-08 23:41:58.150 1250-2692/? E/AL_LIBC: ===Attention ! fb_port is NULL
+09-08 23:41:58.200 1250-2692/? E/AL_LIBC: al-codec/video/vde_core/vde_utils.c 82,open /dev/mali0 node
+09-08 23:41:58.210 1250-2692/? E/AL_LIBC: alloce buf sucess :
+09-08 23:41:58.210 1250-2692/? E/AL_LIBC: MJPG open sucess:
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-dlopen libhdri.so failed because dlopen failed: library "libhdri.so" not found
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-OMX_ACT_IndexParamSensorSelect 0,0,1
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-Select SensorType 0,0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-gomxcam_bDoneQuery 0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-Select OMX_PrimarySensor 0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-Param-SensorType 6
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: V4l2- Direct cons. 2132
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-back
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-open Device Id is 1b,0
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-mod_queryctl exposure err
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-Got range of exposure: 32-32; 4095-10
+09-08 23:41:58.270 1250-2692/? E/OMX_VCE: OMX-In OMX_ComponentInit, allocating component,0xb724bad0
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: OMX-xEVCompensation set 0,2845
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV 0
+09-08 23:41:58.390 1250-2692/? E/OMX_VCE: OMX-In OMX_ComponentInit, allocating component,0xb72d2408
+09-08 23:41:58.400 1250-2692/? D/CameraHal: mVideoFormat=yuv420sp
+09-08 23:41:58.400 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_set_parm 0 0
+09-08 23:41:58.400 1250-2692/? D/IPP_CAM: OMX-ERR:OMX_ACT_IndexConfigVideoParam process frame rate now!!
+09-08 23:41:58.400 2643-2940/system_process D/Sensors: AccelerationSensor::~setDelay(0, 1000000)
+09-08 23:41:58.420 4140-4140/com.android.camera2 V/CAM_PhotoModule: Preview size is 640x480
+09-08 23:41:58.420 4140-4140/com.android.camera2 D/MediaProfiles: initCamcorderProfiles!
+09-08 23:41:58.430 4140-4140/com.android.camera2 W/CAM_PhotoModule: startPreview: surfaceTexture is not ready.
+09-08 23:41:58.430 2643-2655/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:41:58.550 4140-4140/com.android.camera2 D/CameraStorage: External storage state=mounted
+09-08 23:41:58.810 4140-4140/com.android.camera2 D/OpenGLRenderer: Enabling debug mode 0
+09-08 23:41:58.950 4140-4140/com.android.camera2 V/CAM_UI: SurfaceTexture ready.
+09-08 23:41:58.950 1250-2692/? D/CameraService: ro.cameraservice.camerahotplug=0
+09-08 23:41:58.970 4140-4140/com.android.camera2 V/CAM_PhotoModule: Preview size is 640x480
+09-08 23:41:59.000 4140-4140/com.android.camera2 V/CAM_PhotoModule: startPreview
+09-08 23:41:59.000 1250-2692/? D/IPP_CAM: OMX-nPreviewRes 4,2,320,640
+09-08 23:41:59.000 1250-2692/? D/CameraHal: CAMERA_QUERY_RESOLUTION_PREVIEW 640,480
+09-08 23:41:59.140 2643-2657/system_process I/ActivityManager: Displayed com.android.camera2/com.android.camera.CameraLauncher: +1s518ms
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-store addr b732e138,b732d8e8,12f79000
+09-08 23:41:59.240 1250-2692/? D/CameraHal: start watchdog
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-Stream On ff Set...896
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-set v res 0,280,1e0,2f
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: V4l2-OMX_COLOR_FormatYVU420SemiPlanar 3132564e
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_set_parm 1e 0
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV -37281
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: OMX-set param,5070,0
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-reqbuf,6
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-v4l2camera:v4l2_camera_querybuf 0,12cd6000
+09-08 23:41:59.290 1250-2692/? D/IPP_CAM: V4l2-camera_streamon status 0
+09-08 23:41:59.290 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_streamon
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-v4l2camera:Stream On OK! 0
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: OMX-xEVCompensation set 0,2845
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV 0
+09-08 23:41:59.360 1250-4187/? E/OMX_VCE: OMX-malloc ion addr! phy:13002000,vir:b1b0c000,len:28000
+09-08 23:42:06.290 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED

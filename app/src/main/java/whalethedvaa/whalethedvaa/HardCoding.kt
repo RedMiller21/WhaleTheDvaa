@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_hard_coding.*
 
 class HardCoding : AppCompatActivity() {
@@ -14,6 +15,32 @@ class HardCoding : AppCompatActivity() {
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
+        fun readFromAssets(){
+
+            var fileName = "default"
+
+            when(level) {
+
+                1 -> fileName = "HardCoding_1_Easy.txt"
+                2 -> fileName = "HardCoding_2_Medium.txt"
+                3 -> fileName = "HardCoding_3_Killer.txt"
+
+            }
+
+            val content = application.assets.open(fileName).bufferedReader().use{
+                it.readText()
+            }
+            val textView: TextView = findViewById(R.id.txtField) as TextView
+            textView.text = content
+
+            if (fileName == "default"){
+                textView.text = "//ERROR// - - //DIFF_SELECT_HARDCODE//"
+            }
+
+
+        }
+        readFromAssets()
+
         //Call information dialog creation
         InformationBtn.setOnClickListener{
             informationDialog()
@@ -21,7 +48,7 @@ class HardCoding : AppCompatActivity() {
 
         //call hint dialog creation function
         HintBtn.setOnClickListener{
-           hintSelectionDialog()
+            hintSelectionDialog()
         }
 
         //Back button will move back to the vulnerability selection activity
@@ -71,7 +98,7 @@ class HardCoding : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+            "Hint 1" -> builder.setMessage("Example hint 1")
             "Hint 2" -> builder.setMessage("Example hint 2")
             "Hint 3" -> builder.setMessage("Example hint 3")
         }
