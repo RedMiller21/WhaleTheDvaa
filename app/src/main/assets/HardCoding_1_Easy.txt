@@ -1,3 +1,151 @@
-//todo PUT BAD CODE IN HERE
+var db = Room.databaseBuilder(this, AppDatabase::class.java, "Email_Address").allowMainThreadQueries().fallbackToDestructiveMigration().build()
+var emails = Emails.populateData()
 
-level 1 test
+
+for (email in emails)db.daoAccess().insertOnlySingleUser(email)
+
+SQL_Login.setOnClickListener{
+
+    var searchText = SQL_Email.text.toString()
+    val emailCount = db.daoAccess().emailExists(searchText)
+
+    if (emailCount > 0) {
+
+        Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
+
+    }
+
+    else {
+
+        Toast.makeText(applicationContext, "ERROR", Toast.LENGTH_SHORT).show()
+
+    }
+}
+
+package BankingCo.MobileBanking;
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.RoomDatabase;
+
+@Database(entities = {Emails.class}, version = 1)
+
+public abstract
+
+class AppDatabase extends RoomDatabase{
+
+   public abstract DaoAccess daoAccess();
+
+}
+
+
+@Dao
+public interface DaoAccess {
+
+   @Insert
+   void insertOnlySingleUser(Emails emails);
+
+   @Query("SELECT * FROM Emails WHERE uid=:uid")
+
+   Emails fetchOneEmailsByEmailsID(int uid);
+
+   @Update
+   void updateEmails(Emails emails);
+
+   @Delete
+   void deleteMovie(Emails emails);
+
+   @Query("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText")
+
+   int emailExists(String searchText);
+   public List<Emails.NameTuple> loadFullName;
+
+}
+
+;import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
+@Entity
+public class Emails {
+
+   @NonNull
+
+   @PrimaryKey(autoGenerate = true)
+
+   private int uid;
+   @ColumnInfo(name = "emailAddress")
+
+   private String emailAddress;
+   @ColumnInfo(name = "password")
+
+   private String password;
+
+   public Emails(int uid, String emailAddress, String password){
+
+       this.uid = uid;
+       this.emailAddress = emailAddress;
+       this.password = password;
+
+   }
+
+  public class NameTuple{
+
+       @ColumnInfo(name =  "emailAddress")
+
+       public String emailaddress;
+       @ColumnInfo(name = "password")
+
+      public String password;
+
+  }
+
+
+   @NonNull
+
+   public int getUid() {
+
+       return uid;
+
+   }
+
+   public void setUid(@NonNull int uid) {
+
+       this.uid = uid;
+
+   }
+
+   public String getEmailAddress() {
+
+       return emailAddress;
+
+   }
+
+   public void setEmailAddress(String emailAddress) {
+
+       this.emailAddress = emailAddress;
+
+   }
+
+   public String getPassword() {
+
+       return password;
+
+   }
+
+    public void setPassword(String password) {
+
+       this.password = password;
+
+   }
+
+   public static Emails[] populateData(){
+
+       return new Emails[]{
+
+               new Emails(1, "whale@whalemail.sea", "B055M4N"),
+
+       };
+
+   }
+
+}
