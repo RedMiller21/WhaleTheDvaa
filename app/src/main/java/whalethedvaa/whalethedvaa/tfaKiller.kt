@@ -50,6 +50,8 @@ class tfaKiller : Activity() {
         lblTime.setOnClickListener {
             stampBool = !stampBool
         }
+
+        informationDialog()
     }
 
     private fun updateTime() {
@@ -68,7 +70,7 @@ class tfaKiller : Activity() {
         val builder = android.support.v7.app.AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
-        builder.setMessage("2FA codes should be completely randomised and should not follow any distinguishable pattern. The use of a time-based randomisation methods makes it easy to predict what the next code will be, using the current time. Instead, a randomisation function should be used to create a unique token not based on any pattern or other value.")
+        builder.setMessage("You are a hacker who has been sniffing your victim’s network, viewing the codes they have been using to log in to their account. You determine that the codes are not going up or down by a set value each time, but they are changing. Your findings from sniffing the network can be found in Hint 1.")
         val dialog: android.support.v7.app.AlertDialog = builder.create()
         dialog.show()
     }

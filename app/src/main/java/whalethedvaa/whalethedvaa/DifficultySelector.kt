@@ -60,7 +60,25 @@ class DifficultySelector : AppCompatActivity() {
             println(selector)
             startActivity(intent)
         }
-
+        mtgtBtn.setOnClickListener{
+            val builder = android.support.v7.app.AlertDialog.Builder(this)
+            // Set the alert dialog title
+            when(selector) {
+                1 -> intent = Intent(this, HardCoding::class.java)
+                2 -> intent = Intent(this, SQLI::class.java)
+                3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage("These tokens should be completely randomised and should not follow any distinguishable pattern. The use of a time-based randomisation methods or algorithms to calculate the next code makes it easy to predict what the next code will be, using the current time. Instead, a randomisation function should be used to create a unique token not based on any pattern or other value as to avoid repetition or the chances of this token falling into the wrong hands and being used by an attacker to access a user's account.")}
+                4 -> intent = Intent(this, InsecureTokens::class.java)
+                5 -> intent = Intent(this, PoorAuthentication::class.java)
+                6 -> intent = Intent(this, InsecureLogging::class.java)
+                7 -> intent = Intent(this, InsecureDataStorage::class.java)
+                else -> println(selector)
+            }
+            val dialog: android.support.v7.app.AlertDialog = builder.create()
+            dialog.show()
+           // intent.putExtra("Level",2)
+           // println(selector)
+           // startActivity(intent)
+        }
         //Call information dialog creation
         InformationBtn.setOnClickListener{
             informationDialog()

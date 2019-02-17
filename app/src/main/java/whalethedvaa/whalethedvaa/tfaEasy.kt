@@ -36,6 +36,8 @@ class tfaEasy : AppCompatActivity() {
         BackBtn.setOnClickListener{
             onBackPressed()
         }
+
+        informationDialog()
     }
 
 
@@ -144,7 +146,7 @@ class tfaEasy : AppCompatActivity() {
         val builder = android.support.v7.app.AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
-        builder.setMessage("2FA codes should be unique for each user. A 2FA token acts as a unique identifier for the user logging in, so is redundant if it is not unique to them. The code should be randomly generated each time as to avoid repetition or the chances of this token falling into the wrong hands and being used by an attacker to access a user's account.")
+        builder.setMessage("You are trying to gain access to the account of ‘victim@whalemail.com’, but you need this user’s 2FA code. After entering their email address, the user will be sent an email with the code they can use to log in. You have the email address ‘hacker@whalemail.com’. Try to find your victim’s code and use it to log in to their account.")
         val dialog: android.support.v7.app.AlertDialog = builder.create()
         dialog.show()
     }

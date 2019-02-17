@@ -43,6 +43,8 @@ class tfaMedium : AppCompatActivity() {
             netlog[i] = (convCode((firstCode + addToCode*(i+1)) % 10000))
         }
 
+        informationDialog()
+
     }
 
     private fun ntlgString():String{
@@ -58,7 +60,7 @@ class tfaMedium : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
-        builder.setMessage("2FA codes should be completely randomised and should not follow any distinguishable pattern. The use of a formula may allow an attacker to predict what the next code will be. Instead, a randomisation function should be used to create a unique token.")
+        builder.setMessage("You are a hacker who has been sniffing your victim’s network, viewing the codes they have been using to log in to their account. You must find the pattern in these codes and use this to predict what the next code will be. Once you have found this next code, you can use it to log in. Your findings from sniffing the network can be found in Hint 1.")
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
