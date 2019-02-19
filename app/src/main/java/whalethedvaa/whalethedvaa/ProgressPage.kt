@@ -116,15 +116,13 @@ class ProgressPage : AppCompatActivity() {
 
     private fun updateProgress(flag: String){
         //update
-        println(flag)
-        Toast.makeText(this, flag, Toast.LENGTH_SHORT).show()
         var flagFound : Boolean = true
         when {
-            foundFlags.contains(flag) -> {errorMsg(); return}
+            foundFlags.contains(flag) -> {errorMsg(1); return}
             easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/6"; totalEasy.progress = easyFound*100/6; foundFlags += flag}
             medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/6"; totalMedium.progress = medFound*100/6; foundFlags += flag}
             killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/6"; totalKiller.progress = killerFound*100/6; foundFlags += flag}
-            else -> {flagFound = false; Toast.makeText(this, "Error: flag not found", Toast.LENGTH_SHORT).show(); return}
+            else -> {errorMsg(0); return}
         }
         if(flagFound){
             totalFound++
@@ -145,10 +143,15 @@ class ProgressPage : AppCompatActivity() {
         totalProgress.progress = (totalFound*100)/18
     }
 
-    private fun errorMsg(){
+    private fun errorMsg(case : Int){
+        var title : String = ""
+        when (case){
+            0 -> title = "Error: flag not found"
+            1 -> title = "This flag has already been entered"
+        }
         val builder = AlertDialog.Builder(this)
         builder.setCancelable(false)
-            .setTitle("This flag has already been entered")
+            .setTitle(title)
             .setNegativeButton("Okay"){ dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
