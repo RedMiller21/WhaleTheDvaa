@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_progress_page.*
+import java.sql.Array
 
 class ProgressPage : AppCompatActivity() {
     var easyFlags = arrayOf ("p0k3rf4c3")
@@ -20,10 +21,19 @@ class ProgressPage : AppCompatActivity() {
     var medFound : Int = 0
     var killerFound : Int = 0
     var totalFound : Int = 0
-    var foundFlags = arrayOf<String>()
+    //var foundFlags = arrayOf(String())
+    var foundFlags = arrayOf("")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (savedInstanceState != null) {
+            easyFound = savedInstanceState.getInt("easyFound")
+            medFound = savedInstanceState.getInt("medFound")
+            killerFound = savedInstanceState.getInt("killerFound")
+            totalFound = savedInstanceState.getInt("totalFound")
+        //    foundFlags = savedInstanceState.getStringArray("foundFlags")
+        }
+
         setContentView(R.layout.activity_progress_page)
 
         txtTotal.text = "Total - $totalFound/18"
@@ -36,12 +46,6 @@ class ProgressPage : AppCompatActivity() {
         totalKiller.progress = (killerFound/6)*100
         totalProgress.progress = (totalFound/18)*100
 
-        //totalEasy.progressDrawable.setColorFilter(Color.rgb(112,173,71), PorterDuff.Mode.SRC_IN)
-        /*totalEasy.color(Color.rgb(112,173,71), PorterDuff.Mode.SRC_IN)
-        totalMedium.progressDrawable.setColorFilter(Color.rgb(255,192,0), PorterDuff.Mode.SRC_IN)
-        totalKiller.progressDrawable.setColorFilter(Color.rgb(238,54,50), PorterDuff.Mode.SRC_IN)
-        totalProgress.progressDrawable.setColorFilter(Color.rgb(68,114,196), PorterDuff.Mode.SRC_IN)*/
-
         //Call information dialog creation
         InformationBtn.setOnClickListener{
             informationDialog()
@@ -49,6 +53,12 @@ class ProgressPage : AppCompatActivity() {
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener{
+            savedInstanceState?.putInt("easyFound", easyFound)
+            savedInstanceState?.putInt("medFound", medFound)
+            savedInstanceState?.putInt("killerFound", killerFound)
+            savedInstanceState?.putInt("totalFound", totalFound)
+            //savedInstanceState.putString("foundFlags", foundFlags)
+            super.onSaveInstanceState(savedInstanceState)
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
@@ -57,6 +67,16 @@ class ProgressPage : AppCompatActivity() {
             enterFlag()
         }
     }
+
+    public override fun onSaveInstanceState(savedInstanceState: Bundle?) {
+            savedInstanceState?.putInt("easyFound", easyFound)
+            savedInstanceState?.putInt("medFound", medFound)
+            savedInstanceState?.putInt("killerFound", killerFound)
+            savedInstanceState?.putInt("totalFound", totalFound)
+            //savedInstanceState.putString("foundFlags", foundFlags)
+            super.onSaveInstanceState(savedInstanceState)
+    }
+
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
@@ -92,7 +112,7 @@ class ProgressPage : AppCompatActivity() {
         Toast.makeText(this, flag, Toast.LENGTH_SHORT).show()
         var flagFound : Boolean = true
         when {
-            foundFlags.contains(flag) -> {Toast.makeText(this, "This flag has already been entered", Toast.LENGTH_SHORT).show(); return}
+            foundFlags!!.contains(flag) -> {Toast.makeText(this, "This flag has already been entered", Toast.LENGTH_SHORT).show(); return}
             easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/6"; totalEasy.progress = easyFound*100/6; foundFlags += flag}
             medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/6"; totalMedium.progress = medFound*100/6; foundFlags += flag}
             killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/6"; totalKiller.progress = killerFound*100/6; foundFlags += flag}
