@@ -1,80 +1,69 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_progress_page.*
-import java.sql.Array
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf ("p0k3rf4c3")
-    var medFlags = arrayOf ("h0n3yb33")
-    var killerFlags = arrayOf ("c4sc4d1ng")
-    var easyFound : Int = 0
-    var medFound : Int = 0
-    var killerFound : Int = 0
-    var totalFound : Int = 0
-    //var foundFlags = arrayOf(String())
-    var foundFlags = arrayOf("")
+    var easyFlags = arrayOf("p0k3rf4c3")
+    var medFlags = arrayOf("h0n3yb33")
+    var killerFlags = arrayOf("c4sc4d1ng")
+    var easyFound: Int = 0
+    var medFound: Int = 0
+    var killerFound: Int = 0
+    var totalFound: Int = 0
+    var foundFlags : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (savedInstanceState != null) {
-            easyFound = savedInstanceState.getInt("easyFound")
-            medFound = savedInstanceState.getInt("medFound")
-            killerFound = savedInstanceState.getInt("killerFound")
-            totalFound = savedInstanceState.getInt("totalFound")
-        //    foundFlags = savedInstanceState.getStringArray("foundFlags")
-        }
+
+        val mProg = getSharedPreferences("progress", 0)
+        easyFound = mProg.getInt("easy", 0)
+        medFound = mProg.getInt("med", 0)
+        killerFound = mProg.getInt("killer", 0)
+        totalFound = mProg.getInt("total", 0)
+        foundFlags = mProg.getString("found", "")
 
         setContentView(R.layout.activity_progress_page)
 
-        txtTotal.text = "Total - $totalFound/18"
-        txtEasy.text = "Easy - $easyFound/6"
-        txtMed.text = "Medium - $medFound/6"
-        txtKiller.text = "Killer - $killerFound/6"
-
-        totalEasy.progress = (easyFound/6)*100
-        totalMedium.progress = (medFound/6)*100
-        totalKiller.progress = (killerFound/6)*100
-        totalProgress.progress = (totalFound/18)*100
+        //Update progress bars and displays
+        updateForm()
 
         //Call information dialog creation
-        InformationBtn.setOnClickListener{
+        InformationBtn.setOnClickListener {
             informationDialog()
         }
 
+        //Reset progress
+        ResetBtn.setOnClickListener {
+            resetProg()
+        }
+
+
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
-            savedInstanceState?.putInt("easyFound", easyFound)
-            savedInstanceState?.putInt("medFound", medFound)
-            savedInstanceState?.putInt("killerFound", killerFound)
-            savedInstanceState?.putInt("totalFound", totalFound)
-            //savedInstanceState.putString("foundFlags", foundFlags)
-            super.onSaveInstanceState(savedInstanceState)
+        BackBtn.setOnClickListener {
+            //When back button pressed
+            //Add flag variables to shared preferences
+            val mEditor = mProg.edit()
+            mEditor.putInt("easy", easyFound).commit()
+            mEditor.putInt("med", medFound).commit()
+            mEditor.putInt("killer", killerFound).commit()
+            mEditor.putInt("total", totalFound).commit()
+            mEditor.putString("found", foundFlags).commit()
+
+            //Go back
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
 
-        EnterFlagBtn.setOnClickListener{
+        EnterFlagBtn.setOnClickListener {
             enterFlag()
         }
-    }
-
-    public override fun onSaveInstanceState(savedInstanceState: Bundle?) {
-            savedInstanceState?.putInt("easyFound", easyFound)
-            savedInstanceState?.putInt("medFound", medFound)
-            savedInstanceState?.putInt("killerFound", killerFound)
-            savedInstanceState?.putInt("totalFound", totalFound)
-            //savedInstanceState.putString("foundFlags", foundFlags)
-            super.onSaveInstanceState(savedInstanceState)
     }
 
     private fun informationDialog(){
@@ -85,6 +74,7 @@ class ProgressPage : AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
     private fun enterFlag(){
 
         val li = LayoutInflater.from(this)
@@ -100,11 +90,29 @@ class ProgressPage : AppCompatActivity() {
                 updateProgress(userInput.text.toString())
             }
             .setNegativeButton(R.string.cancel){ dialog, _ -> dialog.cancel() }
-
-
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+    private fun resetProg(){
+        val builder = AlertDialog.Builder(this)
+        builder.setCancelable(false)
+            .setTitle("Are you sure you want to reset your progress?")
+            .setPositiveButton("Yes"){ _, _ ->
+                //reset flag variables
+                easyFound = 0
+                medFound = 0
+                killerFound = 0
+                totalFound = 0
+                foundFlags = ""
+                //update bars and form
+                updateForm()
+            }
+            .setNegativeButton("No"){ dialog, _ -> dialog.cancel() }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
 
     private fun updateProgress(flag: String){
         //update
@@ -112,7 +120,7 @@ class ProgressPage : AppCompatActivity() {
         Toast.makeText(this, flag, Toast.LENGTH_SHORT).show()
         var flagFound : Boolean = true
         when {
-            foundFlags!!.contains(flag) -> {Toast.makeText(this, "This flag has already been entered", Toast.LENGTH_SHORT).show(); return}
+            foundFlags.contains(flag) -> {errorMsg(); return}
             easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/6"; totalEasy.progress = easyFound*100/6; foundFlags += flag}
             medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/6"; totalMedium.progress = medFound*100/6; foundFlags += flag}
             killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/6"; totalKiller.progress = killerFound*100/6; foundFlags += flag}
@@ -123,5 +131,26 @@ class ProgressPage : AppCompatActivity() {
             txtTotal.text = "Total - $totalFound/18"
             totalProgress.progress = totalFound*(100/18)
         }
+    }
+
+    private fun updateForm(){
+        txtTotal.text = "Total - $totalFound/18"
+        txtEasy.text = "Easy - $easyFound/6"
+        txtMed.text = "Medium - $medFound/6"
+        txtKiller.text = "Killer - $killerFound/6"
+
+        totalEasy.progress = (easyFound*100)/6
+        totalMedium.progress = (medFound*100)/6
+        totalKiller.progress = (killerFound*100)/6
+        totalProgress.progress = (totalFound*100)/18
+    }
+
+    private fun errorMsg(){
+        val builder = AlertDialog.Builder(this)
+        builder.setCancelable(false)
+            .setTitle("This flag has already been entered")
+            .setNegativeButton("Okay"){ dialog, _ -> dialog.cancel() }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }
