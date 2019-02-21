@@ -73,6 +73,8 @@ class InsecureLogging : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle("Hints")
 
+        //test
+
         // Display a message on alert dialog
         //builder.setMessage("Which hint would you like")
 

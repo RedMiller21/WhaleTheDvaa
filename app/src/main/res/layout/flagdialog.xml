@@ -2,9 +2,8 @@
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#222A35">
+        android:background="#222A35" android:layout_width="225dp">
 
 
     <ImageView
@@ -16,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0" android:id="@+id/imageView"
+            android:layout_marginStart="8dp" android:id="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/DialogTitle" android:layout_marginTop="8dp"
             android:layout_height="198dp"/>
     <EditText
@@ -29,7 +28,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" android:textSize="24sp"/>
+            android:textColorHint="#FFFFFF" android:textSize="24sp" android:gravity="center"/>
     <TextView
             android:id="@+id/DialogTitle"
             android:text="Got another flag??"
