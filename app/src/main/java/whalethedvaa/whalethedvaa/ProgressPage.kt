@@ -10,7 +10,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf("p0k3rf4c3")
+    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m")
     var medFlags = arrayOf("h0n3yb33")
     var killerFlags = arrayOf("c4sc4d1ng")
     var easyFound: Int = 0

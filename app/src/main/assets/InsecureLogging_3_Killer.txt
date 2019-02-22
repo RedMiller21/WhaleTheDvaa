@@ -109,7 +109,7 @@
 02-29 04:11:39.140 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Homepage: +590ms
 
 02-29 04:11:41.440 2643-2835/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Login} from pid 4464
-//todo Include password dump file
+09-08 04:11:41.520 2643-2835/Blubble.WhaleMail I/System.out: USE_VALUES($USER, $SECUREPASS) :// //todo PUT FILE LOCATION OF LOGS HERE
 02-29 04:11:41.750 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Login: +301ms
 
 02-29 04:11:45.820 2643-2708/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Inbox (has extras)} from pid 4464

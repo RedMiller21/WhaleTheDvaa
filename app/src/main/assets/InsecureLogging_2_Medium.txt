@@ -44,7 +44,7 @@
 09-08 22:57:00.970 2643-2940/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/LoginPage} from pid 3684
 09-08 22:57:01.310 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/LoginPage: +332ms
 
-09-08 22:57:06.400 3684-3684/WhaleCo.WhaleBook I/System.out: USING LOGIN FILE //todo PUT FILE LOCATION OF LOGS HERE
+09-08 22:57:06.400 3684-3684/WhaleCo.WhaleBook I/System.out: USE_VALUES($USER, $PASS) :// //todo PUT FILE LOCATION OF LOGS HERE
 
 09-08 22:57:06.400 2643-2833/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/Timeline (has extras)} from pid 3684
 09-08 22:57:06.420 1250-2058/? I/AudioHardware: open playback drv
