@@ -79,6 +79,12 @@ class DifficultySelector : AppCompatActivity() {
            // println(selector)
            // startActivity(intent)
         }
+
+        //Go to progress page
+        progBtn.setOnClickListener{
+            startActivity(Intent(this, ProgressPage::class.java))
+        }
+
         //Call information dialog creation
         InformationBtn.setOnClickListener{
             informationDialog()
@@ -90,11 +96,12 @@ class DifficultySelector : AppCompatActivity() {
         }
 
     }
+
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
-        builder.setTitle("Difficulty Information")
-        builder.setMessage("Example Information")
+        builder.setTitle("Difficulty Selection")
+        builder.setMessage("Here you can select the difficulty of your chosen vulnerability to exploit - easy, medium, or 'killer'. \nYou can also view how your chosen vulnerability can be mitigated, or go to the progress page and update your progress by entering your captured flags.")
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
