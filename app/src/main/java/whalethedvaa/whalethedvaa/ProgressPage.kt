@@ -57,8 +57,9 @@ class ProgressPage : AppCompatActivity() {
             mEditor.putString("found", foundFlags).commit()
 
             //Go back
-            val intent = Intent(this, VulnSelection::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, VulnSelection::class.java)
+            //startActivity(intent//
+            onBackPressed()
         }
 
         EnterFlagBtn.setOnClickListener {

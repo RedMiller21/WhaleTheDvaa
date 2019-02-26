@@ -27,6 +27,8 @@ class TheWhala : AppCompatActivity() {
             val intent = Intent(this, Settings::class.java)
             startActivity(intent)
         }
+
+
     }
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)

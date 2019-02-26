@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli.*
 
+
 class sqli_easy : AppCompatActivity() {
     //declaring an array of the database type emails
     private val emails : ArrayList<Emails> = ArrayList()

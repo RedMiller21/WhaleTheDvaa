@@ -45,5 +45,13 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:text="SQL Injection"
             android:textColor="#FFFFFF" android:textSize="24sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/SQL_Email"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/SQL_Login"/>
 
 </android.support.constraint.ConstraintLayout>
