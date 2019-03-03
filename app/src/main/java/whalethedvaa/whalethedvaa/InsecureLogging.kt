@@ -22,8 +22,8 @@ class InsecureLogging : AppCompatActivity() {
             when(level) {
 
                 1 -> fileName = "InsecureLogging_1_Easy.txt"
-                2 -> fileName = "InsecureLogging_2_Medium.txt"
-                3 -> fileName = "InsecureLogging_3_Killer.txt"
+                2 -> fileName = "InsecureLogging_3_Killer.txt"
+                3 -> fileName = "InsecureLogging_2_Medium.txt"
 
             }
 
@@ -99,6 +99,7 @@ class InsecureLogging : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
+
             "Hint 1" -> builder.setMessage("Example hint 1")
             "Hint 2" -> builder.setMessage("Example hint 2")
             "Hint 3" -> builder.setMessage("Example hint 3")

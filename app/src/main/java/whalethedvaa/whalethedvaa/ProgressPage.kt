@@ -11,8 +11,8 @@ import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
     var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N")
-    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N")
-    var killerFlags = arrayOf("c4sc4d1ng", "4M4Z1NG")
+    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d")
+    var killerFlags = arrayOf("c4sc4d1ng", "4M4Z1NG", "t4sty-k3lp")
     var easyFound: Int = 0
     var medFound: Int = 0
     var killerFound: Int = 0

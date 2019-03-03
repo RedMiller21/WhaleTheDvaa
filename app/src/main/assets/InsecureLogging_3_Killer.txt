@@ -1,147 +1,240 @@
-02-29 04:04:15.140 2643-2673/system_process I/PowerManagerService: Going to sleep by user request...
-02-29 04:04:15.590 2643-2643/system_process D/Sensors: AccelerationSensor::~enable(0, 0)
-02-29 04:04:15.620 2695-2695/com.android.systemui V/KeyguardHostView: Initial transport state: 0, pbstate=0
-02-29 04:04:15.620 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_OFF
-02-29 04:04:15.650 2643-3671/system_process D/LightsService: Excessive delay setting light: 76ms
-02-29 04:04:15.650 1246-1246/? D/SurfaceFlinger: Screen released, type=0 flinger=0xb82d4450
-02-29 04:04:15.650 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x1
-02-29 04:04:15.670 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:04:15.710 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:04:15.740 2695-2695/com.android.systemui V/KeyguardHostView: hide transport, gen:2
-02-29 04:04:15.740 2695-2695/com.android.systemui V/KeyguardHostView: music state changed: 0
-02-29 04:04:45.640 2643-2643/system_process D/EthernetService: ACTION_DEVICE_IDLE
-02-29 04:04:59.750 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:06:03.750 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:07:07.750 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:07:17.740 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:07:41.740 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:07:59.950 2643-2643/system_process V/KeyguardServiceDelegate: onScreenTurnedOn(showListener = com.android.internal.policy.impl.PhoneWindowManager$17@41fc7f90)
-02-29 04:07:59.950 2643-2673/system_process I/PowerManagerService: Waking up from sleep...
-02-29 04:08:00.070 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
-02-29 04:08:00.080 2643-2709/system_process D/PowerManagerService-JNI: Excessive delay in autosuspend_disable() while turning screen on: 121ms
-02-29 04:08:00.080 1246-1246/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb82d4450
-02-29 04:08:00.080 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
-02-29 04:08:00.160 2643-2835/system_process V/KeyguardServiceDelegate: **** SHOWN CALLED ****
-02-29 04:08:00.160 2643-2835/system_process D/Sensors: AccelerationSensor::~enable(0, 1)
-02-29 04:08:00.160 2643-2835/system_process I/WindowManager: Lock screen displayed!
-02-29 04:08:00.170 2643-2835/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
-02-29 04:08:00.220 2695-2695/com.android.systemui D/dalvikvm: GC_FOR_ALLOC freed 2036K, 38% free 7807K/12528K, paused 38ms, total 42ms
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:true
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 1...
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/System.out: test,sl:false
-02-29 04:08:00.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2...
-02-29 04:08:00.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2_1...
-02-29 04:08:00.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 4...
-02-29 04:08:00.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 7...
-02-29 04:08:00.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 8...
-02-29 04:08:00.320 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
-02-29 04:08:00.330 3379-3379/com.google.android.googlequicksearchbox I/n: Launch sales thread
-02-29 04:08:00.330 3379-3379/com.google.android.googlequicksearchbox I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
-02-29 04:08:00.330 3379-3379/com.google.android.googlequicksearchbox I/b: Launch AndroidGetData thread
-02-29 04:08:00.330 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
-02-29 04:08:00.430 2643-2662/system_process I/ActivityManager: Config changes=480 {0.85 ?mcc?mnc en_GB ldltr sw480dp w800dp h407dp 160dpi nrml land finger -keyb/v/h -nav/h s.8}
-02-29 04:08:00.440 2643-2673/system_process I/InputReader: Reconfiguring input devices.  changes=0x00000004
-02-29 04:08:00.440 2643-2673/system_process I/InputReader: Device reconfigured: id=1, name='chm_ts', size 480x800, orientation 1, mode 1, display id 0
-02-29 04:08:00.450 2643-2673/system_process I/InputReader: Reconfiguring input devices.  changes=0x00000004
-02-29 04:08:00.530 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:false
-02-29 04:08:00.610 2695-2695/com.android.systemui D/PhoneStatusBar: mSettingsPanelGravity = 55
-02-29 04:08:00.640 2817-2817/com.android.launcher W/ContextImpl: Implicit intents with startService are not safe: Intent { act=android.intent.action.CALIB_SERVICE } android.content.ContextWrapper.startService:494 com.android.launcher2.Launcher.onCreate:368 android.app.Activity.performCreate:5372
-02-29 04:08:00.660 2867-2867/com.actions.calibseviceactivity D/CalibService: onStartCommand executed
-02-29 04:08:00.740 2695-2695/com.android.systemui V/KeyguardHostView: Initial transport state: 0, pbstate=0
-02-29 04:08:00.820 2695-2695/com.android.systemui V/KeyguardHostView: hide transport, gen:2
-02-29 04:08:00.820 2695-2695/com.android.systemui V/KeyguardHostView: music state changed: 0
-02-29 04:08:00.860 2695-2695/com.android.systemui D/skia: === BMP ===1111
-02-29 04:08:00.890 2695-2695/com.android.systemui D/dalvikvm: GC_FOR_ALLOC freed 617K, 34% free 8360K/12528K, paused 33ms, total 33ms
-02-29 04:08:00.890 2695-2695/com.android.systemui I/dalvikvm-heap: Grow heap (frag case) to 11.158MB for 3072016-byte allocation
-02-29 04:08:00.890 2695-2695/com.android.systemui D/skia: === BMP ===222
-02-29 04:08:00.940 2695-2704/com.android.systemui D/dalvikvm: GC_FOR_ALLOC freed 146K, 28% free 11213K/15532K, paused 40ms, total 40ms
-02-29 04:08:01.020 2695-2695/com.android.systemui D/dalvikvm: GC_FOR_ALLOC freed 312K, 30% free 10902K/15532K, paused 26ms, total 26ms
-02-29 04:08:01.020 2695-2695/com.android.systemui I/dalvikvm-heap: Grow heap (frag case) to 13.194MB for 2604816-byte allocation
-02-29 04:08:01.070 2695-2704/com.android.systemui D/dalvikvm: GC_FOR_ALLOC freed <1K, 26% free 13445K/18076K, paused 50ms, total 50ms
-02-29 04:08:01.160 2817-2817/com.android.launcher I/Launcher: Deferring update until onResume
-02-29 04:08:01.160 2817-2817/com.android.launcher I/Launcher: Deferring update until onResume
-02-29 04:08:01.280 2695-2695/com.android.systemui I/Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
-02-29 04:08:01.380 2643-2657/system_process I/WindowManager: Screen frozen for +997ms due to Window{41a580e8 u0 StatusBar}
-02-29 04:08:02.840 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:08:02.870 2643-2658/system_process W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=2695, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
-02-29 04:08:02.910 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
-02-29 04:08:02.980 2817-2817/com.android.launcher D/dalvikvm: GC_FOR_ALLOC freed 1907K, 28% free 5285K/7252K, paused 102ms, total 117ms
-02-29 04:08:03.540 2643-2657/system_process D/dalvikvm: GC_EXPLICIT freed 1433K, 33% free 8834K/13116K, paused 4ms+15ms, total 105ms
-02-29 04:08:05.380 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:08:11.740 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:09:31.325 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:09:52.480 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:09:53.460 2817-3547/com.android.launcher D/dalvikvm: GC_FOR_ALLOC freed 940K, 24% free 5631K/7388K, paused 33ms, total 35ms
-02-29 04:09:56.580 2643-2883/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=WhaleWatchers.Livestreams/Home} from pid 2817
-02-29 04:09:56.590 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:09:56.710 2643-2835/system_process I/ActivityManager: Start proc WhaleWatchers.Livestreams for activity WhaleWatchers.Livestreams/Home: pid=4376 uid=10025 gids={50025}
-02-29 04:09:57.170 4376-4376/com.android.calculator2 D/OpenGLRenderer: Enabling debug mode 0
-02-29 04:09:57.350 2643-2657/system_process I/ActivityManager: Displayed WhaleWatchers.Livestreams/Home: +662ms
-02-29 04:10:26.325 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:10:48.030 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:11:02.700 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:11:02.730 2643-2804/system_process I/ActivityManager: START u0 {act=com.android.systemui.recent.action.TOGGLE_RECENTS flg=0x10800000 cmp=com.android.systemui/.recent.RecentsActivity (has extras)} from pid 2695
-02-29 04:11:03.250 2643-2657/system_process I/ActivityManager: Displayed com.android.systemui/.recent.RecentsActivity: +496ms
-02-29 04:11:05.080 2643-2804/system_process I/ActivityManager: Killing 4376:WhaleWatchers.Livestreams/View (adj 9): remove task
-02-29 04:11:05.090 2643-2672/system_process W/InputDispatcher: channel '41aea8c0 WhaleWatchers.Livestreams/View/ID?=5532 (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
-02-29 04:11:05.090 2643-2672/system_process E/InputDispatcher: channel '41aea8c0 WhaleWatchers.Livestreams/View/ID?=5532 (server)' ~ Channel is unrecoverably broken and will be disposed!
-02-29 04:11:05.100 2643-2883/system_process W/InputDispatcher: Attempted to unregister already unregistered input channel '41aea8c0 WhaleWatchers.Livestreams/View/ID?=5532 (server)'
-02-29 04:11:05.100 2643-2883/system_process I/WindowState: WIN DEATH: Window{41aea8c0 u0 WhaleWatchers.Livestreams/Home}
-02-29 04:11:05.490 2643-2657/system_process W/ResourceType: Skipping entry 0x7f05000e in package table 0 because it is not complex!
-02-29 04:11:05.490 2643-2657/system_process W/ResourceType: Skipping entry 0x7f05000f in package table 0 because it is not complex
-02-29 04:11:23.730 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:11:38.450 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:11:38.450 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:11:38.450 2643-2883/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=Blubble.WhaleMail/Homepage} from pid 2817
-02-29 04:11:38.560 4464-4464/? D/dalvikvm: Late-enabling CheckJNI
-02-29 04:11:38.570 2643-2835/system_process I/ActivityManager: Start proc Blubble.WhaleMail for activity Blubble.WhaleMail/Homepage: pid=4464 uid=10078 gids={50078}
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper; interface 2425 'Landroid/view/View$OnUnhandledKeyEventListener;'
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper;' failed
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail D/dalvikvm: DexOpt: unable to opt direct call 0x2bc5 at 0x1f in Landroid/support/v4/view/ViewCompat;.addOnUnhandledKeyEventListener
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.dispatchApplyWindowInsets
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.onApplyWindowInsets
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$1; interface 2415 'Landroid/view/View$OnApplyWindowInsetsListener;'
-02-29 04:11:38.850 4464-4464/Blubble.WhaleMail W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$1;' failed
-02-29 04:11:38.860 4464-4464/Blubble.WhaleMail D/dalvikvm: DexOpt: unable to opt direct call 0x2bc2 at 0x0f in Landroid/support/v4/view/ViewCompat;.setOnApplyWindowInsetsListener
-02-29 04:11:39.070 4464-4464/Blubble.WhaleMail D/OpenGLRenderer: Enabling debug mode 0
-02-29 04:11:39.140 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Homepage: +590ms
-
-02-29 04:11:41.440 2643-2835/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Login} from pid 4464
-09-08 04:11:41.520 2643-2835/Blubble.WhaleMail I/System.out: USE_VALUES($USER, $SECUREPASS) :// //todo PUT FILE LOCATION OF LOGS HERE
-02-29 04:11:41.750 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Login: +301ms
-
-02-29 04:11:45.820 2643-2708/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Inbox (has extras)} from pid 4464
-02-29 04:11:45.900 4464-4464/Blubble.WhaleMail D/dalvikvm: GC_FOR_ALLOC freed 363K, 10% free 4141K/4576K, paused 19ms, total 20ms
-02-29 04:11:45.940 4464-4464/Blubble.WhaleMail I/System.out: 1
-02-29 04:11:46.070 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Inbox: +225ms
-02-29 04:12:12.230 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:12:27.730 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:12:29.600 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:12:39.520 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:12:40.720 2695-2695/com.android.systemui V/DeadZone: consuming errant click: (570.2872,10.07901)
-02-29 04:12:41.180 2643-2691/system_process D/dalvikvm: GC_FOR_ALLOC freed 1958K, 32% free 8923K/13116K, paused 84ms, total 84ms
-02-29 04:12:43.720 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-02-29 04:13:47.280 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:13:47.290 2643-2804/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.deskclock/.DeskClock} from pid 2817
-02-29 04:13:47.600 3326-3326/com.android.deskclock V/DeskClock: Setting home time zone to America/New_York
-02-29 04:13:47.610 3326-3326/com.android.deskclock I/AlarmClock: Displaying next alarm time: ''
-02-29 04:13:47.710 3326-3326/com.android.deskclock D/dalvikvm: GC_FOR_ALLOC freed 583K, 15% free 3938K/4592K, paused 18ms, total 18ms
-02-29 04:13:48.140 3326-3326/com.android.deskclock D/OpenGLRenderer: Enabling debug mode 0
-02-29 04:13:48.170 3326-3326/com.android.deskclock V/TimerReceiver: Received intent Intent { act=notif_in_use_cancel flg=0x10 cmp=com.android.deskclock/.timer.TimerReceiver }
-02-29 04:13:48.380 2643-2657/system_process I/ActivityManager: Displayed com.android.deskclock/.DeskClock: +1s11ms
-02-29 04:14:31.580 2643-2673/system_process I/PowerManagerService: Going to sleep by user request...
-02-29 04:14:32.010 2643-2643/system_process D/Sensors: AccelerationSensor::~enable(0, 0)
-02-29 04:14:32.030 2695-2695/com.android.systemui V/KeyguardHostView: Initial transport state: 0, pbstate=0
-02-29 04:14:32.090 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_OFF
-02-29 04:14:32.090 3326-3326/com.android.deskclock V/TimerReceiver: Received intent Intent { act=notif_in_use_show flg=0x10 cmp=com.android.deskclock/.timer.TimerReceiver }
-02-29 04:14:32.160 2643-3671/system_process D/LightsService: Excessive delay setting light: 153ms
-02-29 04:14:32.160 1246-1246/? D/SurfaceFlinger: Screen released, type=0 flinger=0xb82d4450
-02-29 04:14:32.160 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x1
-02-29 04:14:32.190 2695-2695/com.android.systemui V/KeyguardHostView: hide transport, gen:2
-02-29 04:14:32.190 2695-2695/com.android.systemui V/KeyguardHostView: music state changed: 0
-02-29 04:14:32.230 1250-2058/? I/AudioHardware: open playback drv
-02-29 04:14:32.270 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info BACK* HOME* RECENT* CLOCK* search >
-02-29 04:14:32.330 2643-2835/system_process D/AlarmManager: overriden alarm callingpackages[0] com.google.android.backuptransport
-02-29 04:14:35.730 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 22:55:30.910 2643-2673/system_process I/PowerManagerService: Waking up from sleep...
+09-08 22:55:31.040 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
+09-08 22:55:31.090 1246-1246/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb82d4450
+09-08 22:55:31.090 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
+09-08 22:55:31.180 2643-2883/system_process V/KeyguardServiceDelegate: **** SHOWN CALLED ****
+09-08 22:55:31.180 2643-2883/system_process D/Sensors: AccelerationSensor::~enable(0, 1)
+09-08 22:55:31.180 2643-2883/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 22:55:31.180 2643-2883/system_process I/WindowManager: Lock screen displayed!
+09-08 22:55:31.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:true
+09-08 22:55:31.310 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 1...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/System.out: test,sl:false
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2_1...
+09-08 22:55:31.320 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 22:55:31.330 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 4...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 7...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 8...
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 22:55:31.350 3379-3379/com.google.android.googlequicksearchbox I/n: Launch sales thread
+09-08 22:55:31.360 3379-3379/com.google.android.googlequicksearchbox I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
+09-08 22:55:31.370 3379-3379/com.google.android.googlequicksearchbox I/b: Launch AndroidGetData thread
+09-08 22:55:33.130 1250-2058/? I/AudioHardware: open playback drv
+09-08 22:55:33.150 2643-2883/system_process W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=2695, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
+09-08 22:55:33.210 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
+09-08 22:55:33.240 2643-2654/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@41ae6b38 attribute=android.view.inputmethod.EditorInfo@41ad33e0, token = android.os.BinderProxy@41c2cfb0
+09-08 22:55:33.530 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 22:56:12.760 2643-2654/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=WhaleCo.WhaleBook/Home} from pid 2817
+09-08 22:56:12.890 3684-3684/? D/dalvikvm: Late-enabling CheckJNI
+09-08 22:56:12.900 2643-2833/system_process I/ActivityManager: Start proc WhaleCo.WhaleBook for activity WhaleCo.WhaleBook/Home: pid=3684 uid=10078 gids={50078}
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper; interface 2425 'Landroid/view/View$OnUnhandledKeyEventListener;'
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$OnUnhandledKeyEventListenerWrapper;' failed
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x2bc5 at 0x1f in Landroid/support/v4/view/ViewCompat;.addOnUnhandledKeyEventListener
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.dispatchApplyWindowInsets
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x5180 at 0x14 in Landroid/support/v4/view/ViewCompat;.onApplyWindowInsets
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook I/dalvikvm: Failed resolving Landroid/support/v4/view/ViewCompat$1; interface 2415 'Landroid/view/View$OnApplyWindowInsetsListener;'
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook W/dalvikvm: Link of class 'Landroid/support/v4/view/ViewCompat$1;' failed
+09-08 22:56:13.420 3684-3684/WhaleCo.WhaleBook D/dalvikvm: DexOpt: unable to opt direct call 0x2bc2 at 0x0f in Landroid/support/v4/view/ViewCompat;.setOnApplyWindowInsetsListener
+09-08 22:56:13.680 3684-3684/WhaleCo.WhaleBook D/OpenGLRenderer: Enabling debug mode 0
+09-08 22:56:15.080 1250-2058/? I/AudioHardware: open playback drv
+09-08 22:56:23.750 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/Home: +872ms
+09-08 22:56:34.240 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 22:57:00.970 2643-2940/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/LoginPage} from pid 3684
+09-08 22:57:01.310 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/LoginPage: +332ms
+09-08 22:57:08.235 D/installd( 123): DexInv: --- END '/data/data/app/WhaleCo.WhaleBook' (success) ---
+09-08 22:57:08.245 D/PackageManager( 171): Registered content provider: WhaleCo.WhaleBook, className = WhaleCo.WhaleBook.LoginAuth, isSyncable = false
+09-08 22:57:09.245 D/PackageManager( 171): Providers: WhaleCo.WhaleBook
+09-08 22:57:46.245 D/PackageManager( 171): Services: WhaleCo.WhaleBook.LoginAuth
+09-08 22:58:01.245 D/PackageManager( 171): Activities: WhaleCo.WhaleBook.LoginAuth WhaleCo.WhaleBook.Home
+09-08 22:58:15.245 I/ActivityManager( 171): Force stopping package WhaleCo.WhaleBook uid=10144
+09-08 22:58:30.435 I/installd( 123): move /data/dalvik-cache/data@data@app@WhaleCo.WhaleBook@LoginAuth -> /data/data/app/WhaleCo.WhaleBook@LoginAuth
+09-08 22:58:39.965 D/szipinf ( 171): Initializing inflate state
+09-08 22:58:51.975 D/HomeLoaders( 273): application intent received: android.intent.action.PACKAGE_ADDED, replacing=false
+09-08 22:58:59.975 D/HomeLoaders( 273): --> package:WhaleCo.WhaleBook
+09-08 22:59:08.975 D/HomeLoaders( 273): --> add package
+09-08 22:59:24.106 D/dalvikvm( 171): JIT code cache reset in 3 ms (1048556 bytes 1/0)
+09-08 22:59:50.116 D/dalvikvm( 171): GC_EXPLICIT freed 1458K, 34% free 8594K/12935K, external 1828K/2161K, paused 98ms
+09-08 23:01:10.126 D/Finsky ( 1999): [9] 1.packageInstalled: Package install status for "WhaleCo.WhaleBook" is 1
+09-08 23:05:48.276 D/szipinf ( 171): Initializing inflate state
+09-08 23:06:23.247 D/szipinf ( 171): Initializing inflate state
+09-08 23:06:59.657 D/szipinf ( 317): Initializing inflate state
+09-08 23:07:05.657 D/szipinf ( 171): Initializing inflate state
+09-08 23:07:28.687 D/szipinf ( 171): Initializing inflate state
+09-08 23:08:49.707 D/szipinf ( 317): Initializing inflate state
+09-08 23:08:50.757 D/szipinf ( 171): Initializing inflate state
+09-08 23:08:59.777 D/szipinf ( 317): Initializing inflate state
+09-08 23:09:40.817 D/szipinf ( 171): Initializing inflate state
+09-08 23:09:52.917 D/szipinf ( 317): Initializing inflate state
+09-08 23:09:58.927 D/szipinf ( 317): Initializing inflate state
+09-08 23:10:00.067 D/szipinf ( 317): Initializing inflate state
+09-08 23:10:11.088 D/szipinf ( 317): Initializing inflate state
+09-08 23:10:16.148 D/szipinf ( 317): Initializing inflate state
+09-08 23:10:28.248 D/szipinf ( 317): Initializing inflate state
+09-08 23:11:34.300 W/SharedBufferStack( 250): waitForCondition(LockCondition) timed out (identity=3, status=0). CPU may be pegged. trying again.
+09-08 23:11:39.301 W/SharedBufferStack( 250): waitForCondition(LockCondition) timed out (identity=3, status=0). CPU may be pegged. trying again.
+09-08 23:11:42.302 W/SharedBufferStack( 250): waitForCondition(LockCondition) timed out (identity=3, status=0). CPU may be pegged. trying again.
+09-08 23:11:48.293 W/SharedBufferStack( 250): waitForCondition(LockCondition) timed out (identity=3, status=0). CPU may be pegged. trying again.
+09-08 23:12:05.955 W/ActivityManager( 171): Timeout of broadcast BroadcastRecord{40b706d8 android.intent.action.PACKAGE_ADDED} - receiver=android.app.ActivityThread$ApplicationThr ead@40717ca0, started 10002ms ago
+09-08 23:12:10.955 W/ActivityManager( 171): Receiver during timeout: ResolveInfo{40afb560 com.android.server.AppsLaunchFailureReceiver p=0 o=0 m=0x208000}
+09-08 23:12:24.235 I/ActivityManager( 171): Start proc WhaleCo.WhaleBook for broadcast WhaleCo.WhaleBook.LoginAuth: pid=2067 uid=10048 gids={}
+09-08 23:13:32.265 I/Process ( 171): Sending signal. PID: 171 SIG: 3
+09-08 23:13:54.265 I/dalvikvm( 171): threadid=4: reacting to signal 3
+09-08 23:14:14.286 I/ActivityThread( 2067): Pub WhaleCo.WhaleBook.LoginAuth: WhaleCo.WhaleBook.LoginAuth
+09-08 23:14:26.366 I/ActivityManager( 171): No longer want com.google.android.maps.mytracks (pid 1520): hidden #16
+09-08 23:14:49.386 D/GTalkService( 292): handlePackageInstalled: re-initialize providers
+09-08 23:15:01.386 D/GTalkService( 292): [RawStanzaProvidersMgr] ##### searchProvidersFromIntent
+09-08 23:15:21.386 D/GTalkService( 292): [RawStanzaProvidersMgr] no intent receivers found
+09-08 23:15:30.400 3684-3684/WhaleCo.WhaleBook I/System.out: DEV: APP_CRASH - DUMPED://data/anr/traces.txt
+09-08 23:15:36.396 I/dalvikvm( 171): Wrote stack traces to '/data/anr/traces.txt'
+09-08 23:15:59.396 I/Process ( 171): Sending signal. PID: 265 SIG: 3
+09-08 23:15:59.396 I/dalvikvm( 265): threadid=4: reacting to signal 3
+09-08 23:16:06.400 2643-2833/system_process I/ActivityManager: START u0 {cmp=WhaleCo.WhaleBook/Timeline (has extras)} from pid 3684
+09-08 23:16:06.420 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:16:06.480 3684-3684/WhaleCo.WhaleBook D/dalvikvm: GC_FOR_ALLOC freed 345K, 10% free 4141K/4556K, paused 21ms, total 22ms
+09-08 23:17:06.650 2643-2657/system_process I/ActivityManager: Displayed WhaleCo.WhaleBook/Timeline: +238ms
+09-08 23:17:34.240 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:17:52.370 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:25:58.320 2643-2673/system_process I/PowerManagerService: Going to sleep by user request...
+09-08 23:26:58.760 2643-2643/system_process D/Sensors: AccelerationSensor::~enable(0, 0)
+09-08 23:26:58.790 2695-2695/com.android.systemui V/KeyguardHostView: Initial transport state: 0, pbstate=0
+09-08 23:28:58.850 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_OFF
+09-08 23:29:58.860 2643-3660/system_process D/LightsService: Excessive delay setting light: 103ms
+09-08 23:32:58.860 1246-1246/? D/SurfaceFlinger: Screen released, type=0 flinger=0xb82d4450
+09-08 23:35:58.860 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x1
+09-08 23:35:58.940 2695-2695/com.android.systemui V/KeyguardHostView: hide transport, gen:2
+09-08 23:36:58.940 2695-2695/com.android.systemui V/KeyguardHostView: music state changed: 0
+09-08 23:37:58.980 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:38:59.030 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info BACK* HOME* RECENT* CLOCK* search >
+09-08 23:39:59.280 2643-2804/system_process D/AlarmManager: overriden alarm callingpackages[0] com.google.android.backuptransport
+09-08 23:39:29.310 2643-2643/system_process D/EthernetService: ACTION_DEVICE_IDLE
+09-08 23:39:48.220 2643-2673/system_process I/PowerManagerService: Waking up from sleep...
+09-08 23:39:48.290 2643-2643/system_process D/EthernetService: Intent.ACTION_SCREEN_ON  mEnableEthernet: false
+09-08 23:39:48.300 2643-2686/system_process D/ConnectivityService: Sampling interval elapsed, updating statistics ..
+09-08 23:39:48.310 2643-2686/system_process D/ConnectivityService: Done.
+09-08 23:39:48.310 2643-2686/system_process D/ConnectivityService: Setting timer for 720seconds
+09-08 23:39:48.320 1246-1246/? D/SurfaceFlinger: Screen acquired, type=0 flinger=0xb82d4450
+09-08 23:39:48.320 1246-1246/? I/hwcomposer: hwc_blank disp = 0 blank = 0x0
+09-08 23:39:48.390 2643-2833/system_process V/KeyguardServiceDelegate: **** SHOWN CALLED ****
+09-08 23:39:48.390 2643-2833/system_process D/Sensors: AccelerationSensor::~enable(0, 1)
+09-08 23:39:48.390 2643-2833/system_process I/WindowManager: Lock screen displayed!
+09-08 23:39:48.400 2643-2833/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test isT:true
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test ver:v20141010
+09-08 23:39:48.500 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 1...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/System.out: test,sl:false
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 2_1...
+09-08 23:39:48.510 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.b:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 4...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 7...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox I/MainBroadcastReceiver: test go on 8...
+09-08 23:39:48.520 3379-3379/com.google.android.googlequicksearchbox W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1490 android.content.ContextWrapper.startService:494 android.support.v4.MainBroadcastReceiver.l:-1 android.support.v4.MainBroadcastReceiver.a:-1 android.support.v4.MainBroadcastReceiver.onReceive:-1
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/n: Launch sales thread
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/System.out: imsi:25663651-bf3b-43ec-a9f6-988781d197b8
+09-08 23:39:48.530 3379-3379/com.google.android.googlequicksearchbox I/b: Launch AndroidGetData thread
+09-08 23:39:50.330 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:39:50.360 2643-2658/system_process W/BroadcastQueue: Permission Denial: broadcasting Intent { act=android.intent.action.USER_PRESENT flg=0x24000010 } from com.android.keyguard (pid=2695, uid=10012) is not exported from uid 1000 due to receiver com.google.android.googlequicksearchbox/android.support.v4.client.AndroidReceiver
+09-08 23:39:50.410 2695-2695/com.android.systemui D/PhoneStatusBar: disable: < expand icons alerts ticker system_info back* home* recent* clock* search >
+09-08 23:39:50.420 2643-2654/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@419398c8 attribute=android.view.inputmethod.EditorInfo@41c57ea8, token = android.os.BinderProxy@41c2cfb0
+09-08 23:40:05.170 2695-2695/com.android.systemui V/PanelView: animationTick called with dtms=0; nothing to do (h=0.3154111 v=-0.0)
+09-08 23:40:05.170 2695-2695/com.android.systemui V/PanelView: animationTick called with dtms=-5; nothing to do (h=0.3154111 v=-0.0)
+09-08 23:40:05.270 2643-2851/system_process W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@418ca1a0 attribute=null, token = android.os.BinderProxy@41c2cfb0
+09-08 23:40:42.300 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:41:46.310 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED
+09-08 23:41:57.480 2643-2833/system_process I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.camera2/com.android.camera.CameraLauncher bnds=[130,685][198,753]} from pid 2817
+09-08 23:41:57.490 1250-2058/? I/AudioHardware: open playback drv
+09-08 23:41:57.630 2643-2654/system_process I/ActivityManager: Start proc com.android.camera2 for activity com.android.camera2/com.android.camera.CameraLauncher: pid=4140 uid=10027 gids={50027, 3003, 1028, 1015}
+09-08 23:41:58.040 4140-4140/com.android.camera2 V/NFC: this device does not have NFC support
+09-08 23:41:58.050 2643-2882/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:41:58.070 1250-4058/? D/CameraService: ro.cameraservice.camerahotplug=0
+09-08 23:41:58.070 4140-4140/com.android.camera2 V/CameraHolder: open camera 0
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: Client(3) constructor
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: setDataSource(/system/media/audio/ui/camera_click.ogg)
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: player type = 3
+09-08 23:41:58.080 1250-2692/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.080 1250-2692/? I/AwesomePlayer: setDataSource_l(URL suppressed)
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService:  setDataSource
+09-08 23:41:58.080 1250-2692/? W/MediaPlayerService: [3] prepareAsync
+09-08 23:41:58.090 1250-4160/? D/MediaExtractor: Autodetected media content as 'application/ogg' with confidence 0.20
+09-08 23:41:58.110 1250-4160/? D/AwesomePlayer: initAudioDecoder: using stagefright audio decoder
+09-08 23:41:58.110 1250-4160/? D/AwesomePlayer: initAudioDecoder: durationUs: 191904
+09-08 23:41:58.110 1250-4160/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: Client(4) constructor
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: setDataSource(/system/media/audio/ui/VideoRecord.ogg)
+09-08 23:41:58.110 1250-2692/? W/MediaPlayerService: player type = 3
+09-08 23:41:58.120 1250-2692/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.120 1250-2692/? I/AwesomePlayer: setDataSource_l(URL suppressed)
+09-08 23:41:58.120 1250-2692/? W/MediaPlayerService:  setDataSource
+09-08 23:41:58.120 1250-2692/? W/MediaPlayerService: [4] prepareAsync
+09-08 23:41:58.130 1250-4164/? D/MediaExtractor: Autodetected media content as 'application/ogg' with confidence 0.20
+09-08 23:41:58.140 1250-4164/? D/AwesomePlayer: initAudioDecoder: using stagefright audio decoder
+09-08 23:41:58.140 1250-4164/? D/AwesomePlayer: initAudioDecoder: durationUs: 229750
+09-08 23:41:58.140 1250-4164/? W/CameraMediaPlayer: CameraMediaPlayer notify from the same process
+09-08 23:41:58.150 1250-2692/? I/CameraClient: Opening camera 0
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-In OMX_ComponentInit, allocating component,0xb7225f78
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-gomxcam_bIsInited -1,0,0,0
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-gomxcam_bIsInited is ok
+09-08 23:41:58.150 1250-2692/? D/OMX_CAM: OMX-Input openmaxStandPort is NULL!
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: IPP-IPP_Open
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: IPP-IPP_Open 0xb7249520
+09-08 23:41:58.150 1250-2692/? D/IPP_CAM: OMX-Get coda Handle Success!
+09-08 23:41:58.150 1250-2692/? E/AL_LIBC: MJPG open version 20131022:
+09-08 23:41:58.150 1250-2692/? E/AL_LIBC: ===Attention ! fb_port is NULL
+09-08 23:41:58.200 1250-2692/? E/AL_LIBC: al-codec/video/vde_core/vde_utils.c 82,open /dev/mali0 node
+09-08 23:41:58.210 1250-2692/? E/AL_LIBC: alloce buf sucess :
+09-08 23:41:58.210 1250-2692/? E/AL_LIBC: MJPG open sucess:
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-dlopen libhdri.so failed because dlopen failed: library "libhdri.so" not found
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-OMX_ACT_IndexParamSensorSelect 0,0,1
+09-08 23:41:58.210 1250-2692/? D/IPP_CAM: OMX-Select SensorType 0,0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-gomxcam_bDoneQuery 0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-Select OMX_PrimarySensor 0
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: OMX-Param-SensorType 6
+09-08 23:41:58.260 1250-2692/? D/IPP_CAM: V4l2- Direct cons. 2132
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-back
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-open Device Id is 1b,0
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-mod_queryctl exposure err
+09-08 23:41:58.270 1250-2692/? D/IPP_CAM: V4l2-Got range of exposure: 32-32; 4095-10
+09-08 23:41:58.270 1250-2692/? E/OMX_VCE: OMX-In OMX_ComponentInit, allocating component,0xb724bad0
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: OMX-xEVCompensation set 0,2845
+09-08 23:41:58.390 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV 0
+09-08 23:41:58.390 1250-2692/? E/OMX_VCE: OMX-In OMX_ComponentInit, allocating component,0xb72d2408
+09-08 23:41:58.400 1250-2692/? D/CameraHal: mVideoFormat=yuv420sp
+09-08 23:41:58.400 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_set_parm 0 0
+09-08 23:41:58.400 1250-2692/? D/IPP_CAM: OMX-ERR:OMX_ACT_IndexConfigVideoParam process frame rate now!!
+09-08 23:41:58.400 2643-2940/system_process D/Sensors: AccelerationSensor::~setDelay(0, 1000000)
+09-08 23:41:58.420 4140-4140/com.android.camera2 V/CAM_PhotoModule: Preview size is 640x480
+09-08 23:41:58.420 4140-4140/com.android.camera2 D/MediaProfiles: initCamcorderProfiles!
+09-08 23:41:58.430 4140-4140/com.android.camera2 W/CAM_PhotoModule: startPreview: surfaceTexture is not ready.
+09-08 23:41:58.430 2643-2655/system_process D/Sensors: AccelerationSensor::~setDelay(0, 30000000)
+09-08 23:41:58.550 4140-4140/com.android.camera2 D/CameraStorage: External storage state=mounted
+09-08 23:41:58.810 4140-4140/com.android.camera2 D/OpenGLRenderer: Enabling debug mode 0
+09-08 23:41:58.950 4140-4140/com.android.camera2 V/CAM_UI: SurfaceTexture ready.
+09-08 23:41:58.950 1250-2692/? D/CameraService: ro.cameraservice.camerahotplug=0
+09-08 23:41:58.970 4140-4140/com.android.camera2 V/CAM_PhotoModule: Preview size is 640x480
+09-08 23:41:59.000 4140-4140/com.android.camera2 V/CAM_PhotoModule: startPreview
+09-08 23:41:59.000 1250-2692/? D/IPP_CAM: OMX-nPreviewRes 4,2,320,640
+09-08 23:41:59.000 1250-2692/? D/CameraHal: CAMERA_QUERY_RESOLUTION_PREVIEW 640,480
+09-08 23:41:59.140 2643-2657/system_process I/ActivityManager: Displayed com.android.camera2/com.android.camera.CameraLauncher: +1s518ms
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-store addr b732e138,b732d8e8,12f79000
+09-08 23:41:59.240 1250-2692/? D/CameraHal: start watchdog
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-Stream On ff Set...896
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: OMX-set v res 0,280,1e0,2f
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: V4l2-OMX_COLOR_FormatYVU420SemiPlanar 3132564e
+09-08 23:41:59.240 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_set_parm 1e 0
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV -37281
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: OMX-set param,5070,0
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-reqbuf,6
+09-08 23:41:59.280 1250-2692/? D/IPP_CAM: V4l2-v4l2camera:v4l2_camera_querybuf 0,12cd6000
+09-08 23:41:59.290 1250-2692/? D/IPP_CAM: V4l2-camera_streamon status 0
+09-08 23:41:59.290 1250-2692/? D/IPP_CAM: V4l2-v4l2_camera_streamon
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-v4l2camera:Stream On OK! 0
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-V4L2_EXPOSURE_AUTO
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: OMX-xEVCompensation set 0,2845
+09-08 23:41:59.340 1250-2692/? D/IPP_CAM: V4l2-CAM_SET_EV 0
+09-08 23:41:59.360 1250-4187/? E/OMX_VCE: OMX-malloc ion addr! phy:13002000,vir:b1b0c000,len:28000
+09-08 23:42:06.290 2643-2643/system_process D/EthernetService: Intent.ACTION_BATTERY_CHANGED

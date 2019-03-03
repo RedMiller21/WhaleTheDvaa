@@ -1,3 +1,8 @@
+package BankingCo.MobileBanking;
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.RoomDatabase;
+
+
 var db = Room.databaseBuilder(this, AppDatabase::class.java, "Email_Address").allowMainThreadQueries().fallbackToDestructiveMigration().build()
 var emails = Emails.populateData()
 
@@ -14,17 +19,14 @@ SQL_Login.setOnClickListener{
         Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
 
     }
-
     else {
 
         Toast.makeText(applicationContext, "ERROR", Toast.LENGTH_SHORT).show()
 
     }
+
 }
 
-package BankingCo.MobileBanking;
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.RoomDatabase;
 
 @Database(entities = {Emails.class}, version = 1)
 
@@ -60,7 +62,7 @@ public interface DaoAccess {
 
 }
 
-;import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
