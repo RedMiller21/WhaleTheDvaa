@@ -1,5 +1,6 @@
 package whalethedvaa.whalethedvaa
 
+import android.arch.persistence.room.Room
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,12 +8,28 @@ import android.support.v7.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_base_menu.*
 
 class SQLI : AppCompatActivity() {
+    //declaring an array of the database type emails
+    private val emails : ArrayList<Emails> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sqli)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
+
+
+        // declare instance of database
+        var db = Room.databaseBuilder(
+            this,
+            AppDatabase::class.java, "Email_Address"
+        )
+            //allows room to recreate database tables in main thread without locking UI
+            .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
+
+        //var emails = Emails.populateData()
+        //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
         //Call information dialog creation
         InformationBtn.setOnClickListener{
@@ -30,6 +47,8 @@ class SQLI : AppCompatActivity() {
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
+
+
     }
 
     private fun informationDialog(){

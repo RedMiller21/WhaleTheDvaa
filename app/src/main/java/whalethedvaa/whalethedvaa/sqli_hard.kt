@@ -30,20 +30,20 @@ class sqli_hard : AppCompatActivity() {
             .build()
 
         var emails = Emails.populateData()
-        for (email in emails) db.daoAccess().insertOnlySingleUser(email)
+        //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
 
         SQL_Login.setOnClickListener{
             var searchText = SQL_Email.text.toString()
 
 
-            val emailCount = db.daoAccess().emailExists(searchText)
+            //val emailCount = db.daoAccess().emailExists(searchText)
 
-            if (emailCount > 0) {
-                Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
-            }
+            //if (emailCount > 0) {
+            //    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
+            //} else {
+            //    Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
+            //}
         }
 
         //Call information dialog creation

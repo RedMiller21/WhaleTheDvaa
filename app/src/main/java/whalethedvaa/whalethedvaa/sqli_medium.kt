@@ -16,7 +16,7 @@ class sqli_medium : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sqli)
+        setContentView(R.layout.activity_sqli_medium)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
@@ -32,11 +32,11 @@ class sqli_medium : AppCompatActivity() {
             .build()
 
         var emails = Emails.populateData()
-        for (email in emails) db.daoAccess().insertOnlySingleUser(email)
+        //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
         //db?.daoAccess()?.insertOnlySingleUser(emailAdd, password)
 
-        //todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
+        // todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
         SQL_Login.setOnClickListener{
 
             //simple validation of input using the most common SQLi statement
@@ -52,13 +52,13 @@ class sqli_medium : AppCompatActivity() {
             if (validation == false){
                 Toast.makeText(applicationContext, "Bad hacker!!! Try again", Toast.LENGTH_SHORT).show()
             } else{
-                val emailCount = db.daoAccess().emailExists(searchText)
+                //val emailCount = db.daoAccess().emailExists(searchText)
 
-                if (emailCount > 0) {
-                    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
-                }
+                //if (emailCount > 0) {
+                //    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
+                //} else {
+                //   Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
+                //}
             }
 
 
@@ -104,7 +104,7 @@ class sqli_medium : AppCompatActivity() {
         // Display a message on alert dialog
         //builder.setMessage("Which hint would you like")
 
-        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
+        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3", "Hint 4")
         //SET PROPERTIES USING METHOD CHAINING
         builder.setItems(hints){ _, which ->
             hintDialog(hints[which])
@@ -125,9 +125,10 @@ class sqli_medium : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("Test test test")
-            "Hint 2" -> builder.setMessage("Example hint 2")
-            "Hint 3" -> builder.setMessage("Example hint 3")
+            "Hint 1" -> builder.setMessage("You have been provided with the email whale@whalemail.sea, try entering this email into the login form")
+            "Hint 2" -> builder.setMessage("This page is vulnerable to code injection, the table name is Emails and columns are emailAddress and password")
+            "Hint 3" -> builder.setMessage("Remember you are trying to force the program to execute the query with a statement that will always return true")
+            "Hint 4" -> builder.setMessage("Try entering SELECT * FROM Emails WHERE emailAddress = whale@whalemail.sea OR 5=5 AND 1=1 and see what happens to the success message")
         }
 
         val dialog: AlertDialog = builder.create()

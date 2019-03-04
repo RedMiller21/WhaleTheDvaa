@@ -66,6 +66,7 @@ class DifficultySelector : AppCompatActivity() {
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, SQLI::class.java)
+                2 -> {builder.setTitle("SQLi Mitigation"); builder.setMessage("SQL should always be written using prepared statements. Prepared statements allow for the query to be handled as a seperate process to the main function, preventing code injection")}
                 3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage("These tokens should be completely randomised and should not follow any distinguishable pattern. The use of a time-based randomisation methods or algorithms to calculate the next code makes it easy to predict what the next code will be, using the current time. Instead, a randomisation function should be used to create a unique token not based on any pattern or other value as to avoid repetition or the chances of this token falling into the wrong hands and being used by an attacker to access a user's account.")}
                 4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthentication::class.java)

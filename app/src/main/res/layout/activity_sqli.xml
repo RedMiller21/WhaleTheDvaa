@@ -45,13 +45,29 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:text="SQL Injection"
             android:textColor="#FFFFFF" android:textSize="24sp"/>
-    <TextView
-            android:text="TextView"
+    <EditText
+            android:layout_width="354dp"
+            android:layout_height="65dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/SQL_Email" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp" android:layout_marginTop="157dp"
+            app:layout_constraintTop_toBottomOf="@+id/InformationBtn" android:textColor="@android:color/white"
+            android:textStyle="bold" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"/>
+    <Button
+            android:text="Login"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/SQL_Email"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/SQL_Login"
+            tools:layout_editor_absoluteX="163dp" android:layout_marginBottom="97dp"
+            app:layout_constraintBottom_toTopOf="@+id/BackBtn"/>
     <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/SQL_Login"/>
+            android:layout_width="221dp"
+            android:layout_height="95dp"
+            android:id="@+id/txtSuccessMsg" android:layout_marginEnd="104dp" android:layout_marginRight="104dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/SQL_Email" android:textColor="@android:color/white"
+            android:textStyle="bold"/>
 
 </android.support.constraint.ConstraintLayout>
