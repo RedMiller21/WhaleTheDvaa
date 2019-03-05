@@ -1,9 +1,10 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.view.LayoutInflater
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication.*
 
@@ -14,6 +15,8 @@ class PoorAuthentication : AppCompatActivity(){
         setContentView(R.layout.activity_poor_authentication)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
+        var pin: String = setPin()
+
 
         //Call function to change pin on screen
         NumPad1.setOnClickListener{numPadInput('1')}
@@ -25,23 +28,26 @@ class PoorAuthentication : AppCompatActivity(){
         NumPad7.setOnClickListener{numPadInput('7')}
         NumPad8.setOnClickListener{numPadInput('8')}
         NumPad9.setOnClickListener{numPadInput('9')}
+        NumPad0.setOnClickListener{numPadInput('0')}
 
         //Call function to reset the pin on screen
         ResetBtn.setOnClickListener{reset()}
 
         //Call function to confirm pin
-        ConfirmBtn.setOnClickListener {confirm()}
+        ConfirmBtn.setOnClickListener {pin = confirm(pin)}
 
         //Call information dialog creation
         InformationBtn.setOnClickListener{informationDialog()}
 
         //call hint dialog creation function
-        HintBtn.setOnClickListener{hintSelectionDialog()        }
+        HintBtn.setOnClickListener{hintSelectionDialog()}
+
+        //Call instructions dialog creation function
+        InstructionsBtn.setOnClickListener{instructionsDialog()}
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener{
-            val intent = Intent(this, VulnSelection::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
     }
 
@@ -49,7 +55,19 @@ class PoorAuthentication : AppCompatActivity(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Information")
-        builder.setMessage("Example Information")
+            .setMessage("Example Information")
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun instructionsDialog(){
+        val builder = AlertDialog.Builder(this)
+        // Set the alert dialog title
+        builder.setTitle("Poor Authentication Instructions")
+            .setMessage("Example Instructions")
+            .setPositiveButton(R.string.viewSocial){ _, _ -> socialDialog()}
+            .setCancelable(false)
+            .setNegativeButton(R.string.exit){ dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -60,9 +78,6 @@ class PoorAuthentication : AppCompatActivity(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("Hints")
-
-        // Display a message on alert dialog
-        builder.setMessage("Which hint would you like")
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
@@ -121,15 +136,68 @@ class PoorAuthentication : AppCompatActivity(){
         PinOutput.text = "----"
     }
 
-    private fun confirm(){
+    private fun confirm(pin: String): String {
         val text: String = PinOutput.text.toString()
-        val pin = "3466"
+        var pinReturn: String= "0000"
         if (pin == text){
             Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
+            FlagText.text = "F1NNTH3G00DB01"
+            pinReturn  = newPin()
         } else {
             Toast.makeText(this,"WRONG", Toast.LENGTH_LONG).show()
+            pinReturn = pin
         }
         PinOutput.text = "----"
+
+        return pinReturn
+    }
+
+    private fun viewState(): Int {
+        val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
+        val st = sharedPreferences.getInt("stateKey", 0)
+        println(st)
+        return st
+    }
+
+    private fun setPin(): String {
+        var pin = "0000"
+        when(viewState()){
+            1 -> pin = "3466"
+            2 -> pin = "9455"
+            3 -> pin = "5626"
+            4 -> pin = "1210"
+            5 -> pin = "0805"
+        }
+        return pin
+    }
+
+    private fun newPin(): String {
+        val st = (0..5).random()
+        val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putInt("stateKey", st)
+        editor.apply()
+        editor.commit()
+        return setPin()
+    }
+
+    private fun socialDialog(){
+        val li = LayoutInflater.from(this)
+        val promptsView = li.inflate(R.layout.social_dialog, null)
+        val builder = AlertDialog.Builder(this)
+
+        // set social.xml to social builder
+        builder.setView(promptsView)
+            .setCancelable(false)
+            .setNegativeButton(R.string.exit){ dialog, _ -> dialog.cancel() }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }
 
+
+//TODO: have dialog of social network
+//TODO: make phone book contacts
+//TODO: get face detection to recognise faces
+//TODO: COMMENT COMMENT COMMENT EVERYTHING!!!!!!!
+//TODO: Add hints and mitigation for each difficultly

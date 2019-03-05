@@ -91,8 +91,7 @@ class DifficultySelector : AppCompatActivity() {
         }
 
         BackBtn.setOnClickListener{
-            val intent = Intent(this, VulnSelection::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
 
     }

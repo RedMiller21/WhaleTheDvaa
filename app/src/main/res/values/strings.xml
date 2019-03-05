@@ -6,4 +6,6 @@
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_tfa_killer">tfaKiller</string>
+    <string name="exit">Exit</string>
+    <string name="viewSocial">Victim\'s Social account</string>
 </resources>

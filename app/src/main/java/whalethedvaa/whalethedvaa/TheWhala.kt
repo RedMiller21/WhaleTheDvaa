@@ -13,24 +13,16 @@ class TheWhala : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_the_whala)
 
-        //Call information dialog creation
-        InformationBtn.setOnClickListener{
-            informationDialog()
-        }
-
         GetSplashing.setOnClickListener{
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
 
-        Setting.setOnClickListener{
-            val intent = Intent(this, Settings::class.java)
-            startActivity(intent)
-        }
+        InstuctionsBtn.setOnClickListener{instructionsDialog()}
 
 
     }
-    private fun informationDialog(){
+    private fun instructionsDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("Hard Coding Information")
@@ -38,5 +30,6 @@ class TheWhala : AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
 
 }

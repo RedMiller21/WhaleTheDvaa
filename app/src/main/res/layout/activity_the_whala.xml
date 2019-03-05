@@ -18,27 +18,20 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:contentDescription="WhaleDesign"/>
     <Button
-            android:text="Setting"
+            android:text="Instructions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/Setting" android:layout_marginBottom="8dp"
+            android:id="@+id/InstuctionsBtn" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@+id/GetSplashing"
             app:layout_constraintStart_toStartOf="@+id/GetSplashing"
             android:background="#203864" android:textColor="#FFFFFF"/>
-    <Button
-            android:text="?"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/InformationBtn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold" android:background="#4472C4" android:textColor="#FFFFFF"/>
 
     <Button
             android:text="Get Splashing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/GetSplashing" android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/Setting" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/InstuctionsBtn" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
