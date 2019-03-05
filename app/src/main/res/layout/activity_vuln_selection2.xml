@@ -31,30 +31,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln1"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/Vuln7"
             app:layout_constraintEnd_toEndOf="@+id/ViewProgression"
             app:layout_constraintStart_toStartOf="@+id/ViewProgression" android:background="#4472C4"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.476"
+            android:layout_marginTop="120dp" app:layout_constraintTop_toBottomOf="@+id/SelectionText"/>
     <Button
             android:text="Sql\ninjection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln2"
             app:layout_constraintEnd_toStartOf="@+id/Vuln7"
-            android:layout_marginEnd="20dp" android:layout_marginRight="20dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/Vuln1" android:background="#4472C4" android:textColor="#FFFFFF"
+            android:layout_marginEnd="20dp" android:layout_marginRight="20dp"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp" android:layout_marginBottom="36dp"
+            app:layout_constraintBottom_toTopOf="@+id/Vuln3" app:layout_constraintHorizontal_bias="0.434"/>
     <Button
             android:text="Two-Factor\nAuthentication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Vuln3"
-            app:layout_constraintEnd_toStartOf="@+id/ViewProgression"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/Vuln2"
-            android:background="#4472C4" android:textColor="#FFFFFF" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+            android:background="#4472C4" android:textColor="#FFFFFF" android:layout_marginStart="72dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="72dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/Vuln5"
+            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="364dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
             android:text="Insecure\nTokens"
             android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Vuln7" android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp" android:visibility="invisible"/>
 
     <Button
             android:text="Insecure \nLogging"
@@ -71,17 +72,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/Vuln6"
             app:layout_constraintStart_toEndOf="@+id/Vuln7"
-            android:layout_marginLeft="20dp" android:layout_marginStart="20dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/Vuln1" android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"
+            android:background="#4472C4" android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginBottom="36dp" app:layout_constraintBottom_toTopOf="@+id/Vuln5"
+            app:layout_constraintHorizontal_bias="0.466"/>
     <Button
             android:text="Poor\nAuthentication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/Vuln5"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/Vuln6" app:layout_constraintStart_toEndOf="@+id/ViewProgression"
-            android:background="#4472C4" android:textColor="#FFFFFF" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
+            android:background="#4472C4" android:textColor="#FFFFFF" android:layout_marginEnd="72dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="72dp"
+            android:layout_marginBottom="364dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
             android:text="Insecure\nData\nStorage"
             android:layout_width="wrap_content"
@@ -89,13 +91,14 @@
             android:id="@+id/Vuln7"
             app:layout_constraintEnd_toEndOf="@+id/ViewProgression"
             app:layout_constraintStart_toStartOf="@+id/ViewProgression" android:background="#4472C4"
-            android:textColor="#FFFFFF" android:layout_marginTop="260dp" app:layout_constraintTop_toTopOf="parent"/>
+            android:textColor="#FFFFFF" android:layout_marginTop="392dp" app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
     <TextView
             android:text="Select Vulnerability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/SelectionText" android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/Vuln1" android:textColor="#FFFFFF"
+            android:id="@+id/SelectionText"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/ViewProgression"
             app:layout_constraintStart_toStartOf="@+id/ViewProgression" android:textSize="24sp"
             android:textStyle="italic" android:layout_marginTop="80dp" app:layout_constraintTop_toTopOf="parent"/>
