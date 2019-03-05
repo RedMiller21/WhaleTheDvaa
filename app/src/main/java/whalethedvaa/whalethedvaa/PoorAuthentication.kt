@@ -141,7 +141,7 @@ class PoorAuthentication : AppCompatActivity(){
         var pinReturn: String= "0000"
         if (pin == text){
             Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
-            FlagText.text = "F1NNTH3G00DB01"
+            FlagText.text = "F1NNTH3G00DB01" //TODO: F1NNTH3G00DB01
             pinReturn  = newPin()
         } else {
             Toast.makeText(this,"WRONG", Toast.LENGTH_LONG).show()
