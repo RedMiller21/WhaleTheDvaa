@@ -8,7 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_sqli.*
+import kotlinx.android.synthetic.main.activity_sqli_easy.*
 
 
 class sqli_easy : AppCompatActivity() {
