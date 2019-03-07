@@ -76,8 +76,7 @@ class sqli_medium : AppCompatActivity() {
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener{
-            val intent = Intent(this, VulnSelection::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
 
     }

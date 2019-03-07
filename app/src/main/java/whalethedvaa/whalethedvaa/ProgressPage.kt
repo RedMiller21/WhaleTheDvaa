@@ -1,17 +1,15 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.EditText
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N")
-    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d")
+    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N","F1NNTH3G00DB01")
+    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d", "C4PTB1RD23Y3")
     var killerFlags = arrayOf("c4sc4d1ng", "4M4Z1NG", "t4sty-k3lp")
     var easyFound: Int = 0
     var medFound: Int = 0
@@ -120,28 +118,31 @@ class ProgressPage : AppCompatActivity() {
         var flagFound : Boolean = true
         when {
             foundFlags.contains(flag) -> {errorMsg(1); return}
-            easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/6"; totalEasy.progress = easyFound*100/6; foundFlags += flag}
-            medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/6"; totalMedium.progress = medFound*100/6; foundFlags += flag}
-            killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/6"; totalKiller.progress = killerFound*100/6; foundFlags += flag}
+            easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/5"; totalEasy.progress = easyFound*100/5; foundFlags += flag}
+            medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/5"; totalMedium.progress = medFound*100/5; foundFlags += flag}
+            killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/5"; totalKiller.progress = killerFound*100/5; foundFlags += flag}
             else -> {errorMsg(0); return}
         }
         if(flagFound){
             totalFound++
-            txtTotal.text = "Total - $totalFound/18"
-            totalProgress.progress = totalFound*(100/18)
+            txtTotal.text = "Total - $totalFound/15"
+            totalProgress.progress = totalFound*(100/15)
+            if (totalFound == 15){
+                complete()
+            }
         }
     }
 
     private fun updateForm(){
-        txtTotal.text = "Total - $totalFound/18"
-        txtEasy.text = "Easy - $easyFound/6"
-        txtMed.text = "Medium - $medFound/6"
-        txtKiller.text = "Killer - $killerFound/6"
+        txtTotal.text = "Total - $totalFound/15"
+        txtEasy.text = "Easy - $easyFound/5"
+        txtMed.text = "Medium - $medFound/5"
+        txtKiller.text = "Killer - $killerFound/5"
 
-        totalEasy.progress = (easyFound*100)/6
-        totalMedium.progress = (medFound*100)/6
-        totalKiller.progress = (killerFound*100)/6
-        totalProgress.progress = (totalFound*100)/18
+        totalEasy.progress = (easyFound*100)/5
+        totalMedium.progress = (medFound*100)/5
+        totalKiller.progress = (killerFound*100)/5
+        totalProgress.progress = (totalFound*100)/15
     }
 
     private fun errorMsg(case : Int){
@@ -154,6 +155,16 @@ class ProgressPage : AppCompatActivity() {
         builder.setCancelable(false)
             .setTitle(title)
             .setNegativeButton("Okay"){ dialog, _ -> dialog.cancel() }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun complete(){
+        val builder = AlertDialog.Builder(this)
+        builder.setCancelable(false)
+            .setTitle("Congratulations!")
+            .setMessage("You've successfully found all the flags! Whale done!")
+            .setPositiveButton("Woohoo!"){ dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }

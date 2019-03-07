@@ -6,4 +6,69 @@
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_tfa_killer">tfaKiller</string>
+    <string name="exit">Exit</string>
+    <string name="viewSocial">Victim\'s Social account</string>
+    <string name="AboutTheWhale">White Hat Application for Learning and Evaluation, or WHALE, is a tool to help you
+        learn about how common Android app vulnerabilities can be exploited and mitigated. This app aims to help you
+        understand how you can develop secure Android applications by avoiding common design flaws or protecting against
+        common attacks, as well as improve your skills as a penetration tester conducting an evaluation of an app’s
+        security.
+    </string>
+    <string name="flags">The progress page is where you can enter the flags you have found from the vulnerabilities. You
+        can find this page through the main vulnerability selector, or the difficulty selector for each vulnerability.
+        Press ‘Enter Flag’ to add the flag you have found. You can view your progress in the progress bars which display
+        how many of the vulnerabilities you have completed overall, as well as broken down by difficulty level.
+    </string>
+    <string name="l33tSpeak">When you have successfully exploited a vulnerability, you will find a flag – a piece of
+        text in leet speak, or “L33T SP34K”, such as 4PPL3S or B4N4N4S. Once you have this flag, enter it in the
+        progress page to update your progress.
+    </string>
+    <string name="mitigation">On the difficulty selector page, you can view how your chosen vulnerability is caused and
+        commonly mitigated. This explains which flaws allow an attacker to exploit the application, and how they can be
+        fixed to prevent these kind of attacks.
+    </string>
+    <string name="vulnerabilties">When you select ‘Get Splashing’, you will be directed to the vulnerability selection
+        page. Here you will see the range of common Android vulnerabilities WHALE offers for you to try and exploit,
+        each with varying levels of difficulty – easy, medium, and ‘killer’.
+    </string>
+    <string name="hints">Each vulnerability comes with three hints that can be viewed by selecting the ‘Hints’ button in
+        the top right. The three hints will progressively give away more clues as to how you can exploit the
+        vulnerability and get the flag.
+    </string>
+    <string name="information">At the top right of each page is the information button whcih gives information about the
+        vulnerability. This will give you your scenario as a hacker trying to exploit the app, including any of the
+        details about your victim you may need, such as their email address. This will appear when you open the
+        vulnerability, as well as any time you click this button.
+    </string>
+    <string name="progress">The progress page is where you can enter the flags you have found from the vulnerabilities.
+        You can find this page through the main vulnerability selector, or the difficulty selector for each
+        vulnerability. Press ‘Enter Flag’ to add the flag you have found. You can view your progress in the progress
+        bars which display how many of the vulnerabilities you have completed overall, as well as broken down by
+        difficulty level.
+    </string>
+    <string name="instructions">instructions
+    </string>
+    <string name="hint1EPA">People sometimes use a name of someone they know as their as their pin.
+    </string>
+    <string name="hint2EPA">On older devices the number pad had letters on each key.
+    </string>
+    <string name="hint3EPA">hint3easy
+    </string>
+    <string name="hint1MPA">When hiding codes in the phone book people often name the contact in accordance with the company or site that it is used for</string>
+    <string name="hint2MPA">When hiding codes as a contact the name will be the code in a word form however the contact can be left empty</string>
+    <string name="tfamitigations">These tokens should be completely randomised and should not follow any distinguishable pattern. The use of a time-based randomisation methods or algorithms to calculate the next code makes it easy to predict what the next code will be, using the current time. Instead, a randomisation function should be used to create a unique token not based on any pattern or other value as to avoid repetition or the chances of this token falling into the wrong hands and being used by an attacker to access a user\'s account.
+    </string>
+    <string name="pamitigations">Due to the fact that the authentication of pins and passwords can only be as strong as the user\'s pin or password this can be problematic if the user stores their pins in obvious places or use words/phrases that are easily identifyable to the user. This can be prevented by using pins that do not relate to the user in any way. Increasing pins also helps as there can be far more combinationsfor possible pins that an attacker will have to try.
+    </string>
+    <string name="paeinstructions">To gain the flag use the user\'s social media account to figure out their pin
+    </string>
+    <string name="paeinfo">However safe a log in system can be made if a user does not hide their pins or creates their
+        pins from easily identifiable information the system can be easily bypassed
+    </string>
+    <string name="paminfo">Due to the number of passwords and pins people have to remember, ways of noting down pins are
+        often done such as including a contact in their phone to remind them of their pin
+    </string>
+    <string name="paminstructions">Using the user phone book search their contacts to find the hiden pin code</string>
+
+
 </resources>

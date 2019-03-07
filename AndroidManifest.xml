@@ -9,8 +9,6 @@
             android:roundIcon="@mipmap/whale_main_background"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".PoorAuthenticationMed">
-        </activity>
         <activity
                 android:name="com.example.paulb.whale2fa.tfaKiller"
                 android:label="@string/title_activity_tfa_killer"
@@ -49,6 +47,12 @@
         <activity android:name=".HardCoding">
         </activity>
         <activity android:name=".SQLI">
+        </activity>
+        <activity android:name=".sqli_easy">
+        </activity>
+        <activity android:name=".sqli_medium">
+        </activity>
+        <activity android:name=".sqli_hard">
         </activity>
         <activity android:name=".ManInTheMiddle">
         </activity>
