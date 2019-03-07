@@ -18,8 +18,7 @@ class VulnSelection : AppCompatActivity() {
         }
 
         BackBtn.setOnClickListener{
-            val intent = Intent(this, TheWhala::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
 
         ViewProgression.setOnClickListener{

@@ -1,3 +1,4 @@
+
 package whalethedvaa.whalethedvaa
 
 import android.content.Context
@@ -6,10 +7,9 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_poor_authentication.*
+import kotlinx.android.synthetic.main.activity_poor_authentication_med.*
 
-class PoorAuthentication : AppCompatActivity(){
-
+class PoorAuthenticationMed : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poor_authentication)
@@ -51,11 +51,12 @@ class PoorAuthentication : AppCompatActivity(){
         }
     }
 
+
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Information")
-            .setMessage(R.string.paeinfo)
+            .setMessage(R.string.paminfo)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -64,7 +65,7 @@ class PoorAuthentication : AppCompatActivity(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
-            .setMessage(R.string.paeinstructions)
+            .setMessage(R.string.paminstructions)
             .setPositiveButton(R.string.viewSocial){ _, _ -> socialDialog()}
             .setCancelable(false)
             .setNegativeButton(R.string.exit){ dialog, _ -> dialog.cancel() }
@@ -104,11 +105,11 @@ class PoorAuthentication : AppCompatActivity(){
         builder.setTitle(chosenHint)
         when(chosenHint){
             "Hint 1" -> {
-                builder.setMessage(R.string.hint1EPA)
-                .setTitle(chosenHint)
+                builder.setMessage(R.string.hint1MPA)
+                    .setTitle(chosenHint)
             }
             "Hint 2" -> {
-                builder.setMessage(R.string.hint2EPA)
+                builder.setMessage(R.string.hint2MPA)
                     .setTitle(chosenHint)
             }
             "Hint 3" -> builder.setView(promptsView)
@@ -148,10 +149,9 @@ class PoorAuthentication : AppCompatActivity(){
     private fun confirm(pin: String): String {
         val text: String = PinOutput.text.toString()
         var pinReturn: String= "0000"
-        println(pin)
         if (pin == text){
             Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
-            FlagText.text = "F1NNTH3G00DB01" //TODO: F1NNTH3G00DB01
+            FlagText.text = "C4PTB1RD23Y3" //TODO: C4PTB1RD23Y3
             pinReturn  = newPin()
         } else {
             Toast.makeText(this,"WRONG", Toast.LENGTH_LONG).show()
@@ -172,11 +172,11 @@ class PoorAuthentication : AppCompatActivity(){
     private fun setPin(): String {
         var pin = "0000"
         when(viewState()){
-            1 -> pin = "3466"
-            2 -> pin = "9455"
-            3 -> pin = "5626"
-            4 -> pin = "1210"
-            5 -> pin = "0805"
+            1 -> pin = "8721"
+            2 -> pin = "5757"
+            3 -> pin = "2581"
+            4 -> pin = "3587"
+            5 -> pin = "2278"
         }
         return pin
     }
@@ -205,9 +205,3 @@ class PoorAuthentication : AppCompatActivity(){
     }
 }
 
-
-//TODO: have dialog of social network
-//TODO: make phone book contacts
-//TODO: get face detection to recognise faces
-//TODO: COMMENT COMMENT COMMENT EVERYTHING!!!!!!!
-//TODO: Add hints and mitigation for each difficultly
