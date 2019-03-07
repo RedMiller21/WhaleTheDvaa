@@ -1,17 +1,15 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.EditText
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N")
-    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d")
+    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N","F1NNTH3G00DB01")
+    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d", "C4PTB1RD23Y3")
     var killerFlags = arrayOf("c4sc4d1ng", "4M4Z1NG", "t4sty-k3lp")
     var easyFound: Int = 0
     var medFound: Int = 0

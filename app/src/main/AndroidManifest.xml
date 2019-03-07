@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/whale_main_background"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".PoorAuthenticationMed">
+        </activity>
         <activity
                 android:name="com.example.paulb.whale2fa.tfaKiller"
                 android:label="@string/title_activity_tfa_killer"

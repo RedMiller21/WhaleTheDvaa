@@ -37,12 +37,13 @@
             android:text="Get Splashing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/GetSplashing" android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/Setting" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/GetSplashing"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/InstuctionsBtn"/>
     <TextView
             android:text="White Hat Application and Evaluation"
             android:layout_width="wrap_content"
