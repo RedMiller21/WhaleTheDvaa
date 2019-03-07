@@ -13,7 +13,7 @@
             android:layout_width="245dp"
             android:layout_height="380dp" app:srcCompat="@drawable/whale_main"
             android:id="@+id/TheWhale"
-            android:layout_marginTop="76dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:contentDescription="WhaleDesign"/>

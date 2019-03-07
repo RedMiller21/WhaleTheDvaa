@@ -33,8 +33,9 @@
             android:id="@+id/Vuln1"
             app:layout_constraintEnd_toEndOf="@+id/ViewProgression"
             app:layout_constraintStart_toStartOf="@+id/ViewProgression" android:background="#4472C4"
-            android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.476"
-            android:layout_marginTop="120dp" app:layout_constraintTop_toBottomOf="@+id/SelectionText"/>
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/SelectionText"
+            app:layout_constraintBottom_toTopOf="@+id/Vuln3" app:layout_constraintVertical_bias="0.75"/>
     <Button
             android:text="Sql\ninjection"
             android:layout_width="wrap_content"
