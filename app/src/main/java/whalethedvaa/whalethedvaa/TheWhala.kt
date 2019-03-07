@@ -18,7 +18,7 @@ class TheWhala : AppCompatActivity() {
             startActivity(intent)
         }
 
-        InstuctionsBtn.setOnClickListener{instructionsDialog()}
+        InstructionsBtn.setOnClickListener{instructionsDialog()}
 
 
     }
