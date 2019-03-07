@@ -33,33 +33,60 @@ public class Emails {
         @ColumnInfo(name = "password")
        public String password;
    }
-    //automatic generation of getters and setter functions
+
+    /**
+     * automatic generation of getters and setter functions
+     * @return uid
+     */
     @NonNull
     public int getUid() {
         return uid;
     }
 
+    /**
+     *
+     * @param uid based within the class
+     */
     public void setUid(@NonNull int uid) {
         this.uid = uid;
     }
 
+    /**
+     *
+     * @return the email address
+     */
     public String getEmailAddress() {
         return emailAddress;
     }
 
+    /**
+     * sets the email address to the class
+     * @param emailAddress
+     */
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
+    /**
+     * gets the password
+     * @return
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * sets the password of the class
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
-    //populating database
+    /**
+     * populating database
+     * @return
+     */
     public static Emails[] populateData(){
         return new Emails[]{
                 new Emails(1, "whale@whalemail.sea", "B055M4N"),

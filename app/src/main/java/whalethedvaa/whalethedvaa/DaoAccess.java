@@ -7,31 +7,35 @@ import android.arch.persistence.room.*;
 
 public @Dao interface DaoAccess {
 
-    //example queries
 
-//    @Dao
-//    interface RawDao {
-//        @RawQuery
-//        User getUserViaQuery(SupportSQLiteQuery query);
-//    }
-//    SimpleSQLiteQuery query = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ? LIMIT 1",
-//            new Object[]{userId});
-//    User user2 = rawDao.getUserViaQuery(query);
+    //todo implement instances of classes
+    //Emails isfoundeasy = RawDao.getUserEasy("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText");
+    //SimpleSQLiteQuery queryEasy = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ?", new Object[]{3});
+    //Emails isfound1  = whalethedvaa.whalethedvaa.RawDao.getUserViaQueryEasy(queryEasy);
 
-    @Insert
-    void insertOnlySingleUser(Emails emails);
+    //query for medium difficulty
+    //Emails isfoundmedium = RawDao.getUserMedium("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText");
+    //SimpleSQLiteQuery queryMedium = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ?",
+            //new Object[]{3});
+    //Emails isfoundmedium2 = RawDao.getUserViaQueryMedium(queryMedium);
 
-    @Query("SELECT * FROM Emails WHERE uid=:uid")
-    Emails fetchOneEmailsByEmailsID(int uid);
+    //todo decide on Killer vulnerability setting/code
+    //Emails isfoundKiller = RawDao.getUserKiller("");
 
-    @Update
-    void updateEmails(Emails emails);
+    //@Insert
+    //void insertOnlySingleUser(Emails emails);
 
-    @Delete
-    void deleteEmail(Emails emails);
+    //@Query("SELECT * FROM Emails WHERE uid=:uid")
+    //Emails fetchOneEmailsByEmailsID(int uid);
 
-    @Query("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText")
-    int emailExists(String searchText);
+    //@Update
+    //void updateEmails(Emails emails);
+
+    //@Delete
+    //void deleteEmail(Emails emails);
+
+    //@Query("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText")
+    //int emailExists(String searchText);
 
     //@Query(searchText)
     //int emailExists(String searchText);
