@@ -18,7 +18,7 @@ class DifficultySelector : AppCompatActivity() {
         KillerWhale.setOnClickListener{
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
-                2 -> intent = Intent(this, SQLI::class.java)
+                2 -> intent = Intent(this, sqli_hard::class.java)
                 3 -> intent = Intent(this, tfaKiller::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthentication::class.java)
@@ -33,7 +33,7 @@ class DifficultySelector : AppCompatActivity() {
         WhaleMed.setOnClickListener{
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
-                2 -> intent = Intent(this, SQLI::class.java)
+                2 -> intent = Intent(this, sqli_medium::class.java)
                 3 -> intent = Intent(this, tfaMedium::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthenticationMed::class.java)
@@ -48,7 +48,7 @@ class DifficultySelector : AppCompatActivity() {
         whaleasy.setOnClickListener{
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
-                2 -> intent = Intent(this, SQLI::class.java)
+                2 -> intent = Intent(this, sqli_easy::class.java)
                 3 -> intent = Intent(this, tfaEasy::class.java)
                 4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthentication::class.java)

@@ -2,11 +2,13 @@
 
 package whalethedvaa.whalethedvaa
 
+import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli.*
 
@@ -31,36 +33,23 @@ class sqli_medium : AppCompatActivity() {
             .fallbackToDestructiveMigration()
             .build()
 
-        var emails = Emails.populateData()
-        //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
-        //db?.daoAccess()?.insertOnlySingleUser(emailAdd, password)
+
+        val headersText = "EMAIL       PASSWORD"
+        val accountinfoone = "whale@whalemail.sea     .rÏ.îNlbÄC*Z"
+
+        val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
+        textView.text = headersText;
+        textView.text = accountinfoone;
 
         // todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
         SQL_Login.setOnClickListener{
+            //todo change this to input
+            var Encryption = SQL_Email.text.toString()
 
-            //simple validation of input using the most common SQLi statement
-            var searchText = SQL_Email.text.toString()
-            var badhacker : String  = "SELECT * FROM Emails WHERE uid = 2 OR 1=1"
-
-            var validation = true;
-
-            if (searchText == badhacker){
-                validation = false
+            if (Encryption == "MD5 Base64"){
+                Toast.makeText(applicationContext, "FLAG - NICEW4N", Toast.LENGTH_SHORT).show()
             }
-
-            if (validation == false){
-                Toast.makeText(applicationContext, "Bad hacker!!! Try again", Toast.LENGTH_SHORT).show()
-            } else{
-                //val emailCount = db.daoAccess().emailExists(searchText)
-
-                //if (emailCount > 0) {
-                //    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
-                //} else {
-                //   Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
-                //}
-            }
-
 
         }
 

@@ -1,10 +1,12 @@
 package whalethedvaa.whalethedvaa
 
+import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli.*
 
@@ -32,10 +34,7 @@ class sqli_hard : AppCompatActivity() {
         var emails = Emails.populateData()
         //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
-
         SQL_Login.setOnClickListener{
-            var searchText = SQL_Email.text.toString()
-
 
             //val emailCount = db.daoAccess().emailExists(searchText)
 
@@ -43,7 +42,7 @@ class sqli_hard : AppCompatActivity() {
             //    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
             //} else {
             //    Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
-            //}
+            //
         }
 
         //Call information dialog creation

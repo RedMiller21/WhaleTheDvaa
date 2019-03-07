@@ -8,7 +8,7 @@ import whalethedvaa.whalethedvaa.Emails
 @Dao
 public interface RawDao {
     @RawQuery
-    fun getUserEasy(queryEasy: SupportSQLiteQuery): Int
+    fun getUserEasy(queryEasy: SupportSQLiteQuery): String
 
     @RawQuery
     fun getUserMedium(queryMedium: SupportSQLiteQuery): Emails

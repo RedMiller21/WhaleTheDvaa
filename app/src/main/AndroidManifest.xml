@@ -50,6 +50,12 @@
         </activity>
         <activity android:name=".SQLI">
         </activity>
+        <activity android:name=".sqli_easy">
+        </activity>
+        <activity android:name=".sqli_medium">
+        </activity>
+        <activity android:name=".sqli_hard">
+        </activity>
         <activity android:name=".ManInTheMiddle">
         </activity>
         <activity android:name=".InsecureDataStorage">
