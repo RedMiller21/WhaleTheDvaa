@@ -1,10 +1,12 @@
 package whalethedvaa.whalethedvaa
 
+import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli.*
 
@@ -15,7 +17,7 @@ class sqli_easy : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sqli)
+        setContentView(R.layout.activity_sqli_easy)
         val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
@@ -31,22 +33,36 @@ class sqli_easy : AppCompatActivity() {
             .build()
 
         var emails = Emails.populateData()
-        for (email in emails) db.daoAccess().insertOnlySingleUser(email)
+       // for (email in emails) {
+         //   val query = SimpleSQLiteQuery(
+           //     "INSERT INTO `Emails` (uid, emailAddress, password) VALUES(?, ?, ?)",
+             //    arrayOf(email.uid, email.emailAddress, email.password))
 
+           // db.rawDao().insertUser(query)
+        //}
 
         SQL_Login.setOnClickListener{
             //no validation on search text
             var searchText = SQL_Email.text.toString()
 
-            //for debugging - raw query storage
-            searchText = "SELECT COUNT(*) FROM Emails WHERE emailAddress=:" + searchText
+            val query = SimpleSQLiteQuery(
+                "SELECT COUNT(*) FROM Emails WHERE emailAddress= ?",
+                arrayOf(searchText)
+            )
 
-            val emailCount = db.daoAccess().emailExists(searchText)
+            val email = db.rawDao().getUserEasy(query)
 
-            if (emailCount > 0) {
-                Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
+            if (email > 0.toString()) {
+                val successText = "YAS CONGRATS"
+                val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
+                textView.text = successText;
+                //toast commented out for testing purposes
+               // Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
+                val badtext = "Email is not linked to an account"
+                val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
+                textView.text = badtext;
+                Toast.makeText(applicationContext, "FLAG - B055M4N", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -74,8 +90,10 @@ class sqli_easy : AppCompatActivity() {
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
-        builder.setTitle("Hard Coding Information")
-        builder.setMessage("Example Information")
+        builder.setTitle("SQL Injection - Easy")
+        builder.setMessage("You have been provided the email whale@whalemail.sea, use this login to gain as much information as possible." +
+                "This level shows how user data is stored insecurely and poorly verified. This field does not implement a lockout policy alongside allowing account enumeration. Account enumeration allows a hacker to " +
+                "identify active accounts by brute force, allowing active accounts to be easily identified. Show you understand how to enumerate accounts!")
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -111,9 +129,9 @@ class sqli_easy : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("The table name is Emails")
-            "Hint 2" -> builder.setMessage("The fields of the table emailaddress and uid")
-            "Hint 3" -> builder.setMessage("You are attempting to gain access by placing a query that will always execute, remember 1 = 1")
+            "Hint 1" -> builder.setMessage("You have been given the email whale@whalemail.sea, try entering this on the login screen")
+            "Hint 2" -> builder.setMessage("This page is vulnerable to account enumeration, remember that means you can show what emails exist and which do not!")
+            "Hint 3" -> builder.setMessage("Enter fish@whalemail.sea, note what happens to your success message.")
         }
 
         val dialog: AlertDialog = builder.create()
