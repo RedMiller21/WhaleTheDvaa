@@ -108,7 +108,7 @@
 02-29 04:11:39.070 4464-4464/Blubble.WhaleMail D/OpenGLRenderer: Enabling debug mode 0
 02-29 04:11:39.140 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Homepage: +590ms
 02-29 04:11:41.440 2643-2835/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Login} from pid 4464
-09-08 04:11:41.520 2643-2835/Blubble.WhaleMail I/System.out: USE_VALUES($USER, $SECUREPASS) ://data/data/Blubble.WhaleMail/Assets/Login_conf.txt
+09-08 04:11:41.520 2643-2835/Blubble.WhaleMail I/System.out: USE_VALUES($USER, $SECUREPASS) ://data/Blubble.WhaleMail/Assets/Login_conf.txt
 02-29 04:11:41.750 2643-2657/system_process I/ActivityManager: Displayed Blubble.WhaleMail/Login: +301ms
 02-29 04:11:45.820 2643-2708/system_process I/ActivityManager: START u0 {cmp=Blubble.WhaleMail/Inbox (has extras)} from pid 4464
 02-29 04:11:45.900 4464-4464/Blubble.WhaleMail D/dalvikvm: GC_FOR_ALLOC freed 363K, 10% free 4141K/4576K, paused 19ms, total 20ms
