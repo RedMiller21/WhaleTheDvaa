@@ -48,7 +48,8 @@ class sqli_medium : AppCompatActivity() {
 
             if (Encryption == "MD5 Base64"){
                 val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
-                textView.text = "Flag = N1C3W4N"
+                val flagMessage = "Flat = N1C3W4N"
+                textView.text = flagMessage
             }
 
         }
