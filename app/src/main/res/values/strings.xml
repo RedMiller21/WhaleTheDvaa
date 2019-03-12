@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WhaleTheDvaa</string>
     <string name="title_activity_vulnerability_selection">Vulnerability Selection</string>
-    <string name="title_activity_vuln_selection">Vulnability Selection</string>
+    <string name="title_activity_vuln_selection">Vulnerability Selection</string>
     <string name="flag">Enter Flag</string>
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
