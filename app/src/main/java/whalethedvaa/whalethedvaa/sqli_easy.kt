@@ -2,7 +2,6 @@ package whalethedvaa.whalethedvaa
 
 import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -54,14 +53,14 @@ class sqli_easy : AppCompatActivity() {
 
             if (email > 0.toString()) {
                 val successText = "YAS CONGRATS"
-                val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
-                textView.text = successText;
+                val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
+                textView.text = successText
                 //toast commented out for testing purposes
                // Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
             } else {
                 val badtext = "Email is not linked to an account"
-                val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
-                textView.text = badtext;
+                val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
+                textView.text = badtext
                 Toast.makeText(applicationContext, "FLAG - B055M4N", Toast.LENGTH_SHORT).show()
             }
         }
@@ -77,10 +76,7 @@ class sqli_easy : AppCompatActivity() {
         }
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
-            val intent = Intent(this, VulnSelection::class.java)
-            startActivity(intent)
-        }
+        BackBtn.setOnClickListener{onBackPressed()}
 
     }
 
@@ -91,9 +87,7 @@ class sqli_easy : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("SQL Injection - Easy")
-        builder.setMessage("You have been provided the email whale@whalemail.sea, use this login to gain as much information as possible." +
-                "This level shows how user data is stored insecurely and poorly verified. This field does not implement a lockout policy alongside allowing account enumeration. Account enumeration allows a hacker to " +
-                "identify active accounts by brute force, allowing active accounts to be easily identified. Show you understand how to enumerate accounts!")
+        builder.setMessage(R.string.sqliEInfo)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -129,9 +123,9 @@ class sqli_easy : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("You have been given the email whale@whalemail.sea, try entering this on the login screen")
-            "Hint 2" -> builder.setMessage("This page is vulnerable to account enumeration, remember that means you can show what emails exist and which do not!")
-            "Hint 3" -> builder.setMessage("Enter fish@whalemail.sea, note what happens to your success message.")
+            "Hint 1" -> builder.setMessage(R.string.sqliEHintOne)
+            "Hint 2" -> builder.setMessage(R.string.sqliEHintTwo)
+            "Hint 3" -> builder.setMessage(R.string.sqliEHintThree)
         }
 
         val dialog: AlertDialog = builder.create()

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication.*
-
+//:TODO hidden spelt wrong
 class PoorAuthentication : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,9 +36,6 @@ class PoorAuthentication : AppCompatActivity(){
         //Call function to confirm pin
         ConfirmBtn.setOnClickListener {pin = confirm(pin)}
 
-        //Call information dialog creation
-        InformationBtn.setOnClickListener{informationDialog()}
-
         //call hint dialog creation function
         HintBtn.setOnClickListener{hintSelectionDialog()}
 
@@ -46,18 +43,9 @@ class PoorAuthentication : AppCompatActivity(){
         InstructionsBtn.setOnClickListener{instructionsDialog()}
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
-            onBackPressed()
-        }
-    }
+        BackBtn.setOnClickListener{onBackPressed()}
 
-    private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
-        // Set the alert dialog title
-        builder.setTitle("Poor Authentication Information")
-            .setMessage(R.string.paeinfo)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+        instructionsDialog()
     }
 
     private fun instructionsDialog(){
@@ -111,7 +99,10 @@ class PoorAuthentication : AppCompatActivity(){
                 builder.setMessage(R.string.hint2EPA)
                     .setTitle(chosenHint)
             }
-            "Hint 3" -> builder.setView(promptsView)
+            "Hint 3" -> {
+                builder.setView(promptsView)
+                    .setMessage(R.string.hint3EPA)
+            }
         }
 
         val dialog: AlertDialog = builder.create()
@@ -147,11 +138,11 @@ class PoorAuthentication : AppCompatActivity(){
 
     private fun confirm(pin: String): String {
         val text: String = PinOutput.text.toString()
-        var pinReturn: String= "0000"
+        var pinReturn: String = "0000"
         println(pin)
         if (pin == text){
             Toast.makeText(this,"Correct", Toast.LENGTH_LONG).show()
-            FlagText.text = "F1NNTH3G00DB01" //TODO: F1NNTH3G00DB01
+            FlagText.text = "F1NNDOG" //TODO: F1NNDOG
             pinReturn  = newPin()
         } else {
             Toast.makeText(this,"WRONG", Toast.LENGTH_LONG).show()

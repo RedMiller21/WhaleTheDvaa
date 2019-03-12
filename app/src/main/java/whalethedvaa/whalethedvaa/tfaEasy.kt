@@ -3,13 +3,12 @@ package com.example.paulb.whale2fa
 import android.app.AlertDialog
 import android.app.Dialog
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_tfa_easy.*
 import whalethedvaa.whalethedvaa.R
-
-import java.util.Random
+import java.util.*
 
 class tfaEasy : AppCompatActivity() {
 
@@ -45,7 +44,7 @@ class tfaEasy : AppCompatActivity() {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("New Email")
         showCode.setMessage("Your code is $code")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -54,7 +53,7 @@ class tfaEasy : AppCompatActivity() {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("Success!")
         showCode.setMessage("Welcome back, Victim. \n*p0k3rf4c3*")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -63,7 +62,7 @@ class tfaEasy : AppCompatActivity() {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("Success!")
         showCode.setMessage("Welcome back, Hacker. \nYour credentials are correct")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -96,7 +95,7 @@ class tfaEasy : AppCompatActivity() {
         txtCode.visibility = View.VISIBLE
     }
 
-    fun enterEmail(v: View) {
+    fun enterEmail() {
         when (txtEmail.text.toString()) {
             "victim@whalemail.com" -> {
                 showCodeInput()

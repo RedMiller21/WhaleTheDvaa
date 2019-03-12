@@ -12,10 +12,10 @@ import kotlinx.android.synthetic.main.activity_difficulty_selector.*
 class DifficultySelector : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_difficulty_selector);
+        setContentView(R.layout.activity_difficulty_selector)
         val selector = intent.getIntExtra("vulnerability",0)
         VulnText.text = intent.getStringExtra("name")
-        KillerWhale.setOnClickListener{
+        killerWhale.setOnClickListener{
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, sqli_hard::class.java)
@@ -30,7 +30,7 @@ class DifficultySelector : AppCompatActivity() {
             println(selector)
             startActivity(intent)
         }
-        WhaleMed.setOnClickListener{
+        whaleMed.setOnClickListener{
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, sqli_medium::class.java)
@@ -68,16 +68,13 @@ class DifficultySelector : AppCompatActivity() {
                 2 -> intent = Intent(this, SQLI::class.java)
                 3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage(R.string.tfamitigations)}
                 4 -> intent = Intent(this, InsecureTokens::class.java)
-                5 -> {builder.setTitle("2FA Mitigations"); builder.setMessage(R.string.pamitigations)}
+                5 -> {builder.setTitle("Poor Authentication"); builder.setMessage(R.string.pamitigations)}
                 6 -> intent = Intent(this, InsecureLogging::class.java)
                 7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
             }
             val dialog: android.support.v7.app.AlertDialog = builder.create()
             dialog.show()
-           // intent.putExtra("Level",2)
-           // println(selector)
-           // startActivity(intent)
         }
 
         //Go to progress page

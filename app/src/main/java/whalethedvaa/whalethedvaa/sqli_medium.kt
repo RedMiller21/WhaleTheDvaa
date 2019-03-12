@@ -2,9 +2,7 @@
 
 package whalethedvaa.whalethedvaa
 
-import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -38,9 +36,9 @@ class sqli_medium : AppCompatActivity() {
         val headersText = "EMAIL       PASSWORD"
         val accountinfoone = "whale@whalemail.sea     .rÏ.îNlbÄC*Z"
 
-        val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
-        textView.text = headersText;
-        textView.text = accountinfoone;
+        val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
+        textView.text = headersText
+        textView.text = accountinfoone
 
         // todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
         SQL_Login.setOnClickListener{
