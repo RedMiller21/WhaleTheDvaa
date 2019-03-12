@@ -128,7 +128,7 @@ class tfaKiller : Activity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*c4sc4d1ng*")
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*C4SC4D1NG*")
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
         }
 

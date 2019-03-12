@@ -129,7 +129,7 @@ class tfaMedium : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*h0n3yb33*")
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*H0N3YB33*")
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
         }
 

@@ -8,9 +8,9 @@ import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf("p0k3rf4c3", "d1v3t34m", "B055M4N","F1NNDOG")
-    var medFlags = arrayOf("h0n3yb33", "N1C3-W4N", "f1shf00d", "C4PTB1RD23Y3")
-    var killerFlags = arrayOf("c4sc4d1ng", "4M4Z1NG", "t4sty-k3lp")
+    var easyFlags = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG")
+    var medFlags = arrayOf("H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3")
+    var killerFlags = arrayOf("C4SC4D1NG", "4M4Z1NG", "T4STY-K3LP")
     var easyFound: Int = 0
     var medFound: Int = 0
     var killerFound: Int = 0

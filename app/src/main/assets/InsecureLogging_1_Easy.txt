@@ -57,8 +57,8 @@
 01-24 10:32:51.291 1240-1943/? I/AudioHardware: open playback drv
 01-24 10:32:51.611 2920-2934/? I/ActivityManager: Displayed /BankingCo/MobileBanking/Login: +320ms
 01-24 10:33:27.821 2920-2920/? D/EthernetService: Intent.ACTION_BATTERY_CHANGED
-01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: EMAL: MobyDick@whalemail.com
-01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: PASSWD: d1v3t34m
+01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: EMAL: MobyDick@whalemail.sea
+01-24 10:33:40.101 5372-5372//BankingCo/MobileBanking I/System.out: PASSWD: D1V3T34M
 01-24 10:34:02.002 1240-1943/? I/AudioHardware: open playback drv
 01-24 10:34:10.232 2920-2931/? I/ActivityManager: START u0 {cmp=/BankingCo/MobileBanking/Accounts (has extras)} from pid 5372
 01-24 10:34:10.240 5372-5372//BankingCo/MobileBanking D/dalvikvm: GC_FOR_ALLOC freed 483K, 13% free 4239K/4828K, paused 24ms, total 25ms
