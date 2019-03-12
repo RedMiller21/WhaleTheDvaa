@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WhaleTheDvaa</string>
     <string name="title_activity_vulnerability_selection">Vulnerability Selection</string>
-    <string name="title_activity_vuln_selection">Vulnability Selection</string>
+    <string name="title_activity_vuln_selection">Vulnerability Selection</string>
     <string name="flag">Enter Flag</string>
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
@@ -48,27 +48,41 @@
     </string>
     <string name="instructions">instructions
     </string>
-    <string name="hint1EPA">People sometimes use a name of someone they know as their as their pin.
+    <string name="hint1EPA">People sometimes use a name of someone they know or a significant date as their as their pin.
     </string>
-    <string name="hint2EPA">On older devices the number pad had letters on each key.
+    <string name="hint2EPA">Dates can be formatted in several different ways eg.
+        the 4th of march 2019 can be:
+        04 03 2019
+        4.3.2019 or 4.3.19
     </string>
-    <string name="hint3EPA">hint3easy
+    <string name="hint3EPA">On some devices the number pad has letters on each key.
     </string>
     <string name="hint1MPA">When hiding codes in the phone book people often name the contact in accordance with the company or site that it is used for</string>
-    <string name="hint2MPA">When hiding codes as a contact the name will be the code in a word form however the contact can be left empty</string>
+    <string name="hint2MPA">When hiding codes as a contact the name will sometimes be the code in a word form however the contact can be left empty</string>
     <string name="tfamitigations">These tokens should be completely randomised and should not follow any distinguishable pattern. The use of a time-based randomisation methods or algorithms to calculate the next code makes it easy to predict what the next code will be, using the current time. Instead, a randomisation function should be used to create a unique token not based on any pattern or other value as to avoid repetition or the chances of this token falling into the wrong hands and being used by an attacker to access a user\'s account.
     </string>
     <string name="pamitigations">Due to the fact that the authentication of pins and passwords can only be as strong as the user\'s pin or password this can be problematic if the user stores their pins in obvious places or use words/phrases that are easily identifyable to the user. This can be prevented by using pins that do not relate to the user in any way. Increasing pins also helps as there can be far more combinationsfor possible pins that an attacker will have to try.
     </string>
-    <string name="paeinstructions">To gain the flag use the user\'s social media account to figure out their pin
+    <string name="paeinstructions">However safe a log-in system can be made, if a user does not hide their pins or creates their
+        pins from easily identifiable information, the system can be easily bypassed.
+
+        To gain the flag use the user\'s social media account to figure out their pin
     </string>
-    <string name="paeinfo">However safe a log in system can be made if a user does not hide their pins or creates their
-        pins from easily identifiable information the system can be easily bypassed
+    <string name="paminstructions">Due to the number of passwords and pins people have to remember, ways of noting down pins are
+        often done such as including a contact in their phone to remind them of their pin. Using the user phone book on this emulator search the contacts to find the hidden pin code</string>
+    <string name="sqliEInfo">You have been provided the email whale@whalemail.sea, use this login to gain as much information as possible. This level shows how user data is stored insecurely and poorly verified. This field does not implement a lockout policy alongside allowing account enumeration. Account enumeration allows a hacker to identify active accounts by brute force, allowing active accounts to be easily identified. Show you understand how to enumerate accounts!</string>
+    <string name="sqliEHintOne">You have been given the email whale@whalemail.sea, try entering this on the login
+        screen
     </string>
-    <string name="paminfo">Due to the number of passwords and pins people have to remember, ways of noting down pins are
-        often done such as including a contact in their phone to remind them of their pin
+    <string name="sqliEHintTwo">This page is vulnerable to account enumeration, remember that means you can show what
+        emails exist and which do not!
     </string>
-    <string name="paminstructions">Using the user phone book search their contacts to find the hiden pin code</string>
+    <string name="sqliEHintThree">Enter fish@whalemail.sea, note what happens to your success message.</string>
+    <string name="sqliMInfo">You are a hacker who has been sniffing your victim’s network, viewing the codes they have
+        been using to log in to their account. You must find the pattern in these codes and use this to predict what the
+        next code will be. Once you have found this next code, you can use it to log in. Your findings from sniffing the
+        network can be found in Hint 1.
+    </string>
 
 
 </resources>

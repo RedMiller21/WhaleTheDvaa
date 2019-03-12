@@ -1,11 +1,10 @@
 package whalethedvaa.whalethedvaa
 
 import android.arch.persistence.room.Room
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_base_menu.*
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_sqli.*
 
 class SQLI : AppCompatActivity() {
     //declaring an array of the database type emails

@@ -36,9 +36,6 @@ class PoorAuthenticationMed : AppCompatActivity(){
         //Call function to confirm pin
         ConfirmBtn.setOnClickListener {pin = confirm(pin)}
 
-        //Call information dialog creation
-        InformationBtn.setOnClickListener{informationDialog()}
-
         //call hint dialog creation function
         HintBtn.setOnClickListener{hintSelectionDialog()}
 
@@ -46,19 +43,8 @@ class PoorAuthenticationMed : AppCompatActivity(){
         InstructionsBtn.setOnClickListener{instructionsDialog()}
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
-            onBackPressed()
-        }
-    }
-
-
-    private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
-        // Set the alert dialog title
-        builder.setTitle("Poor Authentication Information")
-            .setMessage(R.string.paminfo)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+        BackBtn.setOnClickListener{onBackPressed() }
+        instructionsDialog()
     }
 
     private fun instructionsDialog(){
@@ -66,7 +52,6 @@ class PoorAuthenticationMed : AppCompatActivity(){
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.paminstructions)
-            .setPositiveButton(R.string.viewSocial){ _, _ -> socialDialog()}
             .setCancelable(false)
             .setNegativeButton(R.string.exit){ dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
@@ -122,8 +107,8 @@ class PoorAuthenticationMed : AppCompatActivity(){
     private fun numPadInput(num: Char){
         val text: String = PinOutput.text.toString()
         val charText: CharArray = text.toCharArray()
-        println(text)
-        println(num)
+        println("text"+ text)
+        println("num"+num)
         var i = 0
         while (i < 4) {
             if(charText[i] == '-'){
@@ -132,12 +117,12 @@ class PoorAuthenticationMed : AppCompatActivity(){
             }
             i++
         }
-        println(i)
+        println("i"+i)
 
         //println(charText.toString())
         val newText = String(charText)
 
-        println(newText)
+        println("newTest"+ newText)
         PinOutput.text = newText
 
     }
@@ -158,14 +143,14 @@ class PoorAuthenticationMed : AppCompatActivity(){
             pinReturn = pin
         }
         PinOutput.text = "----"
-
+        println("pinReturn" + pinReturn)
         return pinReturn
     }
 
     private fun viewState(): Int {
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val st = sharedPreferences.getInt("stateKey", 0)
-        println(st)
+        println("st"+st)
         return st
     }
 
@@ -178,6 +163,7 @@ class PoorAuthenticationMed : AppCompatActivity(){
             4 -> pin = "3587"
             5 -> pin = "2278"
         }
+        println("pin"+pin)
         return pin
     }
 
@@ -189,19 +175,6 @@ class PoorAuthenticationMed : AppCompatActivity(){
         editor.apply()
         editor.commit()
         return setPin()
-    }
-
-    private fun socialDialog(){
-        val li = LayoutInflater.from(this)
-        val promptsView = li.inflate(R.layout.social_dialog, null)
-        val builder = AlertDialog.Builder(this)
-
-        // set social.xml to social builder
-        builder.setView(promptsView)
-            .setCancelable(false)
-            .setNegativeButton(R.string.exit){ dialog, _ -> dialog.cancel() }
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
     }
 }
 

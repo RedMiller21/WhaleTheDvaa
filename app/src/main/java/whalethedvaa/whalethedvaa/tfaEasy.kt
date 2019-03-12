@@ -3,18 +3,16 @@ package com.example.paulb.whale2fa
 import android.app.AlertDialog
 import android.app.Dialog
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_tfa_easy.*
 import whalethedvaa.whalethedvaa.R
-
-import java.util.Random
+import java.util.*
 
 class tfaEasy : AppCompatActivity() {
 
     internal var code = genCode()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tfa_easy)
@@ -45,7 +43,7 @@ class tfaEasy : AppCompatActivity() {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("New Email")
         showCode.setMessage("Your code is $code")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -53,8 +51,8 @@ class tfaEasy : AppCompatActivity() {
     fun dlgVtm(): Dialog {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("Success!")
-        showCode.setMessage("Welcome back, Victim. \n*p0k3rf4c3*")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+        showCode.setMessage("Welcome back, Victim. \n*P0K3RF4C3*")
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -63,7 +61,7 @@ class tfaEasy : AppCompatActivity() {
         val showCode = AlertDialog.Builder(this)
         showCode.setTitle("Success!")
         showCode.setMessage("Welcome back, Hacker. \nYour credentials are correct")
-            .setPositiveButton("Return") { dialog, which -> dialog.dismiss() }
+            .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
     }
@@ -96,13 +94,13 @@ class tfaEasy : AppCompatActivity() {
         txtCode.visibility = View.VISIBLE
     }
 
-    fun enterEmail(v: View) {
+    fun enterEmail() {
         when (txtEmail.text.toString()) {
-            "victim@whalemail.com" -> {
+            "victim@whalemail.sea" -> {
                 showCodeInput()
                 displayInfo(1)
             }
-            "hacker@whalemail.com" -> {
+            "hacker@whalemail.sea" -> {
                 showCodeInput()
                 dlgCode()
                 displayInfo(1)
@@ -133,8 +131,8 @@ class tfaEasy : AppCompatActivity() {
         //String enteredCode = txtCode.getText().toString();
         if (code == txtCode.text.toString()) {
             when (txtEmail.text.toString()) {
-                "victim@whalemail.com" -> dlgVtm()
-                "hacker@whalemail.com" -> dlgHkr()
+                "victim@whalemail.sea" -> dlgVtm()
+                "hacker@whalemail.sea" -> dlgHkr()
                 else -> displayInfo(2)
             }
         } else {
@@ -146,7 +144,7 @@ class tfaEasy : AppCompatActivity() {
         val builder = android.support.v7.app.AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
-        builder.setMessage("You are trying to gain access to the account of ‘victim@whalemail.com’, but you need this user’s 2FA code. After entering their email address, the user will be sent an email with the code they can use to log in. You have the email address ‘hacker@whalemail.com’. Try to find your victim’s code and use it to log in to their account.")
+        builder.setMessage("You are trying to gain access to the account of ‘victim@whalemail.sea’, but you need this user’s 2FA code. After entering their email address, the user will be sent an email with the code they can use to log in. You have the email address ‘hacker@whalemail.sea’. Try to find your victim’s code and use it to log in to their account.")
         val dialog: android.support.v7.app.AlertDialog = builder.create()
         dialog.show()
     }
@@ -182,7 +180,7 @@ class tfaEasy : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("You have been given the email address 'hacker@whalemail.com'. Try entering this username.")
+            "Hint 1" -> builder.setMessage("You have been given the email address 'hacker@whalemail.sea'. Try entering this username.")
             "Hint 2" -> builder.setMessage("Does the code change when you request it more than once? Do you think it is uniquely generated?")
             "Hint 3" -> builder.setMessage("You need to login in as Victim. You have their email address, but not their code. Or do you?")
         }

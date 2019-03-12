@@ -1,11 +1,11 @@
 package com.example.paulb.whale2fa
 
+import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import java.util.Random
 import kotlinx.android.synthetic.main.activity_tfa_medium.*
 import whalethedvaa.whalethedvaa.R
+import java.util.*
 
 class tfaMedium : AppCompatActivity() {
 
@@ -60,7 +60,7 @@ class tfaMedium : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
-        builder.setMessage("You are a hacker who has been sniffing your victim’s network, viewing the codes they have been using to log in to their account. You must find the pattern in these codes and use this to predict what the next code will be. Once you have found this next code, you can use it to log in. Your findings from sniffing the network can be found in Hint 1.")
+        builder.setMessage(R.string.sqliMInfo)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -129,7 +129,7 @@ class tfaMedium : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*h0n3yb33*")
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*H0N3YB33*")
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
         }
 
