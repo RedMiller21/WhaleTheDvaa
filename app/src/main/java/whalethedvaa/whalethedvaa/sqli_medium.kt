@@ -8,7 +8,8 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_sqli.*
+import kotlinx.android.synthetic.main.activity_sqli_medium.*
+import org.w3c.dom.Text
 
 class sqli_medium : AppCompatActivity() {
     //declaring an array of the database type emails
@@ -41,12 +42,13 @@ class sqli_medium : AppCompatActivity() {
         textView.text = accountinfoone
 
         // todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
-        SQL_Login.setOnClickListener{
+        checkcrypto.setOnClickListener{
             //todo change this to input
-            var Encryption = SQL_Email.text.toString()
+            var Encryption: String = cryptoEntry.text.toString()
 
             if (Encryption == "MD5 Base64"){
-                Toast.makeText(applicationContext, "FLAG - NICEW4N", Toast.LENGTH_SHORT).show()
+                val textView: TextView = findViewById(R.id.txtSuccessMsg) as TextView
+                textView.text = "Flag = N1C3W4N"
             }
 
         }
@@ -68,9 +70,6 @@ class sqli_medium : AppCompatActivity() {
 
     }
 
-    private fun CheckEmail(searchText: String){
-    }
-
     private fun informationDialog(){
         val builder = AlertDialog.Builder(this)
         // Set the alert dialog title
@@ -90,7 +89,7 @@ class sqli_medium : AppCompatActivity() {
         // Display a message on alert dialog
         //builder.setMessage("Which hint would you like")
 
-        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3", "Hint 4")
+        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
         builder.setItems(hints){ _, which ->
             hintDialog(hints[which])
@@ -111,10 +110,9 @@ class sqli_medium : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
-            "Hint 1" -> builder.setMessage("You have been provided with the email whale@whalemail.sea, try entering this email into the login form")
-            "Hint 2" -> builder.setMessage("This page is vulnerable to code injection, the table name is Emails and columns are emailAddress and password")
-            "Hint 3" -> builder.setMessage("Remember you are trying to force the program to execute the query with a statement that will always return true")
-            "Hint 4" -> builder.setMessage("Try entering SELECT * FROM Emails WHERE emailAddress = whale@whalemail.sea OR 5=5 AND 1=1 and see what happens to the success message")
+            "Hint 1" -> builder.setMessage("You must use two different types of encoding/encryption to decrypt the password dumped by the database")
+            "Hint 2" -> builder.setMessage("A handy tool for decoding is https://gchq.github.io/CyberChef/ try decoding the password!")
+            "Hint 3" -> builder.setMessage("First use Base64 and MD5 to reveal a password")
         }
 
         val dialog: AlertDialog = builder.create()
