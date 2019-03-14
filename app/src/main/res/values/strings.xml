@@ -35,7 +35,7 @@
         the top right. The three hints will progressively give away more clues as to how you can exploit the
         vulnerability and get the flag.
     </string>
-    <string name="information">At the top right of each page is the information button whcih gives information about the
+    <string name="information">At the top right of each page is the information button which gives information about the
         vulnerability. This will give you your scenario as a hacker trying to exploit the app, including any of the
         details about your victim you may need, such as their email address. This will appear when you open the
         vulnerability, as well as any time you click this button.
@@ -81,7 +81,7 @@
     <string name="sqliMInfo">You are a hacker who has been sniffing your victim’s network, viewing the codes they have
         been using to log in to their account. You must find the pattern in these codes and use this to predict what the
         next code will be. Once you have found this next code, you can use it to log in. Your findings from sniffing the
-        network can be found in Hint 1.
+        network can be found in the first hint.
     </string>
 
 
