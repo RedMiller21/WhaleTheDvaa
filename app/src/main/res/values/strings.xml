@@ -83,6 +83,10 @@
         next code will be. Once you have found this next code, you can use it to log in. Your findings from sniffing the
         network can be found in the first hint.
     </string>
+    <string name="VulnSelectorInfo">Each vulnerability contains three challenges for you to complete. Instructions will appear once you select a difficulty level,
+        hints will also be available to use throughout the challenges if you get stuck! Some of the information you need to complete may be located on the phone, you are not limited to the app itself.
+        Good luck!
+    </string>
 
 
 </resources>

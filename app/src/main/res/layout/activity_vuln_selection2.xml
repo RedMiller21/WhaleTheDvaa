@@ -10,7 +10,7 @@
         android:textColor="#FFFFFF">
 
     <Button
-            android:text="?"
+            android:text="Info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/InformationBtn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
