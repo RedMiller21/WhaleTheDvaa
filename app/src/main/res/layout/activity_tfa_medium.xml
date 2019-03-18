@@ -17,22 +17,35 @@
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="108dp"
+            android:layout_marginBottom="176dp"
             android:background="#4472C4"
             android:text="Enter"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/BackBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
+    <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#4472C4"
+            android:text="Generate new codes"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/BackBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnCode" app:layout_constraintVertical_bias="0.13"/>
     <EditText
             android:id="@+id/txtCode"
             android:layout_width="wrap_content"
             android:layout_height="43dp"
-            android:layout_marginTop="79dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="Enter 2FA Code"
@@ -41,7 +54,7 @@
             app:layout_constraintBottom_toTopOf="@+id/btnCode"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail"
-            app:layout_constraintVertical_bias="0.252" android:layout_marginRight="24dp"/>
+            android:layout_marginBottom="8dp"/>
 
     <TextView
             android:id="@+id/lblCode"
@@ -59,8 +72,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblEmail"
-            app:layout_constraintVertical_bias="0.431" android:layout_marginLeft="76dp"
-            android:layout_marginRight="5dp"/>
+    />
 
     <EditText
             android:id="@+id/txtEmail"

@@ -1,11 +1,13 @@
 package BankingCo.MobileBanking;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.RoomDatabase;
-
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 var db = Room.databaseBuilder(this, AppDatabase::class.java, "Email_Address").allowMainThreadQueries().fallbackToDestructiveMigration().build()
 var emails = Emails.populateData()
-
 
 for (email in emails)db.daoAccess().insertOnlySingleUser(email)
 
@@ -14,19 +16,7 @@ SQL_Login.setOnClickListener{
     var searchText = SQL_Email.text.toString()
     val emailCount = db.daoAccess().emailExists(searchText)
 
-    if (emailCount > 0) {
-
-        Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
-
-    }
-    else {
-
-        Toast.makeText(applicationContext, "ERROR", Toast.LENGTH_SHORT).show()
-
-    }
-
 }
-
 
 @Database(entities = {Emails.class}, version = 1)
 
@@ -37,7 +27,6 @@ class AppDatabase extends RoomDatabase{
    public abstract DaoAccess daoAccess();
 
 }
-
 
 @Dao
 public interface DaoAccess {
@@ -62,11 +51,6 @@ public interface DaoAccess {
 
 }
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
-
 @Entity
 public class Emails {
 
@@ -75,79 +59,84 @@ public class Emails {
    @PrimaryKey(autoGenerate = true)
 
    private int uid;
-   @ColumnInfo(name = "emailAddress")
+   @ColumnInfo(name = "Email")
 
    private String emailAddress;
-   @ColumnInfo(name = "password")
+   @ColumnInfo(name = "Password")
 
-   private String password;
+   private String Password;
 
-   public Emails(int uid, String emailAddress, String password){
+   private String AccountType;
+   @ColumnInfo(name = "AccountType")
+
+   public Emails(int uid, String Email, String Password){
 
        this.uid = uid;
-       this.emailAddress = emailAddress;
-       this.password = password;
+       this.Email = Email;
+       this.Password = Password;
+       this.AccountType = AccountType;
 
    }
 
   public class NameTuple{
 
-       @ColumnInfo(name =  "emailAddress")
+       @ColumnInfo(name =  "Email")
 
-       public String emailaddress;
-       @ColumnInfo(name = "password")
+       public String Email;
+       @ColumnInfo(name = "Password")
 
-      public String password;
+      public String Password;
+
+      private String AccountType;
+      @ColumnInfo(name = "AccountType")
 
   }
 
-
    @NonNull
-
    public int getUid() {
-
        return uid;
-
    }
 
    public void setUid(@NonNull int uid) {
-
        this.uid = uid;
-
    }
 
-   public String getEmailAddress() {
-
-       return emailAddress;
-
+   public String getEmail() {
+       return Email;
    }
 
-   public void setEmailAddress(String emailAddress) {
-
-       this.emailAddress = emailAddress;
-
+   public void setEmail(String Email) {
+       this.Email = Email;
    }
 
    public String getPassword() {
-
-       return password;
-
+       return Password;
    }
 
-    public void setPassword(String password) {
+    public void setPassword(String Password) {
+       this.password = Password;
+   }
 
-       this.password = password;
+   public String getAccountType() {
+       return AccountType;
+   }
 
+    public void setAccountType(String AccountType) {
+       this.AccountType = AccountType;
    }
 
    public static Emails[] populateData(){
-
        return new Emails[]{
-
-               new Emails(1, "whale@whalemail.sea", "B055M4N"),
-
+               new Emails(1, "admin@whalemail.sea", "H3RM4N-M3LV1LL3", "Admin"),
+               new Emails(2, "CPT_Ahab@whalemail.sea", "PequodDoesntSink123", "User"),
+               new Emails(3, "CPT_Boomer@whalemail.sea", "SamEnderby001", "User"),
+               new Emails(4, "Moby_D@whalemail.sea", "BlubbBlubb11", "User"),
+               new Emails(5, "xx_Ishmael_xx@whalemail.sea", "Survivor9", "User"),
+               new Emails(6, "Stubb1851@whalemail.sea", "2ndMate8", "User"),
+               new Emails(7, "Queequeg@whalemail.sea", "Harpwner99", "User"),
+               new Emails(8, "SStarbuckk@whalemail.sea", "ChiefMate8", "User"),
+               new Emails(9, "Elijah@whalemail.sea", "SailingIs4Chumps01", "User"),
        };
-
    }
 
 }

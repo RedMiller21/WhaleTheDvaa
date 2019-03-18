@@ -1,5 +1,6 @@
 package com.example.paulb.whale2fa
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -10,10 +11,23 @@ import java.util.*
 class tfaMedium : AppCompatActivity() {
 
     private val netlog = arrayOfNulls<String>(4) //Array(4)
+    private var firstCode = 0
+    private var addToCode = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tfa_medium)
+
+        var mTfaCodes = getSharedPreferences("tfaM", 0)
+        firstCode = mTfaCodes.getInt("firstCode", 0)
+        addToCode = mTfaCodes.getInt("addToCode", 0)
+        if (firstCode == 0 || addToCode == 0 ){
+            resetCodes()
+        }
+        else {
+            calcCodes()
+        }
+
         val level = intent.getIntExtra("Level",2) //level is the difficulty setting 1
         // easy 2 medium and 3 hard
         //println(level) //comment out, debug for level variable
@@ -37,14 +51,35 @@ class tfaMedium : AppCompatActivity() {
             checkCode(txtCode.text.toString())
         }
 
-        val firstCode = Random().nextInt(10000)
-        val addToCode = Random().nextInt(10000)
+        btnReset.setOnClickListener{
+            val builder = AlertDialog.Builder(this)
+            // Set the alert dialog title
+            builder.setTitle("Generate new codes")
+                .setMessage("Are you sure you want to reset the existing codes?")
+                .setPositiveButton("Yes"){ _, _ ->
+                    resetCodes()
+                }
+                .setNegativeButton("No"){ dialog, _ -> dialog.cancel() }
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+        informationDialog()
+    }
+
+    private fun resetCodes(){
+        var mTfaCodes = getSharedPreferences("tfaM", 0)
+        firstCode = Random().nextInt(10000)
+        addToCode = Random().nextInt(10000)
+        val mEditor = mTfaCodes.edit()
+        mEditor.putInt("firstCode", firstCode).commit()
+        mEditor.putInt("addToCode", addToCode).commit()
+        calcCodes()
+    }
+
+    private fun calcCodes(){
         for (i in 0..3) {
             netlog[i] = (convCode((firstCode + addToCode*(i+1)) % 10000))
         }
-
-        informationDialog()
-
     }
 
     private fun ntlgString():String{
@@ -129,7 +164,7 @@ class tfaMedium : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*H0N3YB33*")
+            "Success" -> {builder.setMessage("Welcome back, Victim.\n*H0N3YB33*"); resetCodes()}
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
         }
 
