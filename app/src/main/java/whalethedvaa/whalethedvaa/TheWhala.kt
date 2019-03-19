@@ -55,7 +55,7 @@ class TheWhala : AppCompatActivity() {
     }
 
     private fun instructionsDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val subInstructions = arrayOf("What its whale about",  "The Vulnerabilities/Mitigations", "Flags/Progression", "All the buttons under the sea")
         builder.setTitle("Instructions")
             .setItems(subInstructions){ _, which ->
@@ -63,14 +63,14 @@ class TheWhala : AppCompatActivity() {
             println(subInstructions[which])
         }
         val dialog: AlertDialog = builder.create()
-        dialog.getWindow().setBackgroundDrawable(ColorDrawable(0xFFDEEBF7.toInt()))
+        //dialog.getWindow().setBackgroundDrawable(ColorDrawable(0xFFDEEBF7.toInt()))
         dialog.show()
     }
 
     private fun instDialog(chosenInst: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenInst)
             .setNegativeButton("Back"){ _,_ -> instructionsDialog()}
@@ -102,7 +102,7 @@ class TheWhala : AppCompatActivity() {
 
     private fun furtherInstrDialog(choosenInst: String, lastInst: String)
     {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(choosenInst)
             .setNegativeButton("Back"){ _,_ -> instDialog(lastInst)}

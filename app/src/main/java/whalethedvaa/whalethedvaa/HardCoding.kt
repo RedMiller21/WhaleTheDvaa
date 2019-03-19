@@ -57,7 +57,7 @@ class HardCoding : AppCompatActivity() {
 
     //Function to set the Info section of the code
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val level = intent.getIntExtra("Level",0)
 
         // Set the dialog title
@@ -81,7 +81,7 @@ class HardCoding : AppCompatActivity() {
 
     //Create dialog to show the hints
     private fun hintSelectionDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the dialog title
         builder.setTitle("Hints")
 
@@ -101,7 +101,7 @@ class HardCoding : AppCompatActivity() {
     private fun hintDialog(chosenHint: String)
     {
         val level = intent.getIntExtra("Level",0)
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
 

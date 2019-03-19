@@ -67,7 +67,7 @@ class tfaKiller : Activity() {
     }
 
     private fun informationDialog(){
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
         builder.setMessage("You are a hacker who has been sniffing your victim’s network, viewing the codes they have been using to log in to their account. You determine that the codes are not going up or down by a set value each time, but they are changing. Your findings from sniffing the network can be found in Hint 1.")
@@ -78,7 +78,7 @@ class tfaKiller : Activity() {
     //Create dialog with hint options
     private fun hintSelectionDialog(){
         // Initialize a new instance of
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
 
@@ -102,7 +102,7 @@ class tfaKiller : Activity() {
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
@@ -124,7 +124,7 @@ class tfaKiller : Activity() {
     }
 
     private fun codeResult(result : String){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){

@@ -1,11 +1,12 @@
 <resources>
-
+    android:background="#222A35"
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:alertDialogStyle">@style/whaleDialog</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -20,11 +21,15 @@
     <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     
-    <style name="mitigationDialogueTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <!--<style name="mitigationDialogueTheme" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+    <style name="whaleDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- text and title colours -->
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <!-- background colours
-        <item name="android:windowBackground">@drawable/background_dialog</item> -->
+        <item name="android:textColor">@color/veryDarkBlue</item>
+        <!--<item name="android:textColorPrimary">@color/veryDarkBlue</item>
+        <item name="android:titleTextColor">@color/veryDarkBlue</item>
+        <item name="android:dialogMessage">@color/veryDarkBlue</item>-->
+        <!--background colours -->
+        <item name="android:background">@color/veryLightBlue</item>
     </style>
 
 </resources>

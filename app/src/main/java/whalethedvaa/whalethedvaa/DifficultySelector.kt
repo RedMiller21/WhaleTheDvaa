@@ -55,7 +55,7 @@ class DifficultySelector : AppCompatActivity() {
             startActivity(intent)
         }
         mtgtBtn.setOnClickListener{
-            val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.mitigationDialogueTheme)
+            val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)//, R.style.mitigationDialogueTheme)
             // Set the alert dialog title
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
@@ -86,7 +86,7 @@ class DifficultySelector : AppCompatActivity() {
     }
 
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Difficulty Selection")
         builder.setMessage("Here you can select the difficulty of your chosen vulnerability to exploit - easy, medium, or 'killer'. \nYou can also view how your chosen vulnerability can be mitigated, or go to the progress page and update your progress by entering your captured flags.")

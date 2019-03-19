@@ -89,7 +89,7 @@ class VulnSelection : AppCompatActivity() {
 
 
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Vulnerability Information")
         builder.setMessage(R.string.VulnSelectorInfo)

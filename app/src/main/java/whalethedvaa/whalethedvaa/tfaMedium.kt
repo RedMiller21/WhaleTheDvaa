@@ -52,7 +52,7 @@ class tfaMedium : AppCompatActivity() {
         }
 
         btnReset.setOnClickListener{
-            val builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this, R.style.whaleDialog)
             // Set the alert dialog title
             builder.setTitle("Generate new codes")
                 .setMessage("Are you sure you want to reset the existing codes?")
@@ -92,7 +92,7 @@ class tfaMedium : AppCompatActivity() {
 
 
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
         builder.setMessage(R.string.sqliMInfo)
@@ -103,7 +103,7 @@ class tfaMedium : AppCompatActivity() {
     //Create dialog with hint options
     private fun hintSelectionDialog(){
         // Initialize a new instance of
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
 
@@ -127,7 +127,7 @@ class tfaMedium : AppCompatActivity() {
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
@@ -160,7 +160,7 @@ class tfaMedium : AppCompatActivity() {
     }
 
     private fun codeResult(result : String){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){

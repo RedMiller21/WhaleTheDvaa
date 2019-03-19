@@ -66,7 +66,7 @@ class ProgressPage : AppCompatActivity() {
     }
 
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Progression Information")
         builder.setMessage("Example Information")
@@ -78,7 +78,7 @@ class ProgressPage : AppCompatActivity() {
 
         val li = LayoutInflater.from(this)
         val promptsView = li.inflate(R.layout.flagdialog, null)
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
 
         val userInput = promptsView.findViewById(R.id.EnterFlagText) as EditText
 
@@ -94,7 +94,7 @@ class ProgressPage : AppCompatActivity() {
     }
 
     private fun resetProg(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle("Are you sure you want to reset your progress?")
             .setPositiveButton("Yes"){ _, _ ->
@@ -151,7 +151,7 @@ class ProgressPage : AppCompatActivity() {
             0 -> title = "Error: flag not found"
             1 -> title = "This flag has already been entered"
         }
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle(title)
             .setNegativeButton("Okay"){ dialog, _ -> dialog.cancel() }
@@ -160,7 +160,7 @@ class ProgressPage : AppCompatActivity() {
     }
 
     private fun complete(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle("Congratulations!")
             .setMessage("You've successfully found all the flags! Whale done!")
