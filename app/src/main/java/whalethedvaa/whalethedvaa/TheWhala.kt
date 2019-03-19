@@ -63,7 +63,7 @@ class TheWhala : AppCompatActivity() {
             println(subInstructions[which])
         }
         val dialog: AlertDialog = builder.create()
-        dialog.getWindow().setBackgroundDrawable(ColorDrawable(0xFFDEEBF7.toInt()))
+        dialog.window.setBackgroundDrawable(ColorDrawable(0xFFDEEBF7.toInt()))
         dialog.show()
     }
 
@@ -83,7 +83,7 @@ class TheWhala : AppCompatActivity() {
                 subInstructions = arrayOf("Whats with the Flags", "The looks: Whats l33t speak")
             }
             "All the buttons under the sea" ->{
-                subInstructions = arrayOf("Hint", "?")
+                subInstructions = arrayOf("Hint", "Info", "Flags")
             }
             "The Vulnerabilities/Mitigations" -> {
                 subInstructions = arrayOf("Vulnerabilities", "Mitigations")
@@ -110,8 +110,11 @@ class TheWhala : AppCompatActivity() {
             "Hint" -> {
                 builder.setMessage(R.string.hints)
             }
-            "?" ->{
+            "Info" ->{
                 builder.setMessage(R.string.information)
+            }
+            "Flags" ->{
+                builder.setMessage("Flags")
             }
             "Whats with the Flags" -> {
                 builder.setMessage(R.string.flags)

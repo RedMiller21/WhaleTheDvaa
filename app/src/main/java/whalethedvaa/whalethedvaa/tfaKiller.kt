@@ -1,12 +1,14 @@
 package com.example.paulb.whale2fa
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_tfa_killer.*
+import whalethedvaa.whalethedvaa.ProgressPage
 import whalethedvaa.whalethedvaa.R
 import java.text.SimpleDateFormat
-import java.util.Calendar
+import java.util.*
 
 class tfaKiller : Activity() {
 
@@ -50,6 +52,12 @@ class tfaKiller : Activity() {
         lblTime.setOnClickListener {
             stampBool = !stampBool
         }
+        //Flags button move to progress page
+        flagsBtn.setOnClickListener {
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
+
 
         informationDialog()
     }
@@ -128,7 +136,7 @@ class tfaKiller : Activity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*C4SC4D1NG*")
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*c4sc4d1ng*")
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
         }
 

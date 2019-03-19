@@ -114,11 +114,11 @@
 
     </TableLayout>
     <Button
-            android:text="?"
+            android:text="Info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/InformationBtn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:textStyle="bold" android:background="#4472C4" android:textColor="#FFFFFF"/>
 
     <Button

@@ -29,11 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name=".VulnSelection"
-                android:label="@string/title_activity_vuln_selection"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
         <activity android:name=".DifficultySelector">
         </activity>
         <activity android:name=".ProgressPage">
@@ -49,8 +44,6 @@
         <activity android:name=".sqli_hard">
         </activity>
         <activity android:name=".InsecureLogging">
-        </activity>
-        <activity android:name=".FurtherReading">
         </activity>
     </application>
 
