@@ -2,6 +2,7 @@ package whalethedvaa.whalethedvaa
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -60,6 +61,7 @@ class TheWhala : AppCompatActivity() {
             println(subInstructions[which])
         }
         val dialog: AlertDialog = builder.create()
+        dialog.getWindow().setBackgroundDrawable(ColorDrawable(0xFFDEEBF7.toInt()))
         dialog.show()
     }
 
