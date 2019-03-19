@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.activity_the_whala.*
 
 
 //TODO: Get rid of the puns
+//TODO: Don't get rid of the puns <3
+
 class TheWhala : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

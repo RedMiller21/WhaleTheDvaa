@@ -88,5 +88,36 @@
         Good luck!
     </string>
 
+    <string name="SQLiInfo">
+        SQL Injection is a form of code injection, usually used by an attacker to target data driven applications. Users will enter SQL statements in order to query the data structures used.
+        These queries could provide an attacker with
+    </string>
+
+    <string name="SQLiMitigations">
+        SQL Injection can be prevented by using prepared statements. Prepared statements pass the query and the data to the database separately preventing malicious user entries to be executed.
+        A developer may also wish to prevent SQL by thoroughly validating input, preventing users from entering common phrases used during the attacks such as SELECT. Although it is recommended this should be used alongside prepared statements.
+    </string>
+    <string name="TwoFAFurtherReading">
+        PUT YOUR FURTHER READING HERE
+    </string>
+
+    <string name="SQLiFurtherReading">
+        PUT YOUR FURTHER READING HERE
+    </string>
+
+    <string name="InsecureLoggingFurtherReading">
+        PUT YOUR FURTHER READING HERE
+    </string>
+
+    <string name="HardcodingFurtherReading">
+        PUT YOUR FURTHER READING HERE
+    </string>
+
+    <string name="PoorAuthFurtherReading">
+        PUT YOUR FURTHER READING HERE
+    </string>
+
+
+
 
 </resources>

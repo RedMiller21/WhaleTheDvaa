@@ -19,5 +19,12 @@
     </style>
     <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    
+    <style name="mitigationDialogueTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- text and title colours -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- background colours
+        <item name="android:windowBackground">@drawable/background_dialog</item> -->
+    </style>
 
 </resources>
