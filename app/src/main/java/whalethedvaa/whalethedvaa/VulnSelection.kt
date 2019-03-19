@@ -26,6 +26,11 @@ class VulnSelection : AppCompatActivity() {
             startActivity(intent)
         }
 
+        furtherReading.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+
+        }
+
         Vuln1.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",1)
@@ -71,6 +76,12 @@ class VulnSelection : AppCompatActivity() {
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",7)
             intent.putExtra("name",Vuln7.text)
+            startActivity(intent)
+        }
+
+        //opens further reading page
+        furtherReading.setOnClickListener(){
+            val intent = Intent(this, FurtherReading::class.java)
             startActivity(intent)
         }
 

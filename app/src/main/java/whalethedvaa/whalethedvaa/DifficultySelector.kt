@@ -20,10 +20,8 @@ class DifficultySelector : AppCompatActivity() {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, sqli_hard::class.java)
                 3 -> intent = Intent(this, tfaKiller::class.java)
-                4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthentication::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
-                7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level",3)
@@ -35,10 +33,8 @@ class DifficultySelector : AppCompatActivity() {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, sqli_medium::class.java)
                 3 -> intent = Intent(this, tfaMedium::class.java)
-                4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthenticationMed::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
-                7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level",2)
@@ -50,10 +46,8 @@ class DifficultySelector : AppCompatActivity() {
                 1 -> intent = Intent(this, HardCoding::class.java)
                 2 -> intent = Intent(this, sqli_easy::class.java)
                 3 -> intent = Intent(this, tfaEasy::class.java)
-                4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> intent = Intent(this, PoorAuthentication::class.java)
                 6 -> intent = Intent(this, InsecureLogging::class.java)
-                7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level",1)
@@ -61,16 +55,14 @@ class DifficultySelector : AppCompatActivity() {
             startActivity(intent)
         }
         mtgtBtn.setOnClickListener{
-            val builder = android.support.v7.app.AlertDialog.Builder(this)
+            val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.mitigationDialogueTheme)
             // Set the alert dialog title
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
-                2 -> intent = Intent(this, SQLI::class.java)
+                2 -> {builder.setTitle("SQL Injection Mitigations"); builder.setMessage(R.string.SQLiMitigations)}
                 3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage(R.string.tfamitigations)}
-                4 -> intent = Intent(this, InsecureTokens::class.java)
                 5 -> {builder.setTitle("Poor Authentication"); builder.setMessage(R.string.pamitigations)}
                 6 -> intent = Intent(this, InsecureLogging::class.java)
-                7 -> intent = Intent(this, InsecureDataStorage::class.java)
                 else -> println(selector)
             }
             val dialog: android.support.v7.app.AlertDialog = builder.create()

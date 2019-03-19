@@ -22,8 +22,6 @@
         </activity>
         <activity android:name=".PoorAuthentication">
         </activity>
-        <activity android:name=".Settings">
-        </activity>
         <activity android:name=".TheWhala">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,16 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".BaseActivityMenu">
-        </activity>
         <activity
                 android:name=".VulnSelection"
                 android:label="@string/title_activity_vuln_selection"
-                android:parentActivityName=".BaseActivityMenu"
                 android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="whalethedvaa.whalethedvaa.BaseActivityMenu"/>
         </activity>
         <activity android:name=".DifficultySelector">
         </activity>
@@ -56,15 +48,9 @@
         </activity>
         <activity android:name=".sqli_hard">
         </activity>
-        <activity android:name=".ManInTheMiddle">
-        </activity>
-        <activity android:name=".InsecureDataStorage">
-        </activity>
-        <activity android:name=".InsecureTokens">
-        </activity>
         <activity android:name=".InsecureLogging">
         </activity>
-        <activity android:name=".UnencryptedHttp">
+        <activity android:name=".FurtherReading">
         </activity>
     </application>
 
