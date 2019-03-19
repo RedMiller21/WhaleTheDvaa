@@ -45,6 +45,7 @@
         </activity>
         <activity android:name=".InsecureLogging">
         </activity>
+        <activity android:name=".VulnSelection">
+        </activity>
     </application>
-
 </manifest>
