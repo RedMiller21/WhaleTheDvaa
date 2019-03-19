@@ -16,55 +16,80 @@
             android:id="@+id/InformationBtn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:textStyle="bold" android:background="#4472C4" android:textColor="#FFFFFF"/>
-    <Button
-            android:text="View Progression"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ViewProgression"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            app:layout_constraintHorizontal_bias="0.498" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/furtherReading"/>
-    <Button
-            android:text="Further Reading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/furtherReading" android:layout_marginBottom="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
-            android:textColor="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <Button
+    <TextView
             android:text="Select Vulnerability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/SelectionText"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="italic" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/InformationBtn"/>
+            app:layout_constraintTop_toBottomOf="@+id/InformationBtn" android:layout_marginTop="8dp"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/BackBtn" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:background="#4472C4" android:textColor="#FFFFFF"/>
+            android:id="@+id/BackBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:background="#203864" android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center|fill" android:id="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <Button
+                    android:text="View Progression"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ViewProgression"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintHorizontal_bias="0.498" android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/furtherReading"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <Button
+                    android:text="Further Reading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/furtherReading" android:layout_marginBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:background="#4472C4" android:textStyle="bold"
+                    android:textColor="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent"
+                    android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="0dp"
-            android:layout_height="0dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/SelectionText" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/ViewProgression" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/SelectionText"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp">
+            android:layout_marginStart="8dp" android:id="@+id/linearLayout2"
+            app:layout_constraintDimensionRatio="2:1.8"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout">
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -74,12 +99,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:layout_weight="1">
                 <Button
-                        android:text="Sql\ninjection"
+                        android:text="SQL\nInjection"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/b0"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintVertical_bias="1"/>
+                        app:layout_constraintVertical_bias="1" android:id="@+id/Vuln2"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="vertical"
