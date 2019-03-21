@@ -16,7 +16,6 @@ class tfaEasy : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tfa_easy)
-        //final int code = new Random().nextInt(10000);
         hideCodeInput()
         displayInfo(0)
 
@@ -51,8 +50,8 @@ class tfaEasy : AppCompatActivity() {
 
     fun dlgCode(): Dialog {
         val showCode = AlertDialog.Builder(this, R.style.whaleDialog)
-        showCode.setTitle("New Email")
-        showCode.setMessage("Your code is $code")
+        showCode.setTitle("New Email") //This dialog will appear as if it is an email to the user
+        showCode.setMessage("Your code is $code") //This will provide them with their own 2FA code
             .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
@@ -60,8 +59,8 @@ class tfaEasy : AppCompatActivity() {
 
     fun dlgVtm(): Dialog {
         val showCode = AlertDialog.Builder(this, R.style.whaleDialog)
-        showCode.setTitle("Success!")
-        showCode.setMessage("Welcome back, Victim. \n*P0K3RF4C3*")
+        showCode.setTitle("Success!") //If the user logs in with the victim's code and email address
+        showCode.setMessage("Welcome back, Victim. \n*P0K3RF4C3*") //they will get the flag
             .setPositiveButton("Return") { dialog, _ -> dialog.dismiss() }
             .create()
         return showCode.show()
@@ -77,9 +76,9 @@ class tfaEasy : AppCompatActivity() {
     }
 
     private fun genCode(): String {
-        val intCode = Random().nextInt(10000)
+        val intCode = Random().nextInt(10000) //Generate random code between 0-9999
         val stCode: String
-        if (intCode < 10) {
+        if (intCode < 10) { //this if tree will create a string of the code, adding zeros to ensure it is 4 digits long
             stCode = "000$intCode"
             return stCode
         } else if (intCode < 100) {
@@ -89,64 +88,63 @@ class tfaEasy : AppCompatActivity() {
             stCode = "0$intCode"
             return stCode
         }
-        return Integer.toString(intCode)
+        return Integer.toString(intCode) //if code is already 4 digits long, it will be passed as string
     }
 
-    private fun hideCodeInput() {
+    private fun hideCodeInput() { //Before an email address has been entered, the widgets used to enter the 2FA code will be hidden
         btnCode.visibility = View.GONE
         lblCode.visibility = View.GONE
         txtCode.visibility = View.GONE
     }
 
-    private fun showCodeInput() {
+    private fun showCodeInput() { //After an email address is entered, the widgets used to enter the 2FA code are visible
         btnCode.visibility = View.VISIBLE
         lblCode.visibility = View.VISIBLE
         txtCode.visibility = View.VISIBLE
     }
 
-    fun enterEmail() {
+    private fun enterEmail() { //Function to make decision based on username information
         when (txtEmail.text.toString()) {
-            "victim@whalemail.sea" -> {
-                showCodeInput()
-                displayInfo(1)
+            "victim@whalemail.sea" -> { //Victim's email address has been entered
+                showCodeInput() //Show code input form
+                displayInfo(1) //Say email has been sent
             }
-            "hacker@whalemail.sea" -> {
-                showCodeInput()
-                dlgCode()
-                displayInfo(1)
+            "hacker@whalemail.sea" -> {//Hacker's email address has been entered
+                showCodeInput() //Show code input form
+                dlgCode() //Display user's code
+                displayInfo(1) //Say email has been sent
             }
-            else -> displayInfo(2)
+            else -> displayInfo(2) //Other email or unknown input has been entered, display error message
         }
     }
 
     private fun displayInfo(option: Int) {
         when (option) {
-            0 -> lblInfo.text = ""
+            0 -> lblInfo.text = "" //Make form blank
             1 -> {
                 lblInfo.setTextColor(Color.WHITE)
-                lblInfo.text = "A login code has been sent to your email address!"
+                lblInfo.text = "A login code has been sent to your email address!" //Success message
             }
             2 -> {
                 lblInfo.setTextColor(Color.RED)
-                lblInfo.text = "Email address could not be found. Please try again."
+                lblInfo.text = "Email address could not be found. Please try again." //Error message - wrong email
             }
             3 -> {
                 lblInfo.setTextColor(Color.RED)
-                lblInfo.text = "Error: Wrong code was entered. Please try again."
+                lblInfo.text = "Error: Wrong code was entered. Please try again." //Error message - wrong code
             }
         }
     }
 
-    fun enterCode() {
-        //String enteredCode = txtCode.getText().toString();
-        if (code == txtCode.text.toString()) {
+    private fun enterCode() { //Function to check if 2FA code is correct
+        if (code == txtCode.text.toString()) { //If code has been entered correctly
             when (txtEmail.text.toString()) {
-                "victim@whalemail.sea" -> dlgVtm()
-                "hacker@whalemail.sea" -> dlgHkr()
-                else -> displayInfo(2)
+                "victim@whalemail.sea" -> dlgVtm() //if victim email, display flag
+                "hacker@whalemail.sea" -> dlgHkr() //if hacker email, display success message
+                else -> displayInfo(2) //else, display error
             }
         } else {
-            displayInfo(3)
+            displayInfo(3) //if code is incorrect, display error message
         }
     }
 
@@ -167,7 +165,6 @@ class tfaEasy : AppCompatActivity() {
         builder.setTitle("Hints")
 
         // Display a message on alert dialog
-        //builder.setMessage("Which hint would you like")
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING

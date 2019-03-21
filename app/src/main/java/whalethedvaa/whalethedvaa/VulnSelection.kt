@@ -78,6 +78,7 @@ class VulnSelection : AppCompatActivity() {
         }
     }
 
+
     fun setButtons() {
         val flag  = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG","C4SC4D1NG", "4M4Z1NG", "T4STY-K3lP","H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3")
         if(foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")){

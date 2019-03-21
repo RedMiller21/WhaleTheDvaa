@@ -82,7 +82,7 @@ class TheWhala : AppCompatActivity() {
                 subInstructions = arrayOf("Whats with the Flags", "The looks: Whats l33t speak")
             }
             "All the buttons under the sea" ->{
-                subInstructions = arrayOf("Hint", "Info", "Flags")
+                subInstructions = arrayOf("Hints", "Info", "Flags")
             }
             "The Vulnerabilities/Mitigations" -> {
                 subInstructions = arrayOf("Vulnerabilities", "Mitigations")
@@ -106,14 +106,14 @@ class TheWhala : AppCompatActivity() {
         builder.setTitle(choosenInst)
             .setNegativeButton("Back"){ _,_ -> instDialog(lastInst)}
         when(choosenInst){
-            "Hint" -> {
+            "Hints" -> {
                 builder.setMessage(R.string.hints)
             }
             "Info" ->{
                 builder.setMessage(R.string.information)
             }
             "Flags" ->{
-                builder.setMessage("Flags")
+                builder.setMessage(R.string.flagsButton)
             }
             "Whats with the Flags" -> {
                 builder.setMessage(R.string.flags)
