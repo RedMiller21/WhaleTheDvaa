@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_the_whala.*
 
 //TODO: Get rid of the puns
 //TODO: Don't get rid of the puns <3
+//TODO: Never get rid of the puns!
 
 class TheWhala : AppCompatActivity() {
 

