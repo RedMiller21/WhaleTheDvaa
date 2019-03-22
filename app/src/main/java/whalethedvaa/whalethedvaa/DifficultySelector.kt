@@ -8,6 +8,7 @@ import com.example.paulb.whale2fa.tfaEasy
 import com.example.paulb.whale2fa.tfaKiller
 import com.example.paulb.whale2fa.tfaMedium
 import kotlinx.android.synthetic.main.activity_difficulty_selector.*
+import whalethedvaa.whalethedvaa.R.string.*
 
 class DifficultySelector : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,9 +60,9 @@ class DifficultySelector : AppCompatActivity() {
             // Set the alert dialog title
             when(selector) {
                 1 -> intent = Intent(this, HardCoding::class.java)
-                2 -> {builder.setTitle("SQL Injection Mitigations"); builder.setMessage(R.string.SQLiMitigations)}
-                3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage(R.string.tfamitigations)}
-                5 -> {builder.setTitle("Poor Authentication"); builder.setMessage(R.string.pamitigations)}
+                2 -> {builder.setTitle("SQL Injection Mitigations"); builder.setMessage(SQLiMitigations)}
+                3 -> {builder.setTitle("2FA Mitigations"); builder.setMessage(tfamitigations)}
+                5 -> {builder.setTitle("Poor Authentication"); builder.setMessage(pamitigations)}
                 6 -> intent = Intent(this, InsecureLogging::class.java)
                 else -> println(selector)
             }

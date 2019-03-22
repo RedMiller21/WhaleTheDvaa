@@ -22,7 +22,7 @@
     
     <style name="mitigationDialogueTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- text and title colours -->
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--<item name="android:textColorPrimary">@android:color/white</item>-->
         <!-- background colours
         <item name="android:windowBackground">@drawable/background_dialog</item> -->
     </style>

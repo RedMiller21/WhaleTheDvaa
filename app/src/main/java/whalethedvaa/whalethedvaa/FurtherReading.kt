@@ -1,6 +1,5 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -13,30 +12,32 @@ class FurtherReading : AppCompatActivity(){
      */
      override fun onCreate(savedInstanceState: Bundle?){
          super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_further_reading)
 
-           btn2FA.setOnClickListener(){
-               var selector = 1
-               readingDialogue(selector)
+        //var selector = 0
+           btn2FA.setOnClickListener{
+               //selector = 1
+               readingDialogue(1)
            }
 
-           btnHardCoding.setOnClickListener(){
-                var selector = 2
-                readingDialogue(selector)
+           btnHardCoding.setOnClickListener{
+               //selector = 2
+                readingDialogue(2)
            }
 
-           btnInsecureLogging.setOnClickListener(){
-                var selector = 3
-               readingDialogue(selector)
+           btnInsecureLogging.setOnClickListener{
+               //selector = 3
+               readingDialogue(3)
            }
 
-           btnPoorAuth.setOnClickListener(){
-                var selector = 4
-               readingDialogue(selector)
+           btnPoorAuth.setOnClickListener{
+               //selector = 4
+               readingDialogue(4)
            }
 
-           btnSQLi.setOnClickListener(){
-                var selector = 5
-               readingDialogue(selector)
+           btnSQLi.setOnClickListener{
+               //selector = 5
+               readingDialogue(5)
            }
 
    }
