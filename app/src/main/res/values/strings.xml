@@ -116,8 +116,11 @@
     <string name="PoorAuthFurtherReading">
         PUT YOUR FURTHER READING HERE
     </string>
-
-
+    <string name="flagsButton">The \'Flags\' button on each vulnerability will direct you to the progress page, where
+        you can enter any flags you have found in order to update your progress.\n The progress page can also be accessed
+        by clicking \'View Progression\' and \'Update Progress\' buttons on the vulnerability and difficulty selector
+        menus.
+    </string>
 
 
 </resources>

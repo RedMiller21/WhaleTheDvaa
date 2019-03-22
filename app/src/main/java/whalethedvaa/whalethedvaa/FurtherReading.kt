@@ -47,7 +47,7 @@ class FurtherReading : AppCompatActivity(){
      */
     private fun readingDialogue(selector: Int){
         //declare the builder for the dialogue
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
 
         when(selector) {
             1 -> {builder.setTitle("Two Factor Authentication - Further Reading"); builder.setMessage(R.string.TwoFAFurtherReading)}

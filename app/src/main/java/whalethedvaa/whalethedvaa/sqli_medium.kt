@@ -72,7 +72,7 @@ class sqli_medium : AppCompatActivity() {
     }
 
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hard Coding Information")
         builder.setMessage("Example Information")
@@ -83,7 +83,7 @@ class sqli_medium : AppCompatActivity() {
     //Create dialog with hint options
     private fun hintSelectionDialog(){
         // Initialize a new instance of
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
 
@@ -107,7 +107,7 @@ class sqli_medium : AppCompatActivity() {
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){

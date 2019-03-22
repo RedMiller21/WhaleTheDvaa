@@ -48,7 +48,7 @@ class PoorAuthenticationMed : AppCompatActivity(){
     }
 
     private fun instructionsDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.paminstructions)
@@ -61,7 +61,7 @@ class PoorAuthenticationMed : AppCompatActivity(){
     //Create dialog with hint options
     private fun hintSelectionDialog(){
         // Initialize a new instance of
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
 
@@ -82,7 +82,7 @@ class PoorAuthenticationMed : AppCompatActivity(){
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val li = LayoutInflater.from(this)
         val promptsView = li.inflate(R.layout.hintimagepa, null)
 

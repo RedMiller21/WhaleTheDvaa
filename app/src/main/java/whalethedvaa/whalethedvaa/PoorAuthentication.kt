@@ -49,7 +49,7 @@ class PoorAuthentication : AppCompatActivity(){
     }
 
     private fun instructionsDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.paeinstructions)
@@ -63,7 +63,7 @@ class PoorAuthentication : AppCompatActivity(){
     //Create dialog with hint options
     private fun hintSelectionDialog(){
         // Initialize a new instance of
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
 
@@ -84,7 +84,7 @@ class PoorAuthentication : AppCompatActivity(){
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val li = LayoutInflater.from(this)
         val promptsView = li.inflate(R.layout.hintimagepa, null)
 
@@ -185,7 +185,7 @@ class PoorAuthentication : AppCompatActivity(){
     private fun socialDialog(){
         val li = LayoutInflater.from(this)
         val promptsView = li.inflate(R.layout.social_dialog, null)
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
 
         // set social.xml to social builder
         builder.setView(promptsView)

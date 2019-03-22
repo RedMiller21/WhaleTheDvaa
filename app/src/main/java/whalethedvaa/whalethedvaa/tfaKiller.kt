@@ -1,26 +1,28 @@
 package com.example.paulb.whale2fa
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_tfa_killer.*
+import whalethedvaa.whalethedvaa.ProgressPage
 import whalethedvaa.whalethedvaa.R
 import java.text.SimpleDateFormat
-import java.util.Calendar
+import java.util.*
 
 class tfaKiller : Activity() {
 
-    private var stampBool : Boolean = false
-    private var code : Long = 0
+    private var stampBool : Boolean = false //Boolean for if timestamp is being displayed
+    private var code : Long = 0 //Initialise 2FA code
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tfa_killer)
-        val t = object : Thread() {
+        val t = object : Thread() { //Start thread to update clock/timestamp every second
             override fun run() {
                 while (true) {
                     try {
-                        Thread.sleep(1000)
-                        runOnUiThread { updateTime() }
+                        Thread.sleep(1000) //Wait 1 second
+                        runOnUiThread { updateTime() } //Call function to update display
                     } catch (e: InterruptedException) {
                         e.printStackTrace()
                     }
@@ -43,31 +45,41 @@ class tfaKiller : Activity() {
             onBackPressed()
         }
 
+        //Button to check if correct code has been entered
         btnCode.setOnClickListener{
             checkCode(txtCode.text.toString())
         }
 
+        //When clock is clicked it will change to a timestamp and vice versa
         lblTime.setOnClickListener {
-            stampBool = !stampBool
+            stampBool = !stampBool //Invert bool for display
         }
+
+        //Flags button move to progress page
+        flagsBtn.setOnClickListener {
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
+
 
         informationDialog()
     }
 
     private fun updateTime() {
-        val cal = Calendar.getInstance()
-        val df = SimpleDateFormat("HH:mm:ss")
+        val cal = Calendar.getInstance() //Get current time
+        val df = SimpleDateFormat("HH:mm:ss") //Create format for displaying time
         val time = df.format(cal.time)
-        val stamp = System.currentTimeMillis() / 1000
-        when{
-            stampBool -> lblTime.text = stamp.toString()
-            else -> lblTime.text = time
+        val stamp = System.currentTimeMillis() / 1000 //Timestamp is current time in seconds, i.e. milliseconds/1000
+        when{ //case statement determines what to display based on stampBool being true or false
+            stampBool -> lblTime.text = stamp.toString() //if true, display time stamp
+            else -> lblTime.text = time //if false, display clock time
         }
-        code = (stamp % 1000000)/ 100
+        code = (stamp % 1000000)/ 100 //Moduli timestamp by 1000000 and divide by 100 to get 4 digits used for 2FA code
     }
 
+    //Display vulnerability information
     private fun informationDialog(){
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
         builder.setMessage("You are a hacker who has been sniffing your victim’s network, viewing the codes they have been using to log in to their account. You determine that the codes are not going up or down by a set value each time, but they are changing. Your findings from sniffing the network can be found in Hint 1.")
@@ -77,15 +89,9 @@ class tfaKiller : Activity() {
 
     //Create dialog with hint options
     private fun hintSelectionDialog(){
-        // Initialize a new instance of
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
-        // Set the alert dialog title
-        builder.setTitle("Hints")
-
-        // Display a message on alert dialog
-        //builder.setMessage("Which hint would you like")
-
-        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
+        builder.setTitle("Hints")// Set the alert dialog title
+        val hints = arrayOf("Hint 1", "Hint 2", "Hint 3") //Display options for hints
         //SET PROPERTIES USING METHOD CHAINING
         builder.setItems(hints){ _, which ->
             hintDialog(hints[which])
@@ -102,7 +108,7 @@ class tfaKiller : Activity() {
     private fun hintDialog(chosenHint: String)
     {
 
-        val builder = android.support.v7.app.AlertDialog.Builder(this)
+        val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when(chosenHint){
@@ -117,19 +123,19 @@ class tfaKiller : Activity() {
     }
 
     private fun checkCode(enteredCode : String){
-        when (enteredCode){
-            code.toString() -> codeResult("Success")
-            else -> codeResult("Denied")
+        when (enteredCode){  //case statement comparing code entered by user
+            code.toString() -> codeResult("Success") //if match, call codeResult with 'success'
+            else -> codeResult("Denied") //otherwise, call with 'Denied'
         }
     }
 
     private fun codeResult(result : String){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(result)
         when(result){
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*C4SC4D1NG*")
-            "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.")
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*c4sc4d1ng*") //If successful, display flag
+            "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.") //If not successful, display error message
         }
 
         val dialog: AlertDialog = builder.create()

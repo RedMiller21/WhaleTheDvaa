@@ -2,6 +2,7 @@ package whalethedvaa.whalethedvaa
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -10,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_the_whala.*
 
 //TODO: Get rid of the puns
 //TODO: Don't get rid of the puns <3
+//TODO: Never get rid of the puns!
 
 class TheWhala : AppCompatActivity() {
 
@@ -54,7 +56,7 @@ class TheWhala : AppCompatActivity() {
     }
 
     private fun instructionsDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val subInstructions = arrayOf("What its whale about",  "The Vulnerabilities/Mitigations", "Flags/Progression", "All the buttons under the sea")
         builder.setTitle("Instructions")
             .setItems(subInstructions){ _, which ->
@@ -68,7 +70,7 @@ class TheWhala : AppCompatActivity() {
     private fun instDialog(chosenInst: String)
     {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenInst)
             .setNegativeButton("Back"){ _,_ -> instructionsDialog()}
@@ -81,7 +83,7 @@ class TheWhala : AppCompatActivity() {
                 subInstructions = arrayOf("Whats with the Flags", "The looks: Whats l33t speak")
             }
             "All the buttons under the sea" ->{
-                subInstructions = arrayOf("Hint", "?")
+                subInstructions = arrayOf("Hints", "Info", "Flags")
             }
             "The Vulnerabilities/Mitigations" -> {
                 subInstructions = arrayOf("Vulnerabilities", "Mitigations")
@@ -100,16 +102,19 @@ class TheWhala : AppCompatActivity() {
 
     private fun furtherInstrDialog(choosenInst: String, lastInst: String)
     {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(choosenInst)
             .setNegativeButton("Back"){ _,_ -> instDialog(lastInst)}
         when(choosenInst){
-            "Hint" -> {
+            "Hints" -> {
                 builder.setMessage(R.string.hints)
             }
-            "?" ->{
+            "Info" ->{
                 builder.setMessage(R.string.information)
+            }
+            "Flags" ->{
+                builder.setMessage(R.string.flagsButton)
             }
             "Whats with the Flags" -> {
                 builder.setMessage(R.string.flags)

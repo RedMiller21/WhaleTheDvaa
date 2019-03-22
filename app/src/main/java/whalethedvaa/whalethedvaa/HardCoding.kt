@@ -57,7 +57,7 @@ class HardCoding : AppCompatActivity() {
 
     //Function to set the Info section of the code
     private fun informationDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val level = intent.getIntExtra("Level",0)
 
         // Set the dialog title
@@ -65,10 +65,11 @@ class HardCoding : AppCompatActivity() {
 
         //Code to change the info for the different difficulty levels
         if (level == 1){
-            builder.setMessage("")
+            builder.setMessage("You've been supplied with the code for an android application which connects to a database for use internally. To find the flag you must look through the code and follow it's operations to find any security flaws.")
         }
         if (level == 2){
-            builder.setMessage("")
+            //todo finish this
+            builder.setMessage("For this exercise, you've been granted access to a small section of code from a malicious android application. To find the flag here, take a look at how the ")
         }
         if (level == 3){
             builder.setMessage("")
@@ -81,7 +82,7 @@ class HardCoding : AppCompatActivity() {
 
     //Create dialog to show the hints
     private fun hintSelectionDialog(){
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the dialog title
         builder.setTitle("Hints")
 
@@ -101,7 +102,7 @@ class HardCoding : AppCompatActivity() {
     private fun hintDialog(chosenHint: String)
     {
         val level = intent.getIntExtra("Level",0)
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
 
