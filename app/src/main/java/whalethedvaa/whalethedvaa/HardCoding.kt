@@ -68,11 +68,10 @@ class HardCoding : AppCompatActivity() {
             builder.setMessage("You've been supplied with the code for an android application which connects to a database for use internally. To find the flag you must look through the code and follow it's operations to find any security flaws.")
         }
         if (level == 2){
-            //todo finish this
-            builder.setMessage("For this exercise, you've been granted access to a small section of code from a malicious android application. To find the flag here, take a look at how the ")
+            builder.setMessage("For this exercise, you've been granted access to a small section of code from a malicious android application. To find the flag here, take a look at how the code interacts with the android operating system to further itself.")
         }
         if (level == 3){
-            builder.setMessage("")
+            builder.setMessage("This final exercise will test knowledge worked on in the previous difficulties, you've been given another code segment from a malicious android application. Complete it by looking at what the code is doing to gather information on the user.")
         }
 
         //Creating the dialog
@@ -109,23 +108,23 @@ class HardCoding : AppCompatActivity() {
         //The code below sets the Hints to different things depending on the difficulty selection
         if(level == 1) {
             when (chosenHint) {
-                "Hint 1" -> builder.setMessage("")
-                "Hint 2" -> builder.setMessage("")
-                "Hint 3" -> builder.setMessage("")
+                "Hint 1" -> builder.setMessage("The android method for connecting and using a database uses hardcoded variables to interact with. These variables may contain sensitive information.")
+                "Hint 2" -> builder.setMessage("Follow the flow of instructions when the application interacts with the database, values are hardcoded which contain the information you're looking for.")
+                "Hint 3" -> builder.setMessage("Look closely at the bottom section of the code. This section is where the flag is added to the database.")
             }
         }
         if(level == 2) {
             when (chosenHint) {
-                "Hint 1" -> builder.setMessage("")
-                "Hint 2" -> builder.setMessage("")
-                "Hint 3" -> builder.setMessage("")
+                "Hint 1" -> builder.setMessage("Android malware will sometimes focus on elevating it's privilege so that it can access more functions within the android platform. Look at how the malware does this.")
+                "Hint 2" -> builder.setMessage("Usually malware will use Command and Control (or C&C) servers to connect 'back home'. Finding out how the malicious code actually achieves this will allow security analysts to investigate the attacker further, and help you find the flag!")
+                "Hint 3" -> builder.setMessage("The Class 'reportServiceState()' is where the malware reports back to the server, the flag is located in these server connection details!")
             }
         }
         if(level == 3) {
             when (chosenHint) {
-                "Hint 1" -> builder.setMessage("")
-                "Hint 2" -> builder.setMessage("")
-                "Hint 3" -> builder.setMessage("")
+                "Hint 1" -> builder.setMessage("This malware focuses on collecting information from the victims device, again, by looking at how the malware interacts with the OS you will find the flag.")
+                "Hint 2" -> builder.setMessage("Just like the previous activity, this malware connects to a C&C server, albeit in a different manner, the information used to connect back could help find the flag.")
+                "Hint 3" -> builder.setMessage("The section where the malware encodes information using URLEncoder, contains details on the author of the malicious code, and also the flag!")
             }
         }
 
