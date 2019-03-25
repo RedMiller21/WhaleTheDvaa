@@ -24,10 +24,11 @@
             android:id="@+id/SelectionText"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
-            android:textStyle="italic" android:layout_marginStart="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/InformationBtn" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/InformationBtn" android:layout_marginTop="8dp"
+            android:fontFamily="@font/pt_mono"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"

@@ -45,7 +45,8 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:textColor="#FFFFFF"
-            android:textSize="18sp" android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/TheWhale"/>
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/TheWhale" android:typeface="normal"
+            android:textAlignment="center" android:fontFamily="@font/pt_mono"/>
 
 </android.support.constraint.ConstraintLayout>

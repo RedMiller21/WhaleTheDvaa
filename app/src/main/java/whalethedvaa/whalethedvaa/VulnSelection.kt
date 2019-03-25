@@ -30,17 +30,14 @@ class VulnSelection : AppCompatActivity() {
         ViewProgression.setOnClickListener{
             val intent = Intent(this, ProgressPage::class.java)
             startActivity(intent)
-        }
-
-        furtherReading.setOnClickListener{
-            val intent = Intent(this, ProgressPage::class.java)
-
+            onStop()
         }
 
         Vuln1.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",1)
             intent.putExtra("name",Vuln1.text)
+            onStop()
             startActivity(intent)
         }
 
@@ -48,6 +45,7 @@ class VulnSelection : AppCompatActivity() {
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",2)
             intent.putExtra("name",Vuln2.text)
+            onStop()
             startActivity(intent)
         }
 
@@ -55,6 +53,7 @@ class VulnSelection : AppCompatActivity() {
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",3)
             intent.putExtra("name",Vuln3.text)
+            onStop()
             startActivity(intent)
         }
 
@@ -62,6 +61,7 @@ class VulnSelection : AppCompatActivity() {
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",5)
             intent.putExtra("name",Vuln5.text)
+            onStop()
             startActivity(intent)
         }
 
@@ -69,15 +69,21 @@ class VulnSelection : AppCompatActivity() {
             val intent = Intent(this, DifficultySelector::class.java)
             intent.putExtra("vulnerability",6)
             intent.putExtra("name",Vuln6.text)
+            onStop()
             startActivity(intent)
         }
         //opens further reading page
         furtherReading.setOnClickListener {
             val intent = Intent(this, FurtherReading::class.java)
+            onStop()
             startActivity(intent)
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        setButtons()
+    }
 
     fun setButtons() {
         val flag  = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG","C4SC4D1NG", "4M4Z1NG", "T4STY-K3lP","H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3")
