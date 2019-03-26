@@ -43,11 +43,35 @@ class TheWhala : AppCompatActivity() {
             }
             1 -> {
                 state = 2
-                TheWhale.setImageResource(R.drawable.kil1base)
+                TheWhale.setImageResource(R.drawable.kill1base)
             }
             2 -> {
-                state = 0
+                state = 3
                 TheWhale.setImageResource(R.drawable.whale_main)
+            }
+            3 -> {
+                state = 4
+                TheWhale.setImageResource(R.drawable.redhat)
+            }
+            4 -> {
+                state = 5
+                TheWhale.setImageResource(R.drawable.bertha)
+            }
+            5 -> {
+                state = 6
+                TheWhale.setImageResource(R.drawable.bluehat)
+            }
+            6 -> {
+                state = 7
+                TheWhale.setImageResource(R.drawable.clown)
+            }
+            7 -> {
+                state = 8
+                TheWhale.setImageResource(R.drawable.greenhat)
+            }
+            8 -> {
+                state = 0
+                TheWhale.setImageResource(R.drawable.police)
             }
         }
         editor.putInt("whaleState", state)
