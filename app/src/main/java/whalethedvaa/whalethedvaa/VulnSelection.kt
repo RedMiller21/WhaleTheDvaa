@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_vuln_selection2.*
 
 class VulnSelection : AppCompatActivity() {
 
-    var foundFlags : String = ""
+    private var foundFlags : String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,20 +86,20 @@ class VulnSelection : AppCompatActivity() {
     }
 
     fun setButtons() {
-        val flag  = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG","C4SC4D1NG", "4M4Z1NG", "T4STY-K3lP","H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3")
-        if(foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")){
+        //val flag  = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG","C4SC4D1NG", "4M4Z1NG", "T4STY-K3lP","H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3")
+        if(foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")){
             Vuln5.setBackgroundResource(R.drawable.fin1)
-        } else if(foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")){
+        } else if(foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")){
             Vuln5.setBackgroundResource(R.drawable.b23)
-        }else if(foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")){
+        }else if(foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("WH413L0RD")){
             Vuln5.setBackgroundResource(R.drawable.b13)
-        }else if(foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")){
+        }else if(foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3")){
             Vuln5.setBackgroundResource(R.drawable.b12)
-        }else if(foundFlags.contains("F1NNDOG")){
+        }else if(foundFlags!!.contains("F1NNDOG")){
             Vuln5.setBackgroundResource(R.drawable.b1)
-        }else if(foundFlags.contains("C4PTB1RD23Y3")){
+        }else if(foundFlags!!.contains("C4PTB1RD23Y3")){
             Vuln5.setBackgroundResource(R.drawable.b2)
-        }else if(foundFlags.contains("WH413L0RD")){
+        }else if(foundFlags!!.contains("WH413L0RD")){
             Vuln5.setBackgroundResource(R.drawable.b3)
         }else {
             Vuln5.setBackgroundResource(R.drawable.b0)

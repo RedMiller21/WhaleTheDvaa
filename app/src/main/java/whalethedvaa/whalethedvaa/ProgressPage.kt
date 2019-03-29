@@ -15,7 +15,7 @@ class ProgressPage : AppCompatActivity() {
     var medFound: Int = 0 //medium flags found
     var killerFound: Int = 0 //killer flags found
     var totalFound: Int = 0 //total number of flags found
-    var foundFlags : String = "" //Initialise string to store all entered flags
+    var foundFlags : String? = "" //Initialise string to store all entered flags
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -114,7 +114,7 @@ class ProgressPage : AppCompatActivity() {
     private fun updateProgress(flag: String){ //Update progress after user has entered flag
         //update
         when { //Case statement for entered flag.
-            foundFlags.contains(flag) -> {errorMsg(1); return} //If flag has already been entered, show error message.
+            foundFlags!!.contains(flag) -> {errorMsg(1); return} //If flag has already been entered, show error message.
             //If flag exists, increment number of found flags of that difficulty, update progress bars and displays on form,
             easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/5"; totalEasy.progress = easyFound*100/5;}
             medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/5"; totalMedium.progress = medFound*100/5;}

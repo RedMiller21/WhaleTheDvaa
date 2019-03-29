@@ -22,10 +22,11 @@
             android:text="Instructions"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:id="@+id/InstructionsBtn" android:layout_marginBottom="108dp"
+            android:id="@+id/InstructionsBtn"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@+id/GetSplashing"
             app:layout_constraintStart_toStartOf="@+id/GetSplashing"
-            android:background="#203864" android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.0"/>
+            android:background="#203864" android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="75dp"/>
 
     <Button
             android:text="Get Splashing"
