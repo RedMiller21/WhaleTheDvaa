@@ -102,7 +102,14 @@
     </string>
 
     <string name="SQLiFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        SQL injection is a form of code injection in which the user can manipulate a program to output otherwise protected data.
+        This can be protected against by using appropriate data sanitisation and also ensuring by all means that data queries are handled seperately from data input.
+        \n https://www.owasp.org/index.php/SQL_Injection
+        \n https://www.w3schools.com/sql/sql_injection.asp
+        \n https://www.w3schools.com/php/php_mysql_prepared_statements.asp
+        \n https://guides.codepath.com/websecurity/SQL-Injection
+        \n https://developer.android.com/training/articles/security-tips
+
     </string>
 
     <string name="InsecureLoggingFurtherReading">
