@@ -166,7 +166,7 @@
                         android:text="Insecure \nLogging"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Vuln6"
+                        android:id="@+id/Vuln5"
                         android:background="@drawable/b0"
                         android:textColor="#FFFFFF"
                         app:layout_constraintVertical_bias="1"/>
@@ -183,7 +183,7 @@
                 <Button
                         android:text="Poor\nAuthentication"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/Vuln5"
+                        android:layout_height="wrap_content" android:id="@+id/Vuln4"
                         android:background="@drawable/b0"
                         android:textColor="#FFFFFF"
                         app:layout_constraintVertical_bias="1"/>

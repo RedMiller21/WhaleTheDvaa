@@ -1,11 +1,10 @@
 package whalethedvaa.whalethedvaa;
 
-import android.arch.persistence.db.SimpleSQLiteQuery;
-import android.arch.persistence.db.SupportSQLiteQuery;
-import android.arch.persistence.room.*;
+import android.arch.persistence.room.Dao;
 
 
-public @Dao interface DaoAccess {
+public @Dao
+interface DaoAccess {
 
 
     //todo implement instances of classes
@@ -16,7 +15,7 @@ public @Dao interface DaoAccess {
     //query for medium difficulty
     //Emails isfoundmedium = RawDao.getUserMedium("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText");
     //SimpleSQLiteQuery queryMedium = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ?",
-            //new Object[]{3});
+    //new Object[]{3});
     //Emails isfoundmedium2 = RawDao.getUserViaQueryMedium(queryMedium);
 
     //todo decide on Killer vulnerability setting/code

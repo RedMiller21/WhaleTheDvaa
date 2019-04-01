@@ -15,7 +15,8 @@ class ProgressPage : AppCompatActivity() {
     var medFound: Int = 0 //medium flags found
     var killerFound: Int = 0 //killer flags found
     var totalFound: Int = 0 //total number of flags found
-    var foundFlags : String? = "" //Initialise string to store all entered flags
+    var foundFlags: String = "" //Initialise string to store all entered flags
+    var totalFlags: String = "" //Initialise string to store all entered flags
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class ProgressPage : AppCompatActivity() {
         killerFound = mProg.getInt("killer", 0)
         totalFound = mProg.getInt("total", 0)
         foundFlags = mProg.getString("found", "")
-
+        totalFlags = mProg.getString("level", "0,0,0,0,0")
         setContentView(R.layout.activity_progress_page)
 
         //Update progress bars and displays
@@ -53,17 +54,19 @@ class ProgressPage : AppCompatActivity() {
             mEditor.putInt("killer", killerFound).commit()
             mEditor.putInt("total", totalFound).commit()
             mEditor.putString("found", foundFlags).commit()
+            mEditor.putString("level", totalFlags).commit()
 
             //Go back
             onBackPressed()
         }
 
-        EnterFlagBtn.setOnClickListener {//Button to enter flags
+        EnterFlagBtn.setOnClickListener {
+            //Button to enter flags
             enterFlag() //Call function for entering flag
         }
     }
 
-    private fun informationDialog(){
+    private fun informationDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Progression Information")
@@ -72,7 +75,7 @@ class ProgressPage : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun enterFlag(){
+    private fun enterFlag() {
 
         val li = LayoutInflater.from(this)
         val promptsView = li.inflate(R.layout.flagdialog, null)
@@ -83,19 +86,20 @@ class ProgressPage : AppCompatActivity() {
         // set flagdialog.xml to flagdialog builder
         builder.setView(promptsView)
             .setCancelable(false)
-            .setPositiveButton(R.string.enter){ _, _ ->
+            .setPositiveButton(R.string.enter) { _, _ ->
                 updateProgress(userInput.text.toString())
             }
-            .setNegativeButton(R.string.cancel){ dialog, _ -> dialog.cancel() }
+            .setNegativeButton(R.string.cancel) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun resetProg(){ //Function to reset progress by clearing flags found
+    private fun resetProg() { //Function to reset progress by clearing flags found
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle("Are you sure you want to reset your progress?")
-            .setPositiveButton("Yes"){ _, _ -> //If user confirms that they want to reset
+            .setPositiveButton("Yes") { _, _ ->
+                //If user confirms that they want to reset
                 //reset flag variables
                 easyFound = 0
                 medFound = 0
@@ -105,32 +109,152 @@ class ProgressPage : AppCompatActivity() {
                 //update bars and form
                 updateForm()
             }
-            .setNegativeButton("No"){ dialog, _ -> dialog.cancel() } //Else, return to app
+            .setNegativeButton("No") { dialog, _ -> dialog.cancel() } //Else, return to app
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
 
-    private fun updateProgress(flag: String){ //Update progress after user has entered flag
+    private fun updateProgress(flag: String) { //Update progress after user has entered flag
         //update
         when { //Case statement for entered flag.
-            foundFlags!!.contains(flag) -> {errorMsg(1); return} //If flag has already been entered, show error message.
+            foundFlags.contains(flag) -> {
+                errorMsg(1); return
+            } //If flag has already been entered, show error message.
             //If flag exists, increment number of found flags of that difficulty, update progress bars and displays on form,
-            easyFlags.contains(flag) -> {easyFound++; txtEasy.text = "Easy - $easyFound/5"; totalEasy.progress = easyFound*100/5;}
-            medFlags.contains(flag) -> {medFound++; txtMed.text = "Medium - $medFound/5"; totalMedium.progress = medFound*100/5;}
-            killerFlags.contains(flag) -> {killerFound++; txtKiller.text = "Killer - $killerFound/5"; totalKiller.progress = killerFound*100/5;}
-            else -> {errorMsg(0); return} //If flag does not exist, show error message.
+            easyFlags.contains(flag) -> {
+                easyFound++; txtEasy.text = "Easy - $easyFound/5"; totalEasy.progress = easyFound * 100 / 5
+            }
+            medFlags.contains(flag) -> {
+                medFound++; txtMed.text = "Medium - $medFound/5"; totalMedium.progress = medFound * 100 / 5
+            }
+            killerFlags.contains(flag) -> {
+                killerFound++; txtKiller.text = "Killer - $killerFound/5"; totalKiller.progress = killerFound * 100 / 5
+            }
+            else -> {
+                errorMsg(0); return
+            } //If flag does not exist, show error message.
         }
         foundFlags += flag //add flag to string list of found flags
+        upadateFlags()
         totalFound++ //increment number of flags found by 1
         txtTotal.text = "Total - $totalFound/15" //update form for total number of flags found
-        totalProgress.progress = totalFound*(100/15) //update progress bar for total flags
-        if (totalFound == 15){ //If all 15 flags have been found
+        totalProgress.progress = totalFound * (100 / 15) //update progress bar for total flags
+        if (totalFound == 15) { //If all 15 flags have been found
             complete() //call on-completion function
         }
     }
 
-    private fun updateForm(){ //Function to update all the progress bars and displays
+    private fun upadateFlags() {
+
+        var level = totalFlags.split(",").toTypedArray()
+        //TODO: For reference FINNDOG is easy, C4PTB1RDS3Y3 is medium and WH413L0RD is killer
+        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[3] = ""
+        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[3] = "6,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+            level[3] = "5,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+            level[3] = "4,"
+        } else if (foundFlags.contains("F1NNDOG")) {
+            level[3] = "3,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+            level[3] = "2,"
+        } else if (foundFlags.contains("WH413L0RD")) {
+            level[3] = "1,"
+        }else if (foundFlags.contains("bob")){
+            level[3] = "0,"
+            println(level[3])
+        }
+
+        //TODO: Replace with InsecureLogging flags
+        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[4] = "7,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[4] = "6,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+            level[4] = "5,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+            level[4] = "4,"
+        } else if (foundFlags.contains("F1NNDOG")) {
+            level[4] = "3,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+            level[4] = "2,"
+        } else if (foundFlags.contains("WH413L0RD")) {
+            level[4] = "1,"
+        } else {
+            level[4] = "0,"
+        }
+
+        //TODO: Replace with TFA flags
+        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[2] = "7,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[2] = "6,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+            level[2] = "5,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+            level[2] = "4,"
+        } else if (foundFlags.contains("F1NNDOG")) {
+            level[2] = "3,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+            level[2] = "2,"
+        } else if (foundFlags.contains("WH413L0RD")) {
+            level[2] = "1,"
+        } else {
+            level[2] = "0,"
+        }
+
+        //TODO: Replace with SQLI flags
+        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[1] = "7,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[1] = "6,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+            level[1] = "5,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+            level[1] = "4,"
+        } else if (foundFlags.contains("F1NNDOG")) {
+            level[1] = "3,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+            level[1] = "2,"
+        } else if (foundFlags.contains("WH413L0RD")) {
+            level[1] = "1,"
+        } else {
+            level[1] = "0,"
+        }
+
+        //TODO: Replace with HardCoding flags
+        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[0] = "7,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+            level[0] = "6,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+            level[0] = "5,"
+        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+            level[0] = "4,"
+        } else if (foundFlags.contains("F1NNDOG")) {
+            level[0] = "3,"
+        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+            level[0] = "2,"
+        } else if (foundFlags.contains("WH413L0RD")) {
+            level[0] = "1,"
+        } else {
+            level[0] = "0,"
+        }
+
+        println("1: " + totalFlags)
+        totalFlags = ""
+        println("2: " + totalFlags)
+        for (i in 0..4) {
+            totalFlags.plus(level[i])
+        }
+        println("3: " + totalFlags)
+
+    }
+
+    private fun updateForm() { //Function to update all the progress bars and displays
         //Update all TextView displays
         txtTotal.text = "Total - $totalFound/15"
         txtEasy.text = "Easy - $easyFound/5"
@@ -138,32 +262,32 @@ class ProgressPage : AppCompatActivity() {
         txtKiller.text = "Killer - $killerFound/5"
 
         //Update all progress bars
-        totalEasy.progress = (easyFound*100)/5
-        totalMedium.progress = (medFound*100)/5
-        totalKiller.progress = (killerFound*100)/5
-        totalProgress.progress = (totalFound*100)/15
+        totalEasy.progress = (easyFound * 100) / 5
+        totalMedium.progress = (medFound * 100) / 5
+        totalKiller.progress = (killerFound * 100) / 5
+        totalProgress.progress = (totalFound * 100) / 15
     }
 
-    private fun errorMsg(case : Int){ //Function to display error message
-        var title : String = ""
-        when (case){ //Case statement based on parameter
+    private fun errorMsg(case: Int) { //Function to display error message
+        var title: String = ""
+        when (case) { //Case statement based on parameter
             0 -> title = "Error: flag not found" //Incorrect flag was entered
             1 -> title = "This flag has already been entered" //Flag has already been entered
         }
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle(title)
-            .setNegativeButton("Okay"){ dialog, _ -> dialog.cancel() }
+            .setNegativeButton("Okay") { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun complete(){ //Function for when user enters last flag and completes app
+    private fun complete() { //Function for when user enters last flag and completes app
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setCancelable(false)
             .setTitle("Congratulations!")
             .setMessage("You've successfully found all the flags! Whale done!") //Success message
-            .setPositiveButton("Woohoo!"){ dialog, _ -> dialog.cancel() }
+            .setPositiveButton("Woohoo!") { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }

@@ -2,7 +2,6 @@ package whalethedvaa.whalethedvaa
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -19,16 +18,16 @@ class TheWhala : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_the_whala)
 
-        GetSplashing.setOnClickListener{
+        GetSplashing.setOnClickListener {
             val intent = Intent(this, VulnSelection::class.java)
             startActivity(intent)
         }
 
-        InstructionsBtn.setOnClickListener{instructionsDialog()}
+        InstructionsBtn.setOnClickListener { instructionsDialog() }
         setup()
 
 
-        TheWhale.setOnClickListener{whaleChange()}
+        TheWhale.setOnClickListener { whaleChange() }
     }
 
     private fun whaleChange() {
@@ -36,7 +35,7 @@ class TheWhala : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("Whale", Context.MODE_PRIVATE)
         val st = sharedPreferences.getInt("whaleState", 0)
         val editor = sharedPreferences.edit()
-        when(st){
+        when (st) {
             0 -> {
                 state = 1
                 TheWhale.setImageResource(R.drawable.med1base)
@@ -79,42 +78,46 @@ class TheWhala : AppCompatActivity() {
         editor.commit()
     }
 
-    private fun instructionsDialog(){
+    private fun instructionsDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
-        val subInstructions = arrayOf("What its whale about",  "The Vulnerabilities/Mitigations", "Flags/Progression", "All the buttons under the sea")
+        val subInstructions = arrayOf(
+            "What its whale about",
+            "The Vulnerabilities/Mitigations",
+            "Flags/Progression",
+            "All the buttons under the sea"
+        )
         builder.setTitle("Instructions")
-            .setItems(subInstructions){ _, which ->
-            instDialog(subInstructions[which])
-            println(subInstructions[which])
-        }
+            .setItems(subInstructions) { _, which ->
+                instDialog(subInstructions[which])
+                println(subInstructions[which])
+            }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun instDialog(chosenInst: String)
-    {
+    private fun instDialog(chosenInst: String) {
 
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenInst)
-            .setNegativeButton("Back"){ _,_ -> instructionsDialog()}
+            .setNegativeButton("Back") { _, _ -> instructionsDialog() }
         var subInstructions = arrayOf("null")
-        when(chosenInst){
+        when (chosenInst) {
             "What its whale about" -> {
                 builder.setMessage(R.string.AboutTheWhale)
             }
             "Flags/Progression" -> {
                 subInstructions = arrayOf("Whats with the Flags", "The looks: Whats l33t speak")
             }
-            "All the buttons under the sea" ->{
+            "All the buttons under the sea" -> {
                 subInstructions = arrayOf("Hints", "Info", "Flags")
             }
             "The Vulnerabilities/Mitigations" -> {
                 subInstructions = arrayOf("Vulnerabilities", "Mitigations")
             }
         }
-        if (!subInstructions.contains("null")){
-            builder.setItems(subInstructions){ _, which ->
+        if (!subInstructions.contains("null")) {
+            builder.setItems(subInstructions) { _, which ->
                 furtherInstrDialog(subInstructions[which], chosenInst)
                 println(subInstructions[which])
             }
@@ -124,20 +127,19 @@ class TheWhala : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun furtherInstrDialog(choosenInst: String, lastInst: String)
-    {
+    private fun furtherInstrDialog(choosenInst: String, lastInst: String) {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(choosenInst)
-            .setNegativeButton("Back"){ _,_ -> instDialog(lastInst)}
-        when(choosenInst){
+            .setNegativeButton("Back") { _, _ -> instDialog(lastInst) }
+        when (choosenInst) {
             "Hints" -> {
                 builder.setMessage(R.string.hints)
             }
-            "Info" ->{
+            "Info" -> {
                 builder.setMessage(R.string.information)
             }
-            "Flags" ->{
+            "Flags" -> {
                 builder.setMessage(R.string.flagsButton)
             }
             "Whats with the Flags" -> {
@@ -157,15 +159,16 @@ class TheWhala : AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
-    private fun setup(){
+
+    private fun setup() {
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val st = sharedPreferences.getInt("stateKey", 0)
-        if(st == 0){
+        if (st == 0) {
             set()
         }
     }
 
-    private fun set(){
+    private fun set() {
         val st = (0..5).random()
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()

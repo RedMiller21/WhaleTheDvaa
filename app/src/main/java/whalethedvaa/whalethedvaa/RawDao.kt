@@ -3,10 +3,9 @@ package whalethedvaa.whalethedvaa
 import android.arch.persistence.db.SupportSQLiteQuery
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.RawQuery
-import whalethedvaa.whalethedvaa.Emails
 
 @Dao
-public interface RawDao {
+interface RawDao {
     @RawQuery
     fun getUserEasy(queryEasy: SupportSQLiteQuery): String
 

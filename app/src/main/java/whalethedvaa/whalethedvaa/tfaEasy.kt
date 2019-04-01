@@ -20,27 +20,27 @@ class tfaEasy : AppCompatActivity() {
         displayInfo(0)
 
         //Call information dialog creation
-        InformationBtn.setOnClickListener{
+        InformationBtn.setOnClickListener {
             informationDialog()
         }
 
         //call hint dialog creation function
-        HintBtn.setOnClickListener{
+        HintBtn.setOnClickListener {
             hintSelectionDialog()
         }
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
+        BackBtn.setOnClickListener {
             onBackPressed()
         }
 
         //Button to submit email
-        btnEmail.setOnClickListener{
+        btnEmail.setOnClickListener {
             enterEmail()
         }
 
         //Button to enter 2FA code
-        btnCode.setOnClickListener{
+        btnCode.setOnClickListener {
             enterCode()
         }
 
@@ -148,7 +148,7 @@ class tfaEasy : AppCompatActivity() {
         }
     }
 
-    private fun informationDialog(){
+    private fun informationDialog() {
         val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("2FA Information")
@@ -158,7 +158,7 @@ class tfaEasy : AppCompatActivity() {
     }
 
     //Create dialog with hint options
-    private fun hintSelectionDialog(){
+    private fun hintSelectionDialog() {
         // Initialize a new instance of
         val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
@@ -168,7 +168,7 @@ class tfaEasy : AppCompatActivity() {
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
-        builder.setItems(hints){ _, which ->
+        builder.setItems(hints) { _, which ->
             hintDialog(hints[which])
             println(hints[which])
         }
@@ -180,13 +180,12 @@ class tfaEasy : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun hintDialog(chosenHint: String)
-    {
+    private fun hintDialog(chosenHint: String) {
 
         val builder = android.support.v7.app.AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
-        when(chosenHint){
+        when (chosenHint) {
             "Hint 1" -> builder.setMessage("You have been given the email address 'hacker@whalemail.sea'. Try entering this username.")
             "Hint 2" -> builder.setMessage("Does the code change when you request it more than once? Do you think it is uniquely generated?")
             "Hint 3" -> builder.setMessage("You need to login in as Victim. You have their email address, but not their code. Or do you?")
