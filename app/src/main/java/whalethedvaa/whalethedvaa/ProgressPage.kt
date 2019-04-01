@@ -148,7 +148,7 @@ class ProgressPage : AppCompatActivity() {
     private fun upadateFlags() {
 
         var level = totalFlags.split(",").toTypedArray()
-        //TODO: For reference FINNDOG is easy, C4PTB1RDS3Y3 is medium and WH413L0RD is killer
+        //TODO: Poor Authentication flags
         if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
             level[3] = ""
         } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
@@ -168,7 +168,7 @@ class ProgressPage : AppCompatActivity() {
             println(level[3])
         }
 
-        //TODO: Replace with InsecureLogging flags
+        //TODO:InsecureLogging flags
         if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "7,"
         } else if(foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
@@ -186,7 +186,7 @@ class ProgressPage : AppCompatActivity() {
         }else {
             level[4] = "0,"
         }
-        //TODO: Replace with TFA flags
+        //TODO: TFA flags
         if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "7,"
         } else if(foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
@@ -205,7 +205,7 @@ class ProgressPage : AppCompatActivity() {
             level[2] = "0,"
         }
 
-        //TODO: Replace with SQLI flags
+        //TODO: SQLI flags
         if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "7,"
         } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
@@ -224,7 +224,7 @@ class ProgressPage : AppCompatActivity() {
             level[1] = "0,"
         }
 
-        //TODO: Replace with HardCoding flags
+        //TODO: HardCoding flags
         if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "7,"
         } else if(foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){

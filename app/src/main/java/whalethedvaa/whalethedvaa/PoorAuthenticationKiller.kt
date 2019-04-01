@@ -17,13 +17,12 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         Thread.setDefaultUncaughtExceptionHandler( MyExceptionHandler(this));
 
         if (getIntent().getBooleanExtra("crash", false)) {
-            Toast.makeText(this, "App restarted after crash", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Moby had his revenge", Toast.LENGTH_LONG).show();
+            OutputText.text = "WH413L0RD"
         }
 
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
-
-
 
         //Call function to reset the pin on screen
         ResetBtn.setOnClickListener { reset() }
@@ -104,18 +103,18 @@ class PoorAuthenticationKiller : AppCompatActivity() {
 
 
     private fun reset() {
-        InputText.text = "----"
+        InputText.getText().clear()
     }
 
     private fun confirm(){
         val text: String = InputText.text.toString()
+        if(text == "Moby"){
+            Toast.makeText(this, "Moby hasn't crashed the ship yet", Toast.LENGTH_SHORT).show();
+        } else if (text == "Pokemon"){
+            Toast.makeText(this, "Gotta! Catch! EM'ALL!", Toast.LENGTH_SHORT).show();
+        }
+        InputText.getText().clear()
     }
 
-    private fun viewState(): Int {
-        val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
-        val st = sharedPreferences.getInt("stateKey", 0)
-        println("st" + st)
-        return st
-    }
 }
 

@@ -56,10 +56,10 @@ class VulnSelection : AppCompatActivity() {
             startActivity(intent)
         }
 
-        Vuln5.setOnClickListener{
+        Vuln4.setOnClickListener{
             val intent = Intent(this, DifficultySelector::class.java)
-            intent.putExtra("vulnerability",5)
-            intent.putExtra("name",Vuln5.text)
+            intent.putExtra("vulnerability",4)
+            intent.putExtra("name",Vuln4.text)
             onStop()
             startActivity(intent)
         }
@@ -83,7 +83,7 @@ class VulnSelection : AppCompatActivity() {
         super.onStart()
         val mProg = getSharedPreferences("progress", 0)
         foundFlags = mProg.getString("found", "")
-        totalFlags = mProg.getString("level", "0,1,2,3,4")
+        totalFlags = mProg.getString("level", "0,0,0,0,0")
         //checkProgress()
         setButtons()
     }
