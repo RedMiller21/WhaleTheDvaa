@@ -103,6 +103,77 @@ class VulnSelection : AppCompatActivity() {
         }else {
             Vuln5.setBackgroundResource(R.drawable.b0)
         }
+        if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
+            Vuln2.setBackgroundResource(R.drawable.fin1)
+        } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
+            Vuln2.setBackgroundResource(R.drawable.b23)
+        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("4M4Z1NG")){
+            Vuln2.setBackgroundResource(R.drawable.b13)
+        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N")){
+            Vuln2.setBackgroundResource(R.drawable.b12)
+        }else if(foundFlags!!.contains("B055M4N")){
+            Vuln2.setBackgroundResource(R.drawable.b1)
+        }else if(foundFlags!!.contains("N1C3-W4N")){
+            Vuln2.setBackgroundResource(R.drawable.b2)
+        }else if(foundFlags!!.contains("4M4Z1NG")){
+            Vuln2.setBackgroundResource(R.drawable.b3)
+        }else {
+            Vuln2.setBackgroundResource(R.drawable.b0)
+        }
+        if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
+            Vuln3.setBackgroundResource(R.drawable.fin1)
+        } else if(foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
+            Vuln3.setBackgroundResource(R.drawable.b23)
+        }else if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("C4SC4D1NG")){
+            Vuln3.setBackgroundResource(R.drawable.b13)
+        }else if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33")){
+            Vuln3.setBackgroundResource(R.drawable.b12)
+        }else if(foundFlags!!.contains("P0K3RF4C3")){
+            Vuln3.setBackgroundResource(R.drawable.b1)
+        }else if(foundFlags!!.contains("H0N3YB33")){
+            Vuln3.setBackgroundResource(R.drawable.b2)
+        }else if(foundFlags!!.contains("C4SC4D1NG")){
+            Vuln3.setBackgroundResource(R.drawable.b3)
+        }else {
+            Vuln3.setBackgroundResource(R.drawable.b0)
+        }
+        if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
+            Vuln6.setBackgroundResource(R.drawable.fin1)
+        } else if(foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
+            Vuln6.setBackgroundResource(R.drawable.b23)
+        }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("T4STY-K3LP")){
+            Vuln6.setBackgroundResource(R.drawable.b13)
+        }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D")){
+            Vuln6.setBackgroundResource(R.drawable.b12)
+        }else if(foundFlags!!.contains("D1V3T34M")){
+            Vuln6.setBackgroundResource(R.drawable.b1)
+        }else if(foundFlags!!.contains("F1SHF00D")){
+            Vuln6.setBackgroundResource(R.drawable.b2)
+        }else if(foundFlags!!.contains("T4STY-K3LP")){
+            Vuln6.setBackgroundResource(R.drawable.b3)
+        }else {
+            Vuln6.setBackgroundResource(R.drawable.b0)
+        }
+        if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
+            Vuln1.setBackgroundResource(R.drawable.fin1)
+        } else if(foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
+            Vuln1.setBackgroundResource(R.drawable.b23)
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("SP0NG3B0B")){
+            Vuln1.setBackgroundResource(R.drawable.b13)
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F")){
+            Vuln1.setBackgroundResource(R.drawable.b12)
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3")){
+            Vuln1.setBackgroundResource(R.drawable.b1)
+        }else if(foundFlags!!.contains("C0R4L-R33F")){
+            Vuln1.setBackgroundResource(R.drawable.b2)
+        }else if(foundFlags!!.contains("SP0NG3B0B")){
+            Vuln1.setBackgroundResource(R.drawable.b3)
+        }else {
+            Vuln1.setBackgroundResource(R.drawable.b0)
+        }
+
+
+
 
 //        if(foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")){
 //            Vuln5.setBackgroundResource(R.drawable.fin1)
