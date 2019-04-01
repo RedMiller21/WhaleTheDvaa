@@ -5,57 +5,65 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_further_reading.*
 
-class FurtherReading : AppCompatActivity(){
+class FurtherReading : AppCompatActivity() {
 
     /**
      * allows user to select a vulnerability and passes a number to the dialogue function
      */
-     override fun onCreate(savedInstanceState: Bundle?){
-         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_further_reading)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        //var selector = 0
-           btn2FA.setOnClickListener{
-               //selector = 1
-               readingDialogue(1)
-           }
+        btn2FA.setOnClickListener {
+            var selector = 1
+            readingDialogue(selector)
+        }
 
-           btnHardCoding.setOnClickListener{
-               //selector = 2
-                readingDialogue(2)
-           }
+        btnHardCoding.setOnClickListener {
+            var selector = 2
+            readingDialogue(selector)
+        }
 
-           btnInsecureLogging.setOnClickListener{
-               //selector = 3
-               readingDialogue(3)
-           }
+        btnInsecureLogging.setOnClickListener {
+            var selector = 3
+            readingDialogue(selector)
+        }
 
-           btnPoorAuth.setOnClickListener{
-               //selector = 4
-               readingDialogue(4)
-           }
+        btnPoorAuth.setOnClickListener {
+            var selector = 4
+            readingDialogue(selector)
+        }
 
-           btnSQLi.setOnClickListener{
-               //selector = 5
-               readingDialogue(5)
-           }
+        btnSQLi.setOnClickListener {
+            var selector = 5
+            readingDialogue(selector)
+        }
 
-   }
+    }
 
     /**
      * displays a dialogue containing further reading for each vulnerability, with further reading being stored in string file
      */
-    private fun readingDialogue(selector: Int){
+    private fun readingDialogue(selector: Int) {
         //declare the builder for the dialogue
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
 
-        when(selector) {
-            1 -> {builder.setTitle("Two Factor Authentication - Further Reading"); builder.setMessage(R.string.TwoFAFurtherReading)}
-            2 -> {builder.setTitle("Hardcoded Vulnerabilities - Further Reading"); builder.setMessage(R.string.HardcodingFurtherReading)}
-            3 -> {builder.setTitle("Insecure Logging - Further Reading"); builder.setMessage(R.string.InsecureLoggingFurtherReading)}
-            4 -> {builder.setTitle("Poor Authentication - Further Reading"); builder.setMessage(R.string.PoorAuthFurtherReading)}
-            5 -> {builder.setTitle("SQL Injection - Further Reading"); builder.setMessage(R.string.SQLiFurtherReading)}
-        else -> println(selector)
+        when (selector) {
+            1 -> {
+                builder.setTitle("Two Factor Authentication - Further Reading"); builder.setMessage(R.string.TwoFAFurtherReading)
+            }
+            2 -> {
+                builder.setTitle("Hardcoded Vulnerabilities - Further Reading"); builder.setMessage(R.string.HardcodingFurtherReading)
+            }
+            3 -> {
+                builder.setTitle("Insecure Logging - Further Reading"); builder.setMessage(R.string.InsecureLoggingFurtherReading)
+            }
+            4 -> {
+                builder.setTitle("Poor Authentication - Further Reading"); builder.setMessage(R.string.PoorAuthFurtherReading)
+            }
+            5 -> {
+                builder.setTitle("SQL Injection - Further Reading"); builder.setMessage(R.string.SQLiFurtherReading)
+            }
+            else -> println(selector)
         }
     }
 }

@@ -8,7 +8,11 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/whale_main_background"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".MyApplication"
+            >
+        <activity android:name=".PoorAuthenticationKiller">
+        </activity>
         <activity android:name=".PoorAuthenticationMed">
         </activity>
         <activity
@@ -49,5 +53,7 @@
         </activity>
         <activity android:name=".FurtherReading">
         </activity>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
     </application>
+
 </manifest>

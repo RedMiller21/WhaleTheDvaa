@@ -8,12 +8,12 @@ import kotlinx.android.synthetic.main.activity_sqli.*
 
 class SQLI : AppCompatActivity() {
     //declaring an array of the database type emails
-    private val emails : ArrayList<Emails> = ArrayList()
+    private val emails: ArrayList<Emails> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sqli)
-        val level = intent.getIntExtra("Level",0) //level is the difficulty setting 1 easy 2 medium and 3 hard
+        val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
 
@@ -31,25 +31,25 @@ class SQLI : AppCompatActivity() {
         //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
 
         //Call information dialog creation
-        InformationBtn.setOnClickListener{
+        InformationBtn.setOnClickListener {
             informationDialog()
         }
 
         //call hint dialog creation function
-        HintBtn.setOnClickListener{
+        HintBtn.setOnClickListener {
             hintSelectionDialog()
         }
 
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener{
+        BackBtn.setOnClickListener {
             onBackPressed()
         }
 
 
     }
 
-    private fun informationDialog(){
+    private fun informationDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hard Coding Information")
@@ -59,7 +59,7 @@ class SQLI : AppCompatActivity() {
     }
 
     //Create dialog with hint options
-    private fun hintSelectionDialog(){
+    private fun hintSelectionDialog() {
         // Initialize a new instance of
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
@@ -70,7 +70,7 @@ class SQLI : AppCompatActivity() {
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
-        builder.setItems(hints){ _, which ->
+        builder.setItems(hints) { _, which ->
             hintDialog(hints[which])
             println(hints[which])
         }
@@ -82,13 +82,12 @@ class SQLI : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun hintDialog(chosenHint: String)
-    {
+    private fun hintDialog(chosenHint: String) {
 
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle(chosenHint)
-        when(chosenHint){
+        when (chosenHint) {
             "Hint 1" -> builder.setMessage("Test test test")
             "Hint 2" -> builder.setMessage("Example hint 2")
             "Hint 3" -> builder.setMessage("Example hint 3")
