@@ -169,78 +169,77 @@ class ProgressPage : AppCompatActivity() {
         }
 
         //TODO: Replace with InsecureLogging flags
-        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "7,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        } else if(foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "6,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "5,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D")){
             level[4] = "4,"
-        } else if (foundFlags.contains("F1NNDOG")) {
+        }else if(foundFlags!!.contains("D1V3T34M")){
             level[4] = "3,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("F1SHF00D")){
             level[4] = "2,"
-        } else if (foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "1,"
-        } else {
+        }else {
             level[4] = "0,"
         }
-
         //TODO: Replace with TFA flags
-        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "7,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        } else if(foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "6,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "5,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33")){
             level[2] = "4,"
-        } else if (foundFlags.contains("F1NNDOG")) {
+        }else if(foundFlags!!.contains("P0K3RF4C3")){
             level[2] = "3,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("H0N3YB33")){
             level[2] = "2,"
-        } else if (foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "1,"
-        } else {
+        }else {
             level[2] = "0,"
         }
 
         //TODO: Replace with SQLI flags
-        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "7,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "6,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "5,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N")){
             level[1] = "4,"
-        } else if (foundFlags.contains("F1NNDOG")) {
+        }else if(foundFlags!!.contains("B055M4N")){
             level[1] = "3,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("N1C3-W4N")){
             level[1] = "2,"
-        } else if (foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("4M4Z1NG")){
             level[1] = "1,"
-        } else {
+        }else {
             level[1] = "0,"
         }
 
         //TODO: Replace with HardCoding flags
-        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "7,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        } else if(foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "6,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "5,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F")){
             level[0] = "4,"
-        } else if (foundFlags.contains("F1NNDOG")) {
+        }else if(foundFlags!!.contains("H3RM4N-M3LV1LL3")){
             level[0] = "3,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+        }else if(foundFlags!!.contains("C0R4L-R33F")){
             level[0] = "2,"
-        } else if (foundFlags.contains("WH413L0RD")) {
+        }else if(foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "1,"
-        } else {
+        }else {
             level[0] = "0,"
         }
 
