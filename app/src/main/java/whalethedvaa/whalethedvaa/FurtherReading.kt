@@ -12,6 +12,7 @@ class FurtherReading : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_further_reading)
 
         btn2FA.setOnClickListener {
             var selector = 1
