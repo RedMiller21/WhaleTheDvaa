@@ -77,7 +77,6 @@ class TheWhala : AppCompatActivity() {
         }
         editor.putInt("whaleState", state)
         editor.apply()
-        editor.commit()
     }
 
     private fun instructionsDialog() {
@@ -176,7 +175,6 @@ class TheWhala : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putInt("stateKey", st)
         editor.apply()
-        editor.commit()
     }
 
 

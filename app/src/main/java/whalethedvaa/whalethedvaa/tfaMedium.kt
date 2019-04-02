@@ -77,8 +77,8 @@ class tfaMedium : AppCompatActivity() {
         firstCode = Random().nextInt(10000) //Generate first code
         addToCode = Random().nextInt(10000) //Generate addition value
         val mEditor = mTfaCodes.edit()
-        mEditor.putInt("firstCode", firstCode).commit() //Commit these values to shared preferences
-        mEditor.putInt("addToCode", addToCode).commit()
+        mEditor.putInt("firstCode", firstCode).apply() //Commit these values to shared preferences
+        mEditor.putInt("addToCode", addToCode).apply()
         calcCodes() //Calculate remaining codes
     }
 

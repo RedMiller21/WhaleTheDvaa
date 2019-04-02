@@ -126,7 +126,12 @@
         prepared statements.
     </string>
     <string name="TwoFAFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        Two Factor Authentication is used to provide another way of verifying a user\'s identity, using something they have such as a code or device as well as something they know, such as their password.
+        If 2FA codes are generated in a way that is predictable or can be intercepted, hackers can use them to access a user\'s information. This can be protected by avoiding distributing codes through SMS or email,
+        and using devices such as Universal Second Factor devices such as USB keys.
+        \n\n <a href="https://www.kaspersky.co.uk/blog/2fa-practical-guide/14589/">\'Types of two-factor authentication, pros and cons\', Kaspersky Labs</a>\n
+        \n <a href="https://www.tripwire.com/state-of-security/security-data-protection/cyber-security/u2f-next-generation-2-factor-authentication/">\'U2F: Next Generation 2-Factor Authentication\', Tripwire</a>\n
+        \n <a href="https://www.wired.com/story/2fa-randomness/">\'Just how random are two factor authentication codes?\', Wired</a>
     </string>
 
     <string name="SQLiFurtherReading">

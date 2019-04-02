@@ -49,12 +49,12 @@ class ProgressPage : AppCompatActivity() {
             //When back button pressed
             //Add flag variables to shared preferences
             val mEditor = mProg.edit()
-            mEditor.putInt("easy", easyFound).commit()
-            mEditor.putInt("med", medFound).commit()
-            mEditor.putInt("killer", killerFound).commit()
-            mEditor.putInt("total", totalFound).commit()
-            mEditor.putString("found", foundFlags).commit()
-            mEditor.putString("level", totalFlags).commit()
+            mEditor.putInt("easy", easyFound).apply()
+            mEditor.putInt("med", medFound).apply()
+            mEditor.putInt("killer", killerFound).apply()
+            mEditor.putInt("total", totalFound).apply()
+            mEditor.putString("found", foundFlags).apply()
+            mEditor.putString("level", totalFlags).apply()
 
             //Go back
             onBackPressed()
@@ -136,7 +136,7 @@ class ProgressPage : AppCompatActivity() {
             } //If flag does not exist, show error message.
         }
         foundFlags += flag //add flag to string list of found flags
-        upadateFlags()
+       // upadateFlags()
         totalFound++ //increment number of flags found by 1
         txtTotal.text = "Total - $totalFound/15" //update form for total number of flags found
         totalProgress.progress = totalFound * (100 / 15) //update progress bar for total flags
@@ -145,7 +145,7 @@ class ProgressPage : AppCompatActivity() {
         }
     }
 
-    private fun upadateFlags() {
+   /* private fun upadateFlags() {
 
         var level = totalFlags.split(",").toTypedArray()
         //TODO: Poor Authentication flags
@@ -251,7 +251,7 @@ class ProgressPage : AppCompatActivity() {
         }
         println("3: " + totalFlags)
 
-    }
+    }*/
 
     private fun updateForm() { //Function to update all the progress bars and displays
         //Update all TextView displays
@@ -268,7 +268,7 @@ class ProgressPage : AppCompatActivity() {
     }
 
     private fun errorMsg(case: Int) { //Function to display error message
-        var title: String = ""
+        var title = ""
         when (case) { //Case statement based on parameter
             0 -> title = "Error: flag not found" //Incorrect flag was entered
             1 -> title = "This flag has already been entered" //Flag has already been entered

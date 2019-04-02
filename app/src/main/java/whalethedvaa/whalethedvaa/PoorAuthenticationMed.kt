@@ -171,7 +171,6 @@ class PoorAuthenticationMed : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putInt("stateKey", st)
         editor.apply()
-        editor.commit()
         return setPin()
     }
 }
