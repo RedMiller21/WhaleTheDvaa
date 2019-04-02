@@ -15,8 +15,8 @@ class ProgressPage : AppCompatActivity() {
     var medFound: Int = 0 //medium flags found
     var killerFound: Int = 0 //killer flags found
     var totalFound: Int = 0 //total number of flags found
-    var foundFlags: String = "" //Initialise string to store all entered flags
-    var totalFlags: String = "" //Initialise string to store all entered flags
+    var foundFlags: String? = "" //Initialise string to store all entered flags
+    var totalFlags: String? = "" //Initialise string to store all entered flags
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,7 +118,7 @@ class ProgressPage : AppCompatActivity() {
     private fun updateProgress(flag: String) { //Update progress after user has entered flag
         //update
         when { //Case statement for entered flag.
-            foundFlags.contains(flag) -> {
+            foundFlags!!.contains(flag) -> {
                 errorMsg(1); return
             } //If flag has already been entered, show error message.
             //If flag exists, increment number of found flags of that difficulty, update progress bars and displays on form,
@@ -136,7 +136,7 @@ class ProgressPage : AppCompatActivity() {
             } //If flag does not exist, show error message.
         }
         foundFlags += flag //add flag to string list of found flags
-       // upadateFlags()
+        updateFlags()
         totalFound++ //increment number of flags found by 1
         txtTotal.text = "Total - $totalFound/15" //update form for total number of flags found
         totalProgress.progress = totalFound * (100 / 15) //update progress bar for total flags
@@ -145,30 +145,30 @@ class ProgressPage : AppCompatActivity() {
         }
     }
 
-   private fun upadateFlags() {
+   private fun updateFlags() {
 
-        var level = totalFlags.split(",").toTypedArray()
-        //TODO: Poor Authentication flags
-        if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        var level = totalFlags!!.split(",").toTypedArray()
+        //Poor Authentication flags
+        if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = ""
-        } else if (foundFlags.contains("C4PTB1RD23Y3") && foundFlags.contains("WH413L0RD")) {
+        } else if (foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = "6,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("WH413L0RD")) {
+        } else if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = "5,"
-        } else if (foundFlags.contains("F1NNDOG") && foundFlags.contains("C4PTB1RD23Y3")) {
+        } else if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3")) {
             level[3] = "4,"
-        } else if (foundFlags.contains("F1NNDOG")) {
+        } else if (foundFlags!!.contains("F1NNDOG")) {
             level[3] = "3,"
-        } else if (foundFlags.contains("C4PTB1RD23Y3")) {
+        } else if (foundFlags!!.contains("C4PTB1RD23Y3")) {
             level[3] = "2,"
-        } else if (foundFlags.contains("WH413L0RD")) {
+        } else if (foundFlags!!.contains("WH413L0RD")) {
             level[3] = "1,"
-        }else if (foundFlags.contains("bob")){
+        }else if (foundFlags!!.contains("bob")){
             level[3] = "0,"
             println(level[3])
         }
 
-        //TODO:InsecureLogging flags
+        //InsecureLogging flags
         if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
             level[4] = "7,"
         } else if(foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
@@ -186,7 +186,7 @@ class ProgressPage : AppCompatActivity() {
         }else {
             level[4] = "0,"
         }
-        //TODO: TFA flags
+        //TFA flags
         if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "7,"
         } else if(foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
@@ -205,7 +205,7 @@ class ProgressPage : AppCompatActivity() {
             level[2] = "0,"
         }
 
-        //TODO: SQLI flags
+        //SQLI flags
         if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "7,"
         } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
@@ -224,7 +224,7 @@ class ProgressPage : AppCompatActivity() {
             level[1] = "0,"
         }
 
-        //TODO: HardCoding flags
+        //HardCoding flags
         if(foundFlags!!.contains("H3RM4N-M3LV1LL3") && foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
             level[0] = "7,"
         } else if(foundFlags!!.contains("C0R4L-R33F") && foundFlags!!.contains("SP0NG3B0B")){
@@ -243,13 +243,13 @@ class ProgressPage : AppCompatActivity() {
             level[0] = "0,"
         }
 
-        println("1: " + totalFlags)
+        println("1: $totalFlags")
         totalFlags = ""
-        println("2: " + totalFlags)
+        println("2: $totalFlags")
         for (i in 0..4) {
             totalFlags += level[i]
         }
-        println("3: " + totalFlags)
+        println("3: $totalFlags")
 
     }
 
