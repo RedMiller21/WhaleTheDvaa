@@ -1,6 +1,7 @@
 package whalethedvaa.whalethedvaa
 
 import android.arch.persistence.room.Room
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -62,6 +63,12 @@ class sqli_medium : AppCompatActivity() {
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener {
             onBackPressed()
+        }
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
         }
 
     }

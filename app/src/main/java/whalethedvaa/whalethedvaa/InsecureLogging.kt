@@ -1,5 +1,6 @@
 package whalethedvaa.whalethedvaa
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
@@ -52,6 +53,12 @@ class InsecureLogging : AppCompatActivity() {
 
         BackBtn.setOnClickListener{
             onBackPressed()
+        }
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
         }
     }
 

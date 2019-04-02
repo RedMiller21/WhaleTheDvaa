@@ -1,9 +1,11 @@
 package com.example.paulb.whale2fa
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_tfa_medium.*
+import whalethedvaa.whalethedvaa.ProgressPage
 import whalethedvaa.whalethedvaa.R
 import java.util.*
 
@@ -62,6 +64,12 @@ class tfaMedium : AppCompatActivity() {
             dialog.show()
         }
         informationDialog()
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun resetCodes() { //Function to regenerate 2FA codes

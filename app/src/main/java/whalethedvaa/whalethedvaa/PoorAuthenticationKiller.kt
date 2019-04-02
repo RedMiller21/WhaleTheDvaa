@@ -1,6 +1,7 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
@@ -39,6 +40,13 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener { onBackPressed() }
         //instructionsDialog()
+
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
     }
 
     fun crashMe(v : View) {

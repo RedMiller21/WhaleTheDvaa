@@ -63,6 +63,12 @@ class tfaKiller : Activity() {
 
 
         informationDialog()
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun updateTime() {

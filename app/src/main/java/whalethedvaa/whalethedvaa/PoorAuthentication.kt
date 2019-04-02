@@ -1,6 +1,7 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -47,6 +48,12 @@ class PoorAuthentication : AppCompatActivity() {
         BackBtn.setOnClickListener { onBackPressed() }
 
         instructionsDialog()
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun instructionsDialog() {
