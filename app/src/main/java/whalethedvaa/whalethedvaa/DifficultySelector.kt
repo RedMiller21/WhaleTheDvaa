@@ -31,7 +31,7 @@ class DifficultySelector : AppCompatActivity() {
                 2 -> intent = Intent(this, sqli_hard::class.java)
                 3 -> intent = Intent(this, tfaKiller::class.java)
                 4 -> intent = Intent(this, PoorAuthenticationKiller::class.java)
-                0 -> intent = Intent(this, InsecureLogging::class.java)
+                5 -> intent = Intent(this, InsecureLogging::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level", 3)
@@ -44,7 +44,7 @@ class DifficultySelector : AppCompatActivity() {
                 2 -> intent = Intent(this, sqli_medium::class.java)
                 3 -> intent = Intent(this, tfaMedium::class.java)
                 4 -> intent = Intent(this, PoorAuthenticationMed::class.java)
-                0 -> intent = Intent(this, InsecureLogging::class.java)
+                5 -> intent = Intent(this, InsecureLogging::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level", 2)
@@ -57,7 +57,7 @@ class DifficultySelector : AppCompatActivity() {
                 2 -> intent = Intent(this, sqli_easy::class.java)
                 3 -> intent = Intent(this, tfaEasy::class.java)
                 4 -> intent = Intent(this, PoorAuthentication::class.java)
-                0 -> intent = Intent(this, InsecureLogging::class.java)
+                5 -> intent = Intent(this, InsecureLogging::class.java)
                 else -> println(selector)
             }
             intent.putExtra("Level", 1)
@@ -81,7 +81,7 @@ class DifficultySelector : AppCompatActivity() {
                 4 -> {
                     builder.setTitle("Poor Authentication"); builder.setMessage(R.string.pamitigations)
                 }
-                0 -> intent = Intent(this, InsecureLogging::class.java)
+                5 -> intent = Intent(this, InsecureLogging::class.java)
                 else -> println(selector)
             }
             val dialog: android.support.v7.app.AlertDialog = builder.create()
@@ -106,7 +106,7 @@ class DifficultySelector : AppCompatActivity() {
 
     private fun updateBtns(selector: Int) {
         var level = totalFlags.split(",").toTypedArray()
-        when(level[selector]){
+        when(level[selector-1]){
             "0" -> {whaleasy.setImageResource(R.drawable.whaleasy)
             whaleMed.setImageResource(R.drawable.whalemedi)
             killerWhale.setImageResource(R.drawable.killerwhale)

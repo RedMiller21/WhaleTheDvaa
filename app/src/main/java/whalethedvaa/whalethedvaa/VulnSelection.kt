@@ -66,7 +66,7 @@ class VulnSelection : AppCompatActivity() {
 
         Vuln5.setOnClickListener {
             val intent = Intent(this, DifficultySelector::class.java)
-            intent.putExtra("vulnerability", 0)
+            intent.putExtra("vulnerability", 5)
             intent.putExtra("name", Vuln5.text)
             onStop()
             startActivity(intent)
