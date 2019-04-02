@@ -145,7 +145,7 @@ class ProgressPage : AppCompatActivity() {
         }
     }
 
-   /* private fun upadateFlags() {
+   private fun upadateFlags() {
 
         var level = totalFlags.split(",").toTypedArray()
         //TODO: Poor Authentication flags
@@ -247,11 +247,11 @@ class ProgressPage : AppCompatActivity() {
         totalFlags = ""
         println("2: " + totalFlags)
         for (i in 0..4) {
-            totalFlags.plus(level[i])
+            totalFlags += level[i]
         }
         println("3: " + totalFlags)
 
-    }*/
+    }
 
     private fun updateForm() { //Function to update all the progress bars and displays
         //Update all TextView displays
