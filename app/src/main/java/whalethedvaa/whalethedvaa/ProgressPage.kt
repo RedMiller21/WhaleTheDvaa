@@ -16,7 +16,7 @@ class ProgressPage : AppCompatActivity() {
     var killerFound: Int = 0 //killer flags found
     var totalFound: Int = 0 //total number of flags found
     var foundFlags: String? = "" //Initialise string to store all entered flags
-    var totalFlags: String? = "" //Initialise string to store all entered flags
+    var totalFlags: String = "" //Initialise string to store all entered flags
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -147,7 +147,7 @@ class ProgressPage : AppCompatActivity() {
 
    private fun updateFlags() {
 
-        var level = totalFlags!!.split(",").toTypedArray()
+        var level = totalFlags.split(",").toTypedArray()
         //Poor Authentication flags
         if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = ""
