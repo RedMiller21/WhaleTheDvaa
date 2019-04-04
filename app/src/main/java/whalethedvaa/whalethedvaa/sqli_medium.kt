@@ -9,8 +9,6 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_sqli_medium.*
 
 class sqli_medium : AppCompatActivity() {
-    //declaring an array of the database type emails
-    //private val emails : ArrayList<Emails> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,31 +22,6 @@ class sqli_medium : AppCompatActivity() {
             this,
             AppDatabase::class.java, "Email_Address"
         )
-            //allows room to recreate database tables in main thread without locking UI
-            .allowMainThreadQueries()
-            .fallbackToDestructiveMigration()
-            .build()
-
-
-        val headersText = "EMAIL       PASSWORD"
-        val accountinfoone = "whale@whalemail.sea     .rÏ.îNlbÄC*Z"
-
-        val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
-        textView.text = headersText
-        textView.text = accountinfoone
-
-        // todo this is fucked, assigning a textview to button resulting in runtime error - not fucked anymore
-        checkcrypto.setOnClickListener {
-            //todo change this to input
-            var Encryption: String = cryptoEntry.text.toString()
-
-            if (Encryption == "MD5 Base64") {
-                val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
-                val flagMessage = "Flat = N1C3W4N"
-                textView.text = flagMessage
-            }
-
-        }
 
         //Call information dialog creation
         InformationBtn.setOnClickListener {
@@ -76,8 +49,8 @@ class sqli_medium : AppCompatActivity() {
     private fun informationDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
-        builder.setTitle("Hard Coding Information")
-        builder.setMessage("Example Information")
+        builder.setTitle("Password Decryption")
+        builder.setMessage(R.string.SQliMediumInfo)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -114,7 +87,7 @@ class sqli_medium : AppCompatActivity() {
         when (chosenHint) {
             "Hint 1" -> builder.setMessage("You must use two different types of encoding/encryption to decrypt the password dumped by the database")
             "Hint 2" -> builder.setMessage("A handy tool for decoding is https://gchq.github.io/CyberChef/ try decoding the password!")
-            "Hint 3" -> builder.setMessage("First use Base64 and MD5 to reveal a password")
+            "Hint 3" -> builder.setMessage("First convert from Base64, then convert from hex to reveal a password, this password is your flag")
         }
 
         val dialog: AlertDialog = builder.create()

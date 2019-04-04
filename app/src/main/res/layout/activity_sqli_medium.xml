@@ -3,7 +3,7 @@
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#222A35"
         android:textColor="#FFFFFF"
@@ -60,30 +60,24 @@
             android:layout_marginBottom="28dp"
             app:layout_constraintBottom_toTopOf="@+id/BackBtn" android:layout_marginTop="44dp"
             app:layout_constraintTop_toBottomOf="@+id/input" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="161dp" android:layout_marginRight="161dp"/>
-    <TextView
-            android:layout_width="383dp"
-            android:layout_height="368dp"
-            android:id="@+id/txtSuccessMsg" android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" android:layout_marginTop="28dp"
-            app:layout_constraintTop_toBottomOf="@+id/InformationBtn" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="13dp"/>
+            android:layout_marginEnd="160dp" app:layout_constraintVertical_bias="0.988"/>
     <android.support.design.widget.TextInputLayout
             android:layout_width="395dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="54dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtSuccessMsg" android:layout_marginBottom="44dp"
+            android:layout_marginBottom="44dp"
             app:layout_constraintBottom_toTopOf="@+id/SQL_Login" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp" android:id="@+id/input" android:textColorHint="@color/colorWhite">
-
-        <android.support.design.widget.TextInputEditText
-                android:layout_width="334dp"
-                android:layout_height="43dp"
-                android:hint="Enter the encryption algorithm used" android:id="@+id/cryptoEntry"
-                android:textColor="@color/colorWhite"/>
-    </android.support.design.widget.TextInputLayout>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:id="@+id/input" android:textColorHint="@color/colorWhite"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="392dp"
+            android:layout_height="61dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtPassword" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:hint="NGUgMzEgNDMgMzMgMmQgNTcgMzQgNGU=" android:layout_marginTop="156dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:textColor="@color/colorWhite"
+            android:text="NGUgMzEgNDMgMzMgMmQgNTcgMzQgNGU"/>
 
 </android.support.constraint.ConstraintLayout>

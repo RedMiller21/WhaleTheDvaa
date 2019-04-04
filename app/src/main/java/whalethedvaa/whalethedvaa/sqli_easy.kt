@@ -56,8 +56,6 @@ class sqli_easy : AppCompatActivity() {
                 val successText = "YAS CONGRATS"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
-                //toast commented out for testing purposes
-                // Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
             } else {
                 val badtext = "Email is not linked to an account"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
@@ -105,9 +103,6 @@ class sqli_easy : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
-
-        // Display a message on alert dialog
-        //builder.setMessage("Which hint would you like")
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING

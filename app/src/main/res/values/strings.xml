@@ -145,6 +145,10 @@
 
     </string>
 
+    <string name="SQliMediumInfo">You have recieved a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
+        Your job is to decode the text in order to reveal a password, this password is your flag!
+    </string>
+
     <string name="InsecureLoggingFurtherReading">
         PUT YOUR FURTHER READING HERE
     </string>
