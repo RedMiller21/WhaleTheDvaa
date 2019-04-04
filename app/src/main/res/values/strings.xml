@@ -146,11 +146,19 @@
     </string>
 
     <string name="InsecureLoggingFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        Many vulnerabilities to do with Insecure Logging are due to app developers thinking that the only people able to see the logs of the application are themselves.
+        This oversight on the part of development teams can sometimes result in sensitive or even just too much data being released in the form of android logs.\n
+        These logs can be viewed very easily, even with little tech knowledge, by either downloading an application or by finding logdumps in locations on the device. With some understanding
+        of the layout of android logs, these can be understood and read by any user, not just the development team.\n
+        <a href="https://stackoverflow.com/questions/17290023/obfuscation-in-android-studio">\'Obfuscation in Android Studio\', Ilia Nedoluzhko, Stack Overflow</a>\n
+        <a href="https://android.stackexchange.com/questions/14430/how-can-i-view-and-examine-the-android-log">\'How can I view and examine the Android log?\', Bryan Denny, Android Enthusiasts - Stack Exchange</a>
     </string>
 
     <string name="HardcodingFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        A Hardcoding Vulnerability is a fairly simple concept to explain; if the development team code vulnerable information into an application, they need to do it in such a way
+        that, if someone was to download the application and unpack it, the person wouldn\'t see that information. Otherwise it would be a security flaw! \n
+        In reality, development teams often forget or overlook these kinds of vulnerabilities due to them not thinking about anyone other than themselves looking at the code that makes their application up.\n
+        <a href="https://hackernoon.com/how-i-hacked-modern-vending-machines-43f4ae8decec">\'How I hacked modern Vending Machines\', Matteo Pisani, Hackernoon</a>
     </string>
 
     <string name="PoorAuthFurtherReading">
@@ -240,5 +248,19 @@
     </string>
     <string name="InsecureLogs_Hint_Killer_3">
         By using the filesystem browser, as in the previous exercise, you can navigate to this file and find the flag!
+    </string>
+    <string name="InsecureLogsMitigations">
+        Insecure Log Vulnerabilities are mitigated by development teams when creating applications. This is done by ensuring that any excessive generation of logs, necessary for the
+        debugging of the application, are removed before the release of the application to the public.\n
+        Another way the development team could ensure that this vulnerability won\'t affect their project is by changing normal error and crash messages
+        to ones made by them. This stops any information leakage by the default error catching system during operation.
+    </string>
+    <string name="HardcodingMitigations">
+        Although a good idea, "Just don\'t put the password in the code" isn\'t the only fix for Hardcoding Vulnerabilities in an android application.\n
+        Many problems are usually found with sensitive resources and functions that give away too much information about an application. The development team can properly mitigate
+        Hardcoding Vulnerabilities by changing the layout, function names and variable names inside their application to obfuscate the code that makes it up.
+        \n
+        Another step to secure hardcode is to use build in development tools such as Minify and Proguard to ensure that if anyone was to unpack and decompile the apk file, much
+        of the information would be obscured. This would make it much harder for someone to quickly glance over the code and find the important information.
     </string>
 </resources>
