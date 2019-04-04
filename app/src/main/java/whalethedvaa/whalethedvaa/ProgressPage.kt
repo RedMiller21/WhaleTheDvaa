@@ -151,7 +151,7 @@ class ProgressPage : AppCompatActivity() {
         var level = totalFlags.split(",").toTypedArray()
         //Poor Authentication flags
         if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
-            level[3] = ""
+            level[3] = "7,"
         } else if (foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = "6,"
         } else if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("WH413L0RD")) {
@@ -166,7 +166,6 @@ class ProgressPage : AppCompatActivity() {
             level[3] = "1,"
         }else if (foundFlags!!.contains("bob")){
             level[3] = "0,"
-            println(level[3])
         }
 
         //InsecureLogging flags
@@ -249,6 +248,9 @@ class ProgressPage : AppCompatActivity() {
         println("2: $totalFlags")
         for (i in 0..4) {
             totalFlags += level[i]
+            println(i)
+            println("-" + level)
+
         }
         println("3: $totalFlags")
 
