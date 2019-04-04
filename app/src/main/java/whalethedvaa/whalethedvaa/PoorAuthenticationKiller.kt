@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication_killer.*
 
@@ -19,7 +20,7 @@ class PoorAuthenticationKiller : AppCompatActivity() {
 
         if (getIntent().getBooleanExtra("crash", false)) {
             Toast.makeText(this, "Moby had his revenge", Toast.LENGTH_LONG).show();
-            OutputText.text = "WH413L0RD"
+            FlagText.text = "WH413L0RD"
         }
 
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
@@ -116,12 +117,25 @@ class PoorAuthenticationKiller : AppCompatActivity() {
 
     private fun confirm(){
         val text: String = InputText.text.toString()
+        val sharedPreferences = getSharedPreferences("Crashing", Context.MODE_PRIVATE)
         if(text == "Moby"){
-            Toast.makeText(this, "Moby hasn't crashed the ship yet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Moby hasn't crashed the ship yet", Toast.LENGTH_SHORT).show()
         } else if (text == "Pokemon"){
-            Toast.makeText(this, "Gotta! Catch! EM'ALL!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Gotta! Catch! EM'ALL!", Toast.LENGTH_SHORT).show()
         }
         InputText.getText().clear()
+
+
+        val editor = sharedPreferences.edit()
+        editor.putString(text, text)
+        editor.apply()
+
+
+        val btn = "ConfirmBtn"
+        var btns = resources.getIdentifier(btn, "id", this.packageName)
+        val bttns : Button = findViewById(btns)
+        val value = Integer.parseInt(text)
+        bttns.setBackgroundColor(value)
     }
 
 }
