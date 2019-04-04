@@ -39,6 +39,10 @@ class FurtherReading : AppCompatActivity(){
                readingDialogue(5)
            }
 
+            BackBtn.setOnClickListener {
+            onBackPressed()
+        }
+
    }
 
     /**
