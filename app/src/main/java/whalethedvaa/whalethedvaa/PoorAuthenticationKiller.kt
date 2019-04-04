@@ -126,11 +126,9 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         InputText.getText().clear()
 
 
-
         val editor = sharedPreferences.edit()
         editor.putString(text, text)
         editor.apply()
-
 
 
         val btn = "ConfirmBtn"

@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_vuln_selection2.*
 
 class VulnSelection : AppCompatActivity() {
 
-    var foundFlags: String = ""
     var totalFlags: String = "" //Initialise string to store all entered flags
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,7 +81,6 @@ class VulnSelection : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val mProg = getSharedPreferences("progress", 0)
-        foundFlags = mProg.getString("found", "")
         totalFlags = mProg.getString("level", "0,0,0,0,0")
         //checkProgress()
         setButtons()

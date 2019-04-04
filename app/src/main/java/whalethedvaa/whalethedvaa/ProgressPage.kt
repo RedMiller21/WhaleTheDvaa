@@ -107,6 +107,7 @@ class ProgressPage : AppCompatActivity() {
                 totalFound = 0
                 foundFlags = ""
                 //update bars and form
+                updateFlags()
                 updateForm()
             }
             .setNegativeButton("No") { dialog, _ -> dialog.cancel() } //Else, return to app
