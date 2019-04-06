@@ -71,7 +71,9 @@ class DifficultySelector : AppCompatActivity() {
             )//, R.style.mitigationDialogueTheme)
             // Set the alert dialog title
             when (selector) {
-                1 -> intent = Intent(this, HardCoding::class.java)
+                1 -> {
+                    builder.setTitle("Hardcoding Mitigations"); builder.setMessage(R.string.HardcodingMitigations)
+                }
                 2 -> {
                     builder.setTitle("SQL Injection Mitigations"); builder.setMessage(R.string.SQLiMitigations)
                 }
@@ -79,9 +81,11 @@ class DifficultySelector : AppCompatActivity() {
                     builder.setTitle("2FA Mitigations"); builder.setMessage(R.string.tfamitigations)
                 }
                 4 -> {
-                    builder.setTitle("Poor Authentication"); builder.setMessage(R.string.pamitigations)
+                    builder.setTitle("Poor Authentication Mitigations"); builder.setMessage(R.string.pamitigations)
                 }
-                5 -> intent = Intent(this, InsecureLogging::class.java)
+                5 -> {
+                    builder.setTitle("Insecure Logging Mitigations"); builder.setMessage(R.string.InsecureLogsMitigations)
+                }
                 else -> println(selector)
             }
             val dialog: android.support.v7.app.AlertDialog = builder.create()
