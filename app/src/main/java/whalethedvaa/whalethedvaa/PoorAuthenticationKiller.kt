@@ -2,12 +2,15 @@ package whalethedvaa.whalethedvaa
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication_killer.*
 
@@ -16,10 +19,10 @@ class PoorAuthenticationKiller : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poor_authentication_killer)
-        Thread.setDefaultUncaughtExceptionHandler( MyExceptionHandler(this));
+        Thread.setDefaultUncaughtExceptionHandler( MyExceptionHandler(this))
 
         if (getIntent().getBooleanExtra("crash", false)) {
-            Toast.makeText(this, "Moby had his revenge", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Moby had his revenge", Toast.LENGTH_LONG).show()
             FlagText.text = "WH413L0RD"
         }
 
@@ -48,7 +51,54 @@ class PoorAuthenticationKiller : AppCompatActivity() {
             val intent = Intent(this, ProgressPage::class.java)
             startActivity(intent)
         }
+
+
+        randomizebtn.setOnClickListener {
+            randomizeColour()
+        }
+
+        resetColourBtn.setOnClickListener {
+            resetColour()
+        }
     }
+
+    private fun resetColour() {
+        val radioGroup : RadioGroup = findViewById(R.id.radioGroupBtn)
+        val btn: String = resources.getText(radioGroup.checkedRadioButtonId).toString()
+        val btns : Button = findViewById(resources.getIdentifier(btn, "id", this.packageName))
+        btns.setBackgroundColor(Color.parseColor("#203864"))
+        //TODO: Still needs finished
+    }
+
+    private fun randomizeColour() {
+        val rnds = (0..8).random()
+        val radioGroup : RadioGroup = findViewById(R.id.radioGroupBtn)
+        val sel = radioGroup.checkedRadioButtonId
+        val selected : RadioButton = findViewById(sel)
+
+        var btn = selected.text.toString()
+        when (btn){
+            "Reset Button" -> btn = "ResetBtn"
+            "Back Button" -> btn = "BackBtn"
+            "Confirm Button" -> btn = "ConfirmBtn"
+        }
+
+        val btns : Button = findViewById(resources.getIdentifier(btn, "id", this.packageName))
+        when(rnds){
+            0 -> btns.setBackgroundColor(Color.RED)
+            1 -> btns.setBackgroundColor(Color.GRAY)
+            2 -> btns.setBackgroundColor(Color.CYAN)
+            3 -> btns.setBackgroundColor(Color.GREEN)
+            4 -> btns.setBackgroundColor(Color.BLACK)
+            5 -> btns.setBackgroundColor(Color.BLUE)
+            6 -> btns.setBackgroundColor(Color.WHITE)
+            7 -> btns.setBackgroundColor(Color.MAGENTA)
+            8 -> btns.setBackgroundColor(Color.YELLOW)
+        }
+
+
+    }
+
 
     fun crashMe(v : View) {
         throw  NullPointerException()
@@ -112,7 +162,8 @@ class PoorAuthenticationKiller : AppCompatActivity() {
 
 
     private fun reset() {
-        InputText.getText().clear()
+        InputText.text.clear()
+        FlagText.text = ""
     }
 
     private fun confirm(){
@@ -124,13 +175,16 @@ class PoorAuthenticationKiller : AppCompatActivity() {
             Toast.makeText(this, "Gotta! Catch! EM'ALL!", Toast.LENGTH_SHORT).show()
         }
         InputText.getText().clear()
+        //possible crash 1
+        //screen change rotation
 
 
+        //possible crash 2
         val editor = sharedPreferences.edit()
         editor.putString(text, text)
         editor.apply()
 
-
+        //possible crash 3
         val btn = "ConfirmBtn"
         var btns = resources.getIdentifier(btn, "id", this.packageName)
         val bttns : Button = findViewById(btns)

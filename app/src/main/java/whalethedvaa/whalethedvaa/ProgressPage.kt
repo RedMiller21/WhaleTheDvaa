@@ -164,7 +164,7 @@ class ProgressPage : AppCompatActivity() {
             level[3] = "2,"
         } else if (foundFlags!!.contains("WH413L0RD")) {
             level[3] = "1,"
-        }else{
+        }else {
             level[3] = "0,"
         }
 
@@ -186,6 +186,7 @@ class ProgressPage : AppCompatActivity() {
         }else {
             level[4] = "0"
         }
+
         //TFA flags
         if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "7,"
