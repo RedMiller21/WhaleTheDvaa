@@ -140,7 +140,7 @@ class ProgressPage : AppCompatActivity() {
         updateFlags()
         totalFound++ //increment number of flags found by 1
         txtTotal.text = "Total - $totalFound/15" //update form for total number of flags found
-        totalProgress.progress = totalFound * (100 / 15) //update progress bar for total flags
+        totalProgress.progress = (totalFound * 100) / 15 //update progress bar for total flags
         if (totalFound == 15) { //If all 15 flags have been found
             complete() //call on-completion function
         }

@@ -1,20 +1,22 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication_killer.*
 
-class PoorAuthenticationKiller : AppCompatActivity() {
+abstract class PoorAuthenticationKiller : AppCompatActivity() {
+
+    var Numbers : Array<Int> = arrayOf(0,0,0,0,0,0)
+    var check: Boolean = true
+    var point: Int = 0
+    var Operations: Array<Char> = arrayOf('W','H','A','L','E','S')
+    var point2: Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +31,26 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
+
+        //Call function to change pin on screen
+        NumPad1.setOnClickListener { numPadInput('1') }
+        NumPad2.setOnClickListener { numPadInput('2') }
+        NumPad3.setOnClickListener { numPadInput('3') }
+        NumPad4.setOnClickListener { numPadInput('4') }
+        NumPad5.setOnClickListener { numPadInput('5') }
+        NumPad6.setOnClickListener { numPadInput('6') }
+        NumPad7.setOnClickListener { numPadInput('7') }
+        NumPad8.setOnClickListener { numPadInput('8') }
+        NumPad9.setOnClickListener { numPadInput('9') }
+        NumPad0.setOnClickListener { numPadInput('0') }
+        EqualsBtn.setOnClickListener { numPadInput('=') }
+        PlusBtn.setOnClickListener { numPadInput('+') }
+        MinusBtn.setOnClickListener { numPadInput('-') }
+        DivideBtn.setOnClickListener { numPadInput('/') }
+        MultiBtn.setOnClickListener { numPadInput('X') }
+
         //Call function to reset the pin on screen
         ResetBtn.setOnClickListener { reset() }
-
-        //Call function to confirm pin
-        ConfirmBtn.setOnClickListener { confirm() }
 
         //call hint dialog creation function
         HintBtn.setOnClickListener { hintSelectionDialog() }
@@ -53,52 +70,8 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         }
 
 
-        randomizebtn.setOnClickListener {
-            randomizeColour()
-        }
-
-        resetColourBtn.setOnClickListener {
-            resetColour()
-        }
-    }
-
-    private fun resetColour() {
-        val radioGroup : RadioGroup = findViewById(R.id.radioGroupBtn)
-        val btn: String = resources.getText(radioGroup.checkedRadioButtonId).toString()
-        val btns : Button = findViewById(resources.getIdentifier(btn, "id", this.packageName))
-        btns.setBackgroundColor(Color.parseColor("#203864"))
-        //TODO: Still needs finished
-    }
-
-    private fun randomizeColour() {
-        val rnds = (0..8).random()
-        val radioGroup : RadioGroup = findViewById(R.id.radioGroupBtn)
-        val sel = radioGroup.checkedRadioButtonId
-        val selected : RadioButton = findViewById(sel)
-
-        var btn = selected.text.toString()
-        when (btn){
-            "Reset Button" -> btn = "ResetBtn"
-            "Back Button" -> btn = "BackBtn"
-            "Confirm Button" -> btn = "ConfirmBtn"
-        }
-
-        val btns : Button = findViewById(resources.getIdentifier(btn, "id", this.packageName))
-        when(rnds){
-            0 -> btns.setBackgroundColor(Color.RED)
-            1 -> btns.setBackgroundColor(Color.GRAY)
-            2 -> btns.setBackgroundColor(Color.CYAN)
-            3 -> btns.setBackgroundColor(Color.GREEN)
-            4 -> btns.setBackgroundColor(Color.BLACK)
-            5 -> btns.setBackgroundColor(Color.BLUE)
-            6 -> btns.setBackgroundColor(Color.WHITE)
-            7 -> btns.setBackgroundColor(Color.MAGENTA)
-            8 -> btns.setBackgroundColor(Color.YELLOW)
-        }
-
 
     }
-
 
     fun crashMe(v : View) {
         throw  NullPointerException()
@@ -108,7 +81,7 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
-            .setMessage(R.string.paminstructions)
+            .setMessage(R.string.pakinstructions)
             .setCancelable(false)
             .setNegativeButton(R.string.exit) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
@@ -146,14 +119,17 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         builder.setTitle(chosenHint)
         when (chosenHint) {
             "Hint 1" -> {
-                builder.setMessage(R.string.hint1MPA)
+                builder.setMessage(R.string.hint1KPA)
                     .setTitle(chosenHint)
             }
             "Hint 2" -> {
-                builder.setMessage(R.string.hint2MPA)
+                builder.setMessage(R.string.hint2KPA)
                     .setTitle(chosenHint)
             }
-            "Hint 3" -> builder.setView(promptsView)
+            "Hint 3" -> {
+                builder.setView(R.layout.crash_button)
+                    .setMessage(R.string.hint3KPA)
+            }
         }
 
         val dialog: AlertDialog = builder.create()
@@ -162,35 +138,81 @@ class PoorAuthenticationKiller : AppCompatActivity() {
 
 
     private fun reset() {
-        InputText.text.clear()
-        FlagText.text = ""
+        PinOutput.text = ""
     }
 
-    private fun confirm(){
-        val text: String = InputText.text.toString()
-        val sharedPreferences = getSharedPreferences("Crashing", Context.MODE_PRIVATE)
-        if(text == "Moby"){
-            Toast.makeText(this, "Moby hasn't crashed the ship yet", Toast.LENGTH_SHORT).show()
-        } else if (text == "Pokemon"){
-            Toast.makeText(this, "Gotta! Catch! EM'ALL!", Toast.LENGTH_SHORT).show()
+    private fun numPadInput(num: Char) {
+        val text: String = PinOutput.text.toString()
+        val charText: CharArray = text.toCharArray()
+
+        var a = 0
+        when(num) {
+            '=' ->{
+                var final = Numbers[0]
+                val length = point-1
+                for (i in 1..length){
+                    when(Operations[i]){
+                        '+' -> final += Numbers[i]
+                        '-' -> final -= Numbers[i]
+                        '/' -> final /= Numbers[i]
+                        'X' -> final *= Numbers[i]
+                    }
+                }
+                PinOutput.text = final.toString()
+            }
+
+            '+','-' ,'X','/'  ->{
+                if(check == false){
+                    Toast.makeText(this, "This is not possible", Toast.LENGTH_SHORT).show()
+                }else{
+                    check == false
+                    Operations[point2] = num
+                    point2++
+                        println(text)
+                        println(num)
+                        for (i in charText.indices) {
+                            charText[i] = num
+                        }
+
+                        //println(charText.toString())
+                        val newText = String(charText)
+
+                        println(newText)
+                        PinOutput.text = newText
+                }
+            }
+
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' -> {
+                a = Character.getNumericValue(num)
+                if(check == true){
+                    Numbers[point] *= 10
+                    Numbers[point] += a
+                } else {
+                    check = true
+                    point++
+                    Numbers[point] *= 10
+                    Numbers[point] += a
+                }
+
+                println(text)
+                println(num)
+                for (i in charText.indices) {
+                    charText[i] = num
+                }
+
+                //println(charText.toString())
+                val newText = String(charText)
+
+                println(newText)
+                PinOutput.text = newText
+
+            }
+
+
         }
-        InputText.getText().clear()
-        //possible crash 1
-        //screen change rotation
-
-
-        //possible crash 2
-        val editor = sharedPreferences.edit()
-        editor.putString(text, text)
-        editor.apply()
-
-        //possible crash 3
-        val btn = "ConfirmBtn"
-        var btns = resources.getIdentifier(btn, "id", this.packageName)
-        val bttns : Button = findViewById(btns)
-        val value = Integer.parseInt(text)
-        bttns.setBackgroundColor(value)
     }
+
 
 }
+
 

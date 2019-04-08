@@ -82,7 +82,7 @@ class TheWhala : AppCompatActivity() {
     private fun instructionsDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         val subInstructions = arrayOf(
-            "What its whale about",
+            "What it's whale about",
             "The Vulnerabilities/Mitigations",
             "Flags/Progression",
             "All the buttons under the sea"

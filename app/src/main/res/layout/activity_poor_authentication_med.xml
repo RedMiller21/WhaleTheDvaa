@@ -10,13 +10,6 @@
 >
 
     <Button
-            android:text="Flags"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/flagsBtn" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:background="#4472C4" android:textColor="#FFFFFF"/>
-    <Button
             android:text="Back"
             android:layout_height="wrap_content"
             android:id="@+id/BackBtn"
@@ -56,82 +49,82 @@
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"/>
     <Button
-            android:text="1"
+            android:text="1&#10;"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad1"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad4" app:layout_constraintEnd_toStartOf="@+id/NumPad2"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp"/>
     <Button
-            android:text="2"
+            android:text="2&#10;abc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad2"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad5"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp"/>
     <Button
-            android:text="3"
+            android:text="3&#10;def"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad3"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad6" app:layout_constraintStart_toEndOf="@+id/NumPad2"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"/>
     <Button
-            android:text="4"
+            android:text="4&#10;ghi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad4"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad7" app:layout_constraintEnd_toStartOf="@+id/NumPad5"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp"/>
     <Button
-            android:text="5"
+            android:text="5&#10;jkl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad5"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad8" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp"/>
     <Button
-            android:text="6"
+            android:text="6&#10;mno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad6"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad9" app:layout_constraintStart_toEndOf="@+id/NumPad5"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"/>
     <Button
-            android:text="7"
+            android:text="7&#10;prs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad7"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad0" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/NumPad8" android:layout_marginRight="8dp"/>
+            app:layout_constraintEnd_toStartOf="@+id/NumPad8"/>
     <Button
-            android:text="8"
+            android:text="8&#10;tuv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad8"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad0" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
     <Button
-            android:text="9"
+            android:text="9&#10;wxy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NumPad9"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/NumPad0" app:layout_constraintStart_toEndOf="@+id/NumPad8"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"/>
     <TextView
             android:text="Poor Authentication"
             android:layout_width="wrap_content"
@@ -177,6 +170,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/InstructionsBtn" android:background="#4472C4"
             android:textColor="#FFFFFF" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+    />
+    <Button
+            android:text="Flags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flagsBtn" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:background="#4472C4" android:textColor="#FFFFFF"/>
 
 </android.support.constraint.ConstraintLayout>
