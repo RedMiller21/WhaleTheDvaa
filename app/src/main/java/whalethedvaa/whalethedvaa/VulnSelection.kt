@@ -82,6 +82,8 @@ class VulnSelection : AppCompatActivity() {
         super.onStart()
         val mProg = getSharedPreferences("progress", 0)
         totalFlags = mProg.getString("level", "0,0,0,0,0")
+        //if (totalFlags == ""){totalFlags = "0,0,0,0,0"}
+        //setContentView(R.layout.activity_progress_page)
         //checkProgress()
         setButtons()
     }
@@ -101,7 +103,7 @@ class VulnSelection : AppCompatActivity() {
                 "4" -> {bttns.setBackgroundResource(R.drawable.b12)}
                 "5" -> {bttns.setBackgroundResource(R.drawable.b13)}
                 "6" -> {bttns.setBackgroundResource(R.drawable.b23)}
-                "7" -> {bttns.setBackgroundResource(R.drawable.b123)}
+                "7" -> {bttns.setBackgroundResource(R.drawable.fin1)}
                 else -> println(i)
             }
        }

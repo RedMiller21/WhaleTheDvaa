@@ -117,7 +117,7 @@ class tfaKiller : Activity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when (chosenHint) {
-            "Hint 1" -> builder.setMessage("From sniffing the network, you can see that at 07:29:34 08/08/18 GMT, the code was 7133. At 20:15:23 12/11/2018 GMT, it was 5372.")
+            "Hint 1" -> builder.setMessage("From sniffing the network, you can see that at 07:29:34 08/08/2018 GMT, the code was 7133. At 20:15:23 12/11/2018 GMT, it was 5372.")
             "Hint 2" -> builder.setMessage("The Unix timestamp is the number of seconds that have passed since the 'epoch' - midnight 01/01/1970. Try clicking on the clock to find out more.")
             "Hint 3" -> builder.setMessage("The code is 4 digits long, so only part of the timestamp is used. The code changes every 100 seconds.")
         }
@@ -139,7 +139,7 @@ class tfaKiller : Activity() {
         // Set the alert dialog title
         builder.setTitle(result)
         when (result) {
-            "Success" -> builder.setMessage("Welcome back, Victim.\n*c4sc4d1ng*") //If successful, display flag
+            "Success" -> builder.setMessage("Welcome back, Victim.\n*C4SC4D1NG*") //If successful, display flag
             "Denied" -> builder.setMessage("The code you entered was incorrect. Please try again.") //If not successful, display error message
         }
 
