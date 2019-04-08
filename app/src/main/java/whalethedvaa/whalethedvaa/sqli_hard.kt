@@ -16,7 +16,7 @@ class sqli_hard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sqli)
+        setContentView(R.layout.activity_sqli_hard)
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
@@ -41,6 +41,7 @@ class sqli_hard : AppCompatActivity() {
             var statement = findViewById(R.id.SQL_Email) as EditText
             var success = findViewById(R.id.txtSuccessMsg) as TextView
 
+            val stringStatement = statement.text.toString()
 
             var SQLstatmentOne = "SELECT * FROM Emails WHERE uid = 1 OR 1=1"
             var SQLstatementTwo = "SELECT * FROM Emails WHERE uid = 0 OR 1=1"
@@ -49,19 +50,19 @@ class sqli_hard : AppCompatActivity() {
             /**
              * if statements for three common SQL injection commands
              */
-            if (statement.equals(SQLstatmentOne))
+            if (stringStatement == SQLstatmentOne)
             {
                 //query broken?? - temporary fix
                 success.text = "whale@whalemail.sea   4M4Z1NG"
             }
 
-            if (statement.equals(SQLstatementTwo))
+            if (stringStatement == SQLstatementTwo)
             {
                 //query broken?? - temporary fix
                 success.text = "whale@whalemail.sea   4M4Z1NG"
             }
 
-            if (statement.equals(SQLstatementThree))
+            if (stringStatement == SQLstatementThree)
             {
                 //query broken?? - temporary fix
                 success.text = "whale@whalemail.sea   4M4Z1NG"
