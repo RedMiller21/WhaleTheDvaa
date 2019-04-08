@@ -1,39 +1,22 @@
 package whalethedvaa.whalethedvaa;
 
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Insert;
-import android.arch.persistence.room.Query;
+import android.arch.persistence.room.*;
 
 
 public @Dao
 interface DaoAccess {
 
+    @Insert
+    void insertOnlySingleUser(Emails emails);
 
-    //todo implement instances of classes
-    //Emails isfoundeasy = RawDao.getUserEasy("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText");
-    //SimpleSQLiteQuery queryEasy = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ?", new Object[]{3});
-    //Emails isfound1  = whalethedvaa.whalethedvaa.RawDao.getUserViaQueryEasy(queryEasy);
+    @Query("SELECT * FROM Emails WHERE uid=:uid")
+    Emails fetchOneEmailsByEmailsID(int uid);
 
-    //query for medium difficulty
-    //Emails isfoundmedium = RawDao.getUserMedium("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText");
-    //SimpleSQLiteQuery queryMedium = new SimpleSQLiteQuery("SELECT * FROM User WHERE id = ?",
-    //new Object[]{3});
-    //Emails isfoundmedium2 = RawDao.getUserViaQueryMedium(queryMedium);
+    @Update
+    void updateEmails(Emails emails);
 
-
-    //Emails isfoundKiller = RawDao.getUserKiller("");
-
-   // @Insert
-    //void insertOnlySingleUser(Emails emails);
-
-    //@Query("SELECT * FROM Emails WHERE uid=:uid")
-    //Emails fetchOneEmailsByEmailsID(int uid);
-
-    //@Update
-    //void updateEmails(Emails emails);
-
-    //@Delete
-    //void deleteEmail(Emails emails);
+    @Delete
+    void deleteEmail(Emails emails);
 
     //@Query("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText")
     //int emailExists(String searchText);
@@ -42,7 +25,7 @@ interface DaoAccess {
     //int emailExists(String searchText);
 
 
-    @Query("SELECT * FROM emails")
-    Emails fetchemails(Emails emails);
+    //@Query("SELECT * FROM emails")
+    //Emails fetchemails(Emails emails);
 }
 

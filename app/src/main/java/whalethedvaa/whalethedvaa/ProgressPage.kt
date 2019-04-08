@@ -8,9 +8,9 @@ import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_progress_page.*
 
 class ProgressPage : AppCompatActivity() {
-    var easyFlags = arrayOf("P0K3RF4C3", "D1V3T34M", "B055M4N","F1NNDOG", "H3RM4N-M3LV1LL3") //Array of flags for easy vulns
+    var easyFlags = arrayOf("P0K3RF4C3", "D1V3T34M", "4M4Z1NG","F1NNDOG", "H3RM4N-M3LV1LL3") //Array of flags for easy vulns
     var medFlags = arrayOf("H0N3YB33", "N1C3-W4N", "F1SHF00D", "C4PTB1RD23Y3", "C0R4L-R33F") //Flags for medium
-    var killerFlags = arrayOf("C4SC4D1NG", "4M4Z1NG", "T4STY-K3LP", "WH413L0RD", "SP0NG3B0B") //Flags for killer
+    var killerFlags = arrayOf("C4SC4D1NG", "B055M4N", "T4STY-K3LP", "WH413L0RD", "SP0NG3B0B") //Flags for killer
     var easyFound: Int = 0 //Initialise var for number of easy flags found
     var medFound: Int = 0 //medium flags found
     var killerFound: Int = 0 //killer flags found
@@ -209,17 +209,17 @@ class ProgressPage : AppCompatActivity() {
         //SQLI flags
         if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
             level[1] = "7,"
-        } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("4M4Z1NG")){
+        } else if(foundFlags!!.contains("N1C3-W4N") && foundFlags!!.contains("B055M4N")){
             level[1] = "6,"
-        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("4M4Z1NG")){
+        }else if(foundFlags!!.contains("4M4Z1NG") && foundFlags!!.contains("B055M4N")){
             level[1] = "5,"
-        }else if(foundFlags!!.contains("B055M4N") && foundFlags!!.contains("N1C3-W4N")){
+        }else if(foundFlags!!.contains("4M4Z1NG") && foundFlags!!.contains("N1C3-W4N")){
             level[1] = "4,"
-        }else if(foundFlags!!.contains("B055M4N")){
+        }else if(foundFlags!!.contains("4M4Z1NG")){
             level[1] = "3,"
         }else if(foundFlags!!.contains("N1C3-W4N")){
             level[1] = "2,"
-        }else if(foundFlags!!.contains("4M4Z1NG")){
+        }else if(foundFlags!!.contains("B055M4N")){
             level[1] = "1,"
         }else {
             level[1] = "0,"
