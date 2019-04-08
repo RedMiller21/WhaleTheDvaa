@@ -57,10 +57,10 @@ class sqli_easy : AppCompatActivity() {
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {
-                val badtext = "Email is not linked to an account"
+                val badtext = "Email is not linked to an account" +
+                        "Flag - B055M4N"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
-                textView.text = badtext
-                Toast.makeText(applicationContext, "FLAG - B055M4N", Toast.LENGTH_SHORT).show()
+
             }
         }
 

@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.EditText
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_sqli_hard.*
 
 
@@ -36,11 +38,35 @@ class sqli_hard : AppCompatActivity() {
 
             //val emailCount = db.daoAccess().emailExists(searchText)
 
-            //if (emailCount > 0) {
-            //    Toast.makeText(applicationContext, "This worked", Toast.LENGTH_SHORT).show()
-            //} else {
-            //    Toast.makeText(applicationContext, "didny work", Toast.LENGTH_SHORT).show()
-            //
+            var statement = findViewById(R.id.SQL_Email) as EditText
+            var success = findViewById(R.id.txtSuccessMsg) as TextView
+
+
+            var SQLstatmentOne = "SELECT * FROM Emails WHERE uid = 1 OR 1=1"
+            var SQLstatementTwo = "SELECT * FROM Emails WHERE uid = 0 OR 1=1"
+            var SQLstatementThree = "SELECT uid, email_address, password FROM Emails uid, email_address, password FROM Emails WHERE uid = 1 or 1= WHERE uid = 105 or 1=1"
+
+            /**
+             * if statements for three common SQL injection commands
+             */
+            if (statement.equals(SQLstatmentOne))
+            {
+                //query broken?? - temporary fix
+                success.text = "whale@whalemail.sea   4M4Z1NG"
+            }
+
+            if (statement.equals(SQLstatementTwo))
+            {
+                //query broken?? - temporary fix
+                success.text = "whale@whalemail.sea   4M4Z1NG"
+            }
+
+            if (statement.equals(SQLstatementThree))
+            {
+                //query broken?? - temporary fix
+                success.text = "whale@whalemail.sea   4M4Z1NG"
+            }
+
         }
 
         //Call information dialog creation
@@ -108,9 +134,9 @@ class sqli_hard : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenHint)
         when (chosenHint) {
-            "Hint 1" -> builder.setMessage("Test test test")
-            "Hint 2" -> builder.setMessage("Example hint 2")
-            "Hint 3" -> builder.setMessage("Example hint 3")
+            "Hint 1" -> builder.setMessage("Table name is Emails with columns uid, email address and password")
+            "Hint 2" -> builder.setMessage("This input field lacks validation, try entering an SQL statement")
+            "Hint 3" -> builder.setMessage("Enter SELECT * FROM Emails WHERE uid = 1 OR 1=1")
         }
 
         val dialog: AlertDialog = builder.create()

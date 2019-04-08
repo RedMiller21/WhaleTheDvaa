@@ -1,6 +1,8 @@
 package whalethedvaa.whalethedvaa;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.Query;
 
 
 public @Dao
@@ -18,10 +20,10 @@ interface DaoAccess {
     //new Object[]{3});
     //Emails isfoundmedium2 = RawDao.getUserViaQueryMedium(queryMedium);
 
-    //todo decide on Killer vulnerability setting/code
+
     //Emails isfoundKiller = RawDao.getUserKiller("");
 
-    //@Insert
+   // @Insert
     //void insertOnlySingleUser(Emails emails);
 
     //@Query("SELECT * FROM Emails WHERE uid=:uid")
@@ -39,5 +41,8 @@ interface DaoAccess {
     //@Query(searchText)
     //int emailExists(String searchText);
 
+
+    @Query("SELECT * FROM emails")
+    Emails fetchemails(Emails emails);
 }
 
