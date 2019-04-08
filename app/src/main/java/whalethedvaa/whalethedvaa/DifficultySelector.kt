@@ -36,6 +36,7 @@ class DifficultySelector : AppCompatActivity() {
             }
             intent.putExtra("Level", 3)
             println(selector)
+            onStop()
             startActivity(intent)
         }
         whaleMed.setOnClickListener {
@@ -49,6 +50,7 @@ class DifficultySelector : AppCompatActivity() {
             }
             intent.putExtra("Level", 2)
             println(selector)
+            onStop()
             startActivity(intent)
         }
         whaleasy.setOnClickListener {
@@ -62,6 +64,7 @@ class DifficultySelector : AppCompatActivity() {
             }
             intent.putExtra("Level", 1)
             println(selector)
+            onStop()
             startActivity(intent)
         }
         mtgtBtn.setOnClickListener {

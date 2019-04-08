@@ -263,4 +263,12 @@
         Another step to secure hardcode is to use build in development tools such as Minify and Proguard to ensure that if anyone was to unpack and decompile the apk file, much
         of the information would be obscured. This would make it much harder for someone to quickly glance over the code and find the important information.
     </string>
+    <string name="pakinstructions">Due to the many ways applications can be coded errors can occur, which can lead to
+        sensitive being revealled, whether this be through error handling being left in.
+    </string>
+    <string name="hint1KPA">Computers are logicical machines, if they are not programmed to catch logical errors, they
+        have a tendency to crash
+    </string>
+    <string name="hint2KPA">Think what number operations have certain requirements</string>
+    <string name="hint3KPA">0 is a mysterious number. In case the app is programed correctly use this button to crash the app</string>
 </resources>

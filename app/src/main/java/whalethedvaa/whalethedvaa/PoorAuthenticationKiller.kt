@@ -11,10 +11,10 @@ import kotlinx.android.synthetic.main.activity_poor_authentication_killer.*
 
 abstract class PoorAuthenticationKiller : AppCompatActivity() {
 
-    abstract var Numbers : IntArray
+    var Numbers : Array<Int> = arrayOf(0,0,0,0,0,0)
     var check: Boolean = true
     var point: Int = 0
-    abstract var Operations: CharArray
+    var Operations: Array<Char> = arrayOf('W','H','A','L','E','S')
     var point2: Int = 0
 
 
@@ -81,7 +81,7 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
-            .setMessage(R.string.paminstructions)
+            .setMessage(R.string.pakinstructions)
             .setCancelable(false)
             .setNegativeButton(R.string.exit) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
@@ -119,14 +119,17 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
         builder.setTitle(chosenHint)
         when (chosenHint) {
             "Hint 1" -> {
-                builder.setMessage(R.string.hint1MPA)
+                builder.setMessage(R.string.hint1KPA)
                     .setTitle(chosenHint)
             }
             "Hint 2" -> {
-                builder.setMessage(R.string.hint2MPA)
+                builder.setMessage(R.string.hint2KPA)
                     .setTitle(chosenHint)
             }
-            "Hint 3" -> builder.setView(promptsView)
+            "Hint 3" -> {
+                builder.setView(R.layout.crash_button)
+                    .setMessage(R.string.hint3KPA)
+            }
         }
 
         val dialog: AlertDialog = builder.create()
