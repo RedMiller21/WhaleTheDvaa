@@ -26,7 +26,7 @@ class ProgressPage : AppCompatActivity() {
         medFound = mProg.getInt("med", 0)
         killerFound = mProg.getInt("killer", 0)
         totalFound = mProg.getInt("total", 0)
-        foundFlags = mProg.getString("found", "")
+        foundFlags  = mProg.getString("found", "")
         totalFlags = mProg.getString("level", "0,0,0,0,0")
         setContentView(R.layout.activity_progress_page)
 
@@ -151,7 +151,7 @@ class ProgressPage : AppCompatActivity() {
         var level = totalFlags.split(",").toTypedArray()
         //Poor Authentication flags
         if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
-            level[3] = ""
+            level[3] = "7,"
         } else if (foundFlags!!.contains("C4PTB1RD23Y3") && foundFlags!!.contains("WH413L0RD")) {
             level[3] = "6,"
         } else if (foundFlags!!.contains("F1NNDOG") && foundFlags!!.contains("WH413L0RD")) {
@@ -164,29 +164,29 @@ class ProgressPage : AppCompatActivity() {
             level[3] = "2,"
         } else if (foundFlags!!.contains("WH413L0RD")) {
             level[3] = "1,"
-        }else if (foundFlags!!.contains("bob")){
+        }else {
             level[3] = "0,"
-            println(level[3])
         }
 
         //InsecureLogging flags
         if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
-            level[4] = "7,"
+            level[4] = "7"
         } else if(foundFlags!!.contains("F1SHF00D") && foundFlags!!.contains("T4STY-K3LP")){
-            level[4] = "6,"
+            level[4] = "6"
         }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("T4STY-K3LP")){
-            level[4] = "5,"
+            level[4] = "5"
         }else if(foundFlags!!.contains("D1V3T34M") && foundFlags!!.contains("F1SHF00D")){
-            level[4] = "4,"
+            level[4] = "4"
         }else if(foundFlags!!.contains("D1V3T34M")){
-            level[4] = "3,"
+            level[4] = "3"
         }else if(foundFlags!!.contains("F1SHF00D")){
-            level[4] = "2,"
+            level[4] = "2"
         }else if(foundFlags!!.contains("T4STY-K3LP")){
-            level[4] = "1,"
+            level[4] = "1"
         }else {
-            level[4] = "0,"
+            level[4] = "0"
         }
+
         //TFA flags
         if(foundFlags!!.contains("P0K3RF4C3") && foundFlags!!.contains("H0N3YB33") && foundFlags!!.contains("C4SC4D1NG")){
             level[2] = "7,"
@@ -249,6 +249,9 @@ class ProgressPage : AppCompatActivity() {
         println("2: $totalFlags")
         for (i in 0..4) {
             totalFlags += level[i]
+            println(i)
+            println("-" + level)
+
         }
         println("3: $totalFlags")
 
