@@ -10,40 +10,24 @@
 >
 
     <Button
-            android:text="Flags"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/flagsBtn" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:background="#4472C4" android:textColor="#FFFFFF"/>
-    <Button
             android:text="Back"
             android:layout_height="wrap_content"
             android:id="@+id/BackBtn"
             android:background="#203864" android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
-            android:layout_marginTop="280dp" app:layout_constraintTop_toBottomOf="@+id/FlagText"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/ResetBtn"/>
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/ResetBtn" android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <Button
-            android:text="Confirm"
-            android:layout_height="wrap_content"
-            android:id="@+id/ConfirmBtn"
-            android:background="#203864" android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="280dp"
-            app:layout_constraintTop_toBottomOf="@+id/FlagText" app:layout_constraintStart_toEndOf="@+id/ResetBtn"
-            android:layout_marginStart="8dp"/>
     <Button
             android:text="Reset"
             android:layout_height="wrap_content"
             android:id="@+id/ResetBtn"
             android:background="#203864" android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="280dp"
-            app:layout_constraintTop_toBottomOf="@+id/FlagText" app:layout_constraintHorizontal_bias="0.521"/>
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/PlusBtn"/>
     <Button
             android:text="Hints"
             android:layout_width="wrap_content"
@@ -54,6 +38,78 @@
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad1"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad4"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad2"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad5"
+            app:layout_constraintStart_toEndOf="@+id/NumPad1" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad3"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad6" app:layout_constraintStart_toEndOf="@+id/NumPad2"
+            android:layout_marginStart="8dp"/>
+    <Button
+            android:text="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad4"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad7"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad5"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad8"
+            app:layout_constraintStart_toEndOf="@+id/NumPad4" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad6"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad9" app:layout_constraintStart_toEndOf="@+id/NumPad5"
+            android:layout_marginStart="8dp"/>
+    <Button
+            android:text="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad7"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad0"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad8"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad0"
+            app:layout_constraintStart_toEndOf="@+id/NumPad7" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad9"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad0" app:layout_constraintStart_toEndOf="@+id/NumPad8"
+            android:layout_marginStart="8dp"/>
     <TextView
             android:text="Poor Authentication"
             android:layout_width="wrap_content"
@@ -67,71 +123,79 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/PinOutput" android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/FlagText" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/NumPad2"
+            android:textColorHint="#FFFFFF"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/FlagText" android:textColor="#FFFFFF"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroupBtn"
-            app:layout_constraintStart_toEndOf="@+id/radioGroupBtn" android:layout_marginStart="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/PATitle" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+    <Button
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NumPad0" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ResetBtn"
+            app:layout_constraintStart_toEndOf="@+id/NumPad7" android:layout_marginStart="8dp"/>
     <Button
             android:text="Info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/InstructionsBtn" android:background="#4472C4"
             android:textColor="#FFFFFF" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/InputText"
-            android:textColor="#FFFFFF" android:textSize="24sp"
-            android:hint="Input Colour for button"
-            android:textColorHint="#FFFFFF"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/PATitle"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
     />
-    <!--android:inputType="number"-->
-
-    <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/InputText" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:id="@+id/radioGroupBtn">
-        <RadioButton
-                android:text="Back Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"
-                android:textColor="#FFFFFF"
-                android:checked="true"/>
-        <RadioButton
-                android:text="Reset Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"
-                android:textColor="#FFFFFF"/>
-        <RadioButton
-                android:text="Confirm Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"
-                android:textColor="#FFFFFF"/>
-    </RadioGroup>
     <Button
-            android:text="Reset\nColour"
+            android:text="Flags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/resetColourBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/randomizebtn"/>
+            android:id="@+id/flagsBtn" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:background="#4472C4" android:textColor="#FFFFFF"/>
     <Button
-            android:text="Randomize\nColour"
+            android:text="="
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/randomizebtn" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/EqualsBtn"
+            app:layout_constraintStart_toEndOf="@+id/NumPad0"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ResetBtn"/>
+    <Button
+            android:text="÷"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DivideBtn" app:layout_constraintStart_toEndOf="@+id/NumPad3"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad6"/>
+    <Button
+            android:text="X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MultiBtn" app:layout_constraintStart_toEndOf="@+id/NumPad6"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/NumPad9"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MinusBtn" app:layout_constraintStart_toEndOf="@+id/NumPad9"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/EqualsBtn" android:text="-"/>
+    <Button
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PlusBtn" app:layout_constraintStart_toEndOf="@+id/EqualsBtn"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/radioGroupBtn"/>
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/ResetBtn"/>
 
 </android.support.constraint.ConstraintLayout>
