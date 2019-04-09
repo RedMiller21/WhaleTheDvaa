@@ -72,8 +72,8 @@
     </string>
     <string name="pamitigations">Due to the fact that the authentication of pins and passwords can only be as strong as
         the user\'s pin or password this can be problematic if the user stores their pins in obvious places or use
-        words/phrases that are easily identifyable to the user. This can be prevented by using pins that do not relate
-        to the user in any way. Increasing pins also helps as there can be far more combinationsfor possible pins that
+        words/phrases that are easily identifiable to the user. This can be prevented by using pins that do not relate
+        to the user in any way. Increasing the size of pins also helps as there can be far more combinations for possible pins that
         an attacker will have to try.
     </string>
     <string name="paeinstructions">However safe a log-in system can be made, if a user does not hide their pins or
@@ -136,16 +136,16 @@
 
     <string name="SQLiFurtherReading">
         SQL injection is a form of code injection in which the user can manipulate a program to output otherwise protected data.
-        This can be protected against by using appropriate data sanitisation and also ensuring by all means that data queries are handled seperately from data input.
-        \n https://www.owasp.org/index.php/SQL_Injection
-        \n https://www.w3schools.com/sql/sql_injection.asp
-        \n https://www.w3schools.com/php/php_mysql_prepared_statements.asp
-        \n https://guides.codepath.com/websecurity/SQL-Injection
-        \n https://developer.android.com/training/articles/security-tips
+        This can be protected against by using appropriate data sanitation and also ensuring by all means that data queries are handled separately from data input.
+        \n <a href="https://www.owasp.org/index.php/SQL_Injection">\'SQL Injection\', OWASP</a>\n
+        \n <a href="https://www.w3schools.com/sql/sql_injection.asp">\'SQL Injection\', W3Schools</a>\n
+        \n <a href="https://www.w3schools.com/php/php_mysql_prepared_statements.asp">\'PHP Prepared Statements\', W3Schools</a>\n
+        \n <a href="https://guides.codepath.com/websecurity/SQL-Injection">\'SQL Injection\', Codepath</a>\n
+        \n <a href="https://developer.android.com/training/articles/security-tips">\'Security Tips\', Android Developers</a>\n
 
     </string>
 
-    <string name="SQliMediumInfo">You have recieved a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
+    <string name="SQliMediumInfo">You have received a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
         Your job is to decode the text in order to reveal a password, this password is your flag!
     </string>
 
@@ -154,19 +154,22 @@
         This oversight on the part of development teams can sometimes result in sensitive or even just too much data being released in the form of android logs.\n
         These logs can be viewed very easily, even with little tech knowledge, by either downloading an application or by finding logdumps in locations on the device. With some understanding
         of the layout of android logs, these can be understood and read by any user, not just the development team.\n
-        <a href="https://stackoverflow.com/questions/17290023/obfuscation-in-android-studio">\'Obfuscation in Android Studio\', Ilia Nedoluzhko, Stack Overflow</a>\n
-        <a href="https://android.stackexchange.com/questions/14430/how-can-i-view-and-examine-the-android-log">\'How can I view and examine the Android log?\', Bryan Denny, Android Enthusiasts - Stack Exchange</a>
+        \n<a href="https://stackoverflow.com/questions/17290023/obfuscation-in-android-studio">\'Obfuscation in Android Studio\', Ilia Nedoluzhko, Stack Overflow</a>\n
+        \n<a href="https://android.stackexchange.com/questions/14430/how-can-i-view-and-examine-the-android-log">\'How can I view and examine the Android log?\', Bryan Denny, Android Enthusiasts - Stack Exchange</a>
     </string>
 
     <string name="HardcodingFurtherReading">
         A Hardcoding Vulnerability is a fairly simple concept to explain; if the development team code vulnerable information into an application, they need to do it in such a way
         that, if someone was to download the application and unpack it, the person wouldn\'t see that information. Otherwise it would be a security flaw! \n
         In reality, development teams often forget or overlook these kinds of vulnerabilities due to them not thinking about anyone other than themselves looking at the code that makes their application up.\n
-        <a href="https://hackernoon.com/how-i-hacked-modern-vending-machines-43f4ae8decec">\'How I hacked modern Vending Machines\', Matteo Pisani, Hackernoon</a>
+        \n<a href="https://hackernoon.com/how-i-hacked-modern-vending-machines-43f4ae8decec">\'How I hacked modern Vending Machines\', Matteo Pisani, Hackernoon</a>
     </string>
 
     <string name="PoorAuthFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        Due to the need to protect the sensitive data stored on devices, methods of authentication are needed but most methods can have vulnerabilities if not programmed correctly. By exploiting poor authentication methods, access to sensitive data can be gained.
+        Although, due to human error, even the better authentication methods can become poor if an end user stores their passwords and pins in easy to access places.\n
+        \n<a href="https://blog.appknox.com/understanding-owasp-top-10-mobile-poor-authorization-and-authentication">\'Understanding OWASP Top 10 Mobile: Poor Authorization and Authentication\', AppKnox</a>\n
+        \n<a href="https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/">\'How to Create a Strong Password (and Remember It)\', Chris Hoffman</a>
     </string>
     <string name="flagsButton">The \'Flags\' button on each vulnerability will direct you to the progress page, where
         you can enter any flags you have found in order to update your progress.\n The progress page can also be
@@ -270,11 +273,11 @@
     <string name="pakinstructions">Due to the many ways applications can be coded errors can occur, which can lead to
         sensitive being revealed, whether this be through error handling being left in.
     </string>
-    <string name="hint1KPA">Computers are logicical machines, if they are not programmed to catch logical errors, they
+    <string name="hint1KPA">Computers are logical machines, if they are not programmed to catch logical errors, they
         have a tendency to crash
     </string>
     <string name="SQLiKillerInfo">You have been provided with a vulnerable login form! The table name is Emails, and column names uid, emailAddress and password. Use what you have learned to dump the password for the user with ID = 1. \n
-    Once the password has been displayed from the database, this is your flag!</string>
+        Once the password has been displayed from the database, this is your flag!</string>
     <string name="hint2KPA">Think what number operations have certain requirements</string>
     <string name="hint3KPA">0 is a mysterious number. In case the app is programed correctly use this button to crash the app</string>
 </resources>
