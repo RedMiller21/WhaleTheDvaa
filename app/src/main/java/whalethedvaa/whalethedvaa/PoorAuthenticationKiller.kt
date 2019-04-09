@@ -69,7 +69,7 @@ class PoorAuthenticationKiller : AppCompatActivity() {
                 onBackPressed()
             }
         }
-        //instructionsDialog()
+        instructionsDialog()
 
 
         //Flags button
@@ -91,8 +91,6 @@ class PoorAuthenticationKiller : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.pakinstructions)
-            .setCancelable(false)
-            .setNegativeButton(R.string.exit) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
