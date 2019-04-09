@@ -7,8 +7,11 @@ import android.arch.persistence.room.*;
 public @Dao
 interface DaoAccess {
 
+   // @Insert
+    //void insertOnlySingleUser(int uid, String emailAddress, String password);
+
     @Insert
-    void insertOnlySingleUser(int uid, String emailAddress, String password);
+    void insertUserTest(Emails emails);
 
     @Query("SELECT * FROM Emails WHERE uid=:uid")
     Emails fetchOneEmailsByEmailsID(int uid);

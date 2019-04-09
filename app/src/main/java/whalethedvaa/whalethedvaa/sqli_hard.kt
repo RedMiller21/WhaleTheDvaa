@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_sqli_hard.*
 
 class sqli_hard : AppCompatActivity() {
     //declaring an array of the database type emails
-    //private val emails : ArrayList<Emails> = ArrayList()
+    private val emails : ArrayList<Emails> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,11 @@ class sqli_hard : AppCompatActivity() {
             .fallbackToDestructiveMigration()
             .build()
 
+
         if (db.daoAccess().rowCount < 1)
         {
-            Emails.populateData()
-           // var emails = Emails.populateData()
+            var emails = Emails.populateData()
+            for (email in emails) db.daoAccess().insertUserTest(email)
         }
 
         //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
