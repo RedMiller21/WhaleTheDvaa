@@ -72,8 +72,8 @@
     </string>
     <string name="pamitigations">Due to the fact that the authentication of pins and passwords can only be as strong as
         the user\'s pin or password this can be problematic if the user stores their pins in obvious places or use
-        words/phrases that are easily identifyable to the user. This can be prevented by using pins that do not relate
-        to the user in any way. Increasing pins also helps as there can be far more combinationsfor possible pins that
+        words/phrases that are easily identifiable to the user. This can be prevented by using pins that do not relate
+        to the user in any way. Increasing the size of pins also helps as there can be far more combinations for possible pins that
         an attacker will have to try.
     </string>
     <string name="paeinstructions">However safe a log-in system can be made, if a user does not hide their pins or
@@ -166,7 +166,9 @@
     </string>
 
     <string name="PoorAuthFurtherReading">
-        PUT YOUR FURTHER READING HERE
+        Due to the need to store data or protect devices, methods of authentication are needed but most methods can have vulnerabilities if not programed correctly. By exploiting the poor authentication code, access to sensitive data can be gained. Although due to human error even the better authentication methods can become poor whether it be storing passwords and pins in easy to access places.
+        <a href="https://blog.appknox.com/understanding-owasp-top-10-mobile-poor-authorization-and-authentication">\'Understanding OWASP Top 10 Mobile: Poor Authorization and Authentication\', AppKnox</a>
+        <a href="https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/">\'How to Create a Strong Password (and Remember It)\', Chris Hoffman</a>
     </string>
     <string name="flagsButton">The \'Flags\' button on each vulnerability will direct you to the progress page, where
         you can enter any flags you have found in order to update your progress.\n The progress page can also be
