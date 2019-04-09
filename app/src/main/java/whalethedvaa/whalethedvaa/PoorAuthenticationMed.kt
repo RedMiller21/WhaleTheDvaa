@@ -172,7 +172,7 @@ class PoorAuthenticationMed : AppCompatActivity() {
     }
 
     private fun newPin(): String {
-        val st = (0..5).random()
+        val st = (1..5).random()
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("stateKey", st)
