@@ -136,16 +136,16 @@
 
     <string name="SQLiFurtherReading">
         SQL injection is a form of code injection in which the user can manipulate a program to output otherwise protected data.
-        This can be protected against by using appropriate data sanitisation and also ensuring by all means that data queries are handled seperately from data input.
-        \n https://www.owasp.org/index.php/SQL_Injection
-        \n https://www.w3schools.com/sql/sql_injection.asp
-        \n https://www.w3schools.com/php/php_mysql_prepared_statements.asp
-        \n https://guides.codepath.com/websecurity/SQL-Injection
-        \n https://developer.android.com/training/articles/security-tips
+        This can be protected against by using appropriate data sanitation and also ensuring by all means that data queries are handled separately from data input.
+        \n <a href="https://www.owasp.org/index.php/SQL_Injection">\'SQL Injection\', OWASP</a>\n
+        \n <a href="https://www.w3schools.com/sql/sql_injection.asp">\'SQL Injection\', W3Schools</a>\n
+        \n <a href="https://www.w3schools.com/php/php_mysql_prepared_statements.asp">\'PHP Prepared Statements\', W3Schools</a>\n
+        \n <a href="https://guides.codepath.com/websecurity/SQL-Injection">\'SQL Injection\', Codepath</a>\n
+        \n <a href="https://developer.android.com/training/articles/security-tips">\'Security Tips\', Android Developers</a>\n
 
     </string>
 
-    <string name="SQliMediumInfo">You have recieved a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
+    <string name="SQliMediumInfo">You have received a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
         Your job is to decode the text in order to reveal a password, this password is your flag!
     </string>
 
@@ -270,7 +270,7 @@
     <string name="pakinstructions">Due to the many ways applications can be coded errors can occur, which can lead to
         sensitive being revealed, whether this be through error handling being left in.
     </string>
-    <string name="hint1KPA">Computers are logicical machines, if they are not programmed to catch logical errors, they
+    <string name="hint1KPA">Computers are logical machines, if they are not programmed to catch logical errors, they
         have a tendency to crash
     </string>
     <string name="SQLiKillerInfo">You have been provided with a vulnerable login form! The table name is Emails, and column names uid, emailAddress and password. Use what you have learned to dump the password for the user with ID = 1. \n
