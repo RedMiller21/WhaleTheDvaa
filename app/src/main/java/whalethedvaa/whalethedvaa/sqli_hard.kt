@@ -38,8 +38,6 @@ class sqli_hard : AppCompatActivity() {
             for (email in emails) db.daoAccess().insertUserTest(email)
         }
 
-        //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
-
         SQL_Login.setOnClickListener {
 
             //val emailCount = db.daoAccess().emailExists(searchText)
@@ -54,23 +52,12 @@ class sqli_hard : AppCompatActivity() {
             var SQLstatementThree = "SELECT uid, email_address, password FROM Emails uid, email_address, password FROM Emails WHERE uid = 1 or 1= WHERE uid = 105 or 1=1"
 
 
-            /*if (db.daoAccess().rowCount > 0)
-            {
-                db.daoAccess().insertUserTest()
-            }*/
-
-
-
             /**
              * if statements for three common SQL injection commands
              */
             if (stringStatement == SQLstatmentOne)
             {
-                //query broken?? - temporary fix
                 val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
-                //success.text = "whale@whalemail.sea   4M4Z1NG"
-                //success.text = test.toString()
-
                 successemail.text = test.emailAddress.toString()
                 successpassword.text = test.password.toString()
 
@@ -78,11 +65,7 @@ class sqli_hard : AppCompatActivity() {
 
             if (stringStatement == SQLstatementTwo)
             {
-                //query broken?? - temporary fix
                 val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
-                //success.text = "whale@whalemail.sea   4M4Z1NG"
-                //success.text = test.toString()
-
                 successemail.text = test.emailAddress.toString()
                 successpassword.text = test.password.toString()
 
@@ -90,11 +73,7 @@ class sqli_hard : AppCompatActivity() {
 
             if (stringStatement == SQLstatementThree)
             {
-                //query broken?? - temporary fix
                 val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
-                //success.text = "whale@whalemail.sea   4M4Z1NG"
-                //success.text = test.toString()
-
                 successemail.text = test.emailAddress.toString()
                 successpassword.text = test.password.toString()
 
@@ -125,14 +104,11 @@ class sqli_hard : AppCompatActivity() {
 
     }
 
-    private fun CheckEmail(searchText: String) {
-    }
-
     private fun informationDialog() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
-        builder.setTitle("Hard Coding Information")
-        builder.setMessage("Example Information")
+        builder.setTitle("SQL Injection")
+        builder.setMessage(R.string.SQLiKillerInfo)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -143,9 +119,6 @@ class sqli_hard : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Hints")
-
-        // Display a message on alert dialog
-        //builder.setMessage("Which hint would you like")
 
         val hints = arrayOf("Hint 1", "Hint 2", "Hint 3")
         //SET PROPERTIES USING METHOD CHAINING
