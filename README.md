@@ -1,3 +1,5 @@
+WhaleTheDvaa is a Damn Vulnerable Android Application which teaches user's how to investigate and mitigate android vulnerabilities.
+It will require Android Studio to download and package,
 WhaleTheDvaa uses Nox as an emulator to allow you to run it as intended 
 The following instructions involve the installation of the Nox Emulator
 The Nox Emulator will need to be downloaded, this can be found on their website https://www.bignox.com/
