@@ -1,5 +1,6 @@
 package whalethedvaa.whalethedvaa;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.*;
 
 
@@ -7,7 +8,7 @@ public @Dao
 interface DaoAccess {
 
     @Insert
-    void insertOnlySingleUser(Emails emails);
+    void insertOnlySingleUser(int uid, String emailAddress, String password);
 
     @Query("SELECT * FROM Emails WHERE uid=:uid")
     Emails fetchOneEmailsByEmailsID(int uid);
@@ -17,6 +18,9 @@ interface DaoAccess {
 
     @Delete
     void deleteEmail(Emails emails);
+
+    @Query("SELECT COUNT(emailAddress) FROM Emails")
+    int getRowCount();
 
     //@Query("SELECT COUNT(*) FROM Emails WHERE emailAddress=:searchText")
     //int emailExists(String searchText);

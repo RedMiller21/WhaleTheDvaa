@@ -47,6 +47,10 @@ class sqli_hard : AppCompatActivity() {
             var SQLstatementTwo = "SELECT * FROM Emails WHERE uid = 0 OR 1=1"
             var SQLstatementThree = "SELECT uid, email_address, password FROM Emails uid, email_address, password FROM Emails WHERE uid = 1 or 1= WHERE uid = 105 or 1=1"
 
+            if (db.daoAccess().rowCount > 0)
+            {
+                db.daoAccess().insertOnlySingleUser(1, "whale@whalemail.sea", "B055M4N")
+            }
             /**
              * if statements for three common SQL injection commands
              */
