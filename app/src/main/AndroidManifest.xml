@@ -39,8 +39,6 @@
         </activity>
         <activity android:name=".HardCoding">
         </activity>
-        <activity android:name=".SQLI">
-        </activity>
         <activity android:name=".sqli_easy">
         </activity>
         <activity android:name=".sqli_medium">

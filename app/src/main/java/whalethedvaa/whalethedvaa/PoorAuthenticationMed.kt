@@ -51,8 +51,6 @@ class PoorAuthenticationMed : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.paminstructions)
-            .setCancelable(false)
-            .setNegativeButton(R.string.exit) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }

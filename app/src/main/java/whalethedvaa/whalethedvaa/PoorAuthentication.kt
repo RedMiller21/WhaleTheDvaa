@@ -62,8 +62,6 @@ class PoorAuthentication : AppCompatActivity() {
         builder.setTitle("Poor Authentication Instructions")
             .setMessage(R.string.paeinstructions)
             .setPositiveButton(R.string.viewSocial) { _, _ -> socialDialog() }
-            .setCancelable(false)
-            .setNegativeButton(R.string.exit) { dialog, _ -> dialog.cancel() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
