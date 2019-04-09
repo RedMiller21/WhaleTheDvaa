@@ -3,7 +3,7 @@
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#222A35"
         android:textColor="#FFFFFF"
@@ -53,6 +53,13 @@
             android:layout_marginStart="8dp" android:text="SQL Injection"
             android:textColor="#FFFFFF" android:textSize="24sp" app:layout_constraintTop_toBottomOf="@+id/HintBtn"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:layout_width="425dp"
+            android:layout_height="61dp"
+            android:id="@+id/titleMail" android:layout_marginTop="80dp"
+            android:text="Welcome to WHALE Mail, enter your email address!"
+            android:textColor="#FFFFFF" android:textSize="24sp" app:layout_constraintTop_toBottomOf="@+id/HintBtn"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
     <EditText
             android:layout_width="354dp"
             android:layout_height="65dp"

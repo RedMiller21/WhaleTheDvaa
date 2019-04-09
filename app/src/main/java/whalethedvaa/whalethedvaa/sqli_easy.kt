@@ -32,14 +32,6 @@ class sqli_easy : AppCompatActivity() {
             .fallbackToDestructiveMigration()
             .build()
 
-        var emails = Emails.populateData()
-        // for (email in emails) {
-        //   val query = SimpleSQLiteQuery(
-        //     "INSERT INTO `Emails` (uid, emailAddress, password) VALUES(?, ?, ?)",
-        //    arrayOf(email.uid, email.emailAddress, email.password))
-
-        // db.rawDao().insertUser(query)
-        //}
 
         SQL_Login.setOnClickListener {
             //no validation on search text
@@ -50,15 +42,15 @@ class sqli_easy : AppCompatActivity() {
                 arrayOf(searchText)
             )
 
-            val email = db.rawDao().getUserEasy(query)
+          //  val email = db.rawDao().getUserEasy(query)
 
-            if (email > 0.toString()) {
+            if (searchText > 0.toString()) {
                 val successText = "YAS CONGRATS"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {
                 val badtext = "Email is not linked to an account" +
-                        "Flag - B055M4N"
+                        "Flag - 4M4Z1NG"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
 
             }

@@ -39,8 +39,8 @@ class sqli_hard : AppCompatActivity() {
             //val emailCount = db.daoAccess().emailExists(searchText)
 
             var statement = findViewById(R.id.SQL_Email) as EditText
-            var success = findViewById(R.id.txtSuccessMsg) as TextView
-
+            var successemail = findViewById(R.id.txtSuccessMsg) as TextView
+            var successpassword = findViewById(R.id.txtSuccessMsg) as TextView
             val stringStatement = statement.text.toString()
 
             var SQLstatmentOne = "SELECT * FROM Emails WHERE uid = 1 OR 1=1"
@@ -53,19 +53,37 @@ class sqli_hard : AppCompatActivity() {
             if (stringStatement == SQLstatmentOne)
             {
                 //query broken?? - temporary fix
-                success.text = "whale@whalemail.sea   4M4Z1NG"
+                val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
+                //success.text = "whale@whalemail.sea   4M4Z1NG"
+                //success.text = test.toString()
+
+                successemail.text = test.emailAddress.toString()
+                successpassword.text = test.password.toString()
+
             }
 
             if (stringStatement == SQLstatementTwo)
             {
                 //query broken?? - temporary fix
-                success.text = "whale@whalemail.sea   4M4Z1NG"
+                val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
+                //success.text = "whale@whalemail.sea   4M4Z1NG"
+                //success.text = test.toString()
+
+                successemail.text = test.emailAddress.toString()
+                successpassword.text = test.password.toString()
+
             }
 
             if (stringStatement == SQLstatementThree)
             {
                 //query broken?? - temporary fix
-                success.text = "whale@whalemail.sea   4M4Z1NG"
+                val test = db.daoAccess().fetchOneEmailsByEmailsID(1)
+                //success.text = "whale@whalemail.sea   4M4Z1NG"
+                //success.text = test.toString()
+
+                successemail.text = test.emailAddress.toString()
+                successpassword.text = test.password.toString()
+
             }
 
         }
