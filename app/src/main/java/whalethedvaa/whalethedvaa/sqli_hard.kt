@@ -33,7 +33,8 @@ class sqli_hard : AppCompatActivity() {
 
         if (db.daoAccess().rowCount < 1)
         {
-            var emails = Emails.populateData()
+            Emails.populateData()
+           // var emails = Emails.populateData()
         }
 
         //for (email in emails) db.daoAccess().insertOnlySingleUser(email)
