@@ -1,23 +1,6 @@
-#################################################################################################################################################################      				      
-          _           _      			
-         | |         | |     		       ":"
-__      _| |__   __ _| | ___ 		     ___:____     |"\/"|
-\ \ /\ / / '_ \ / _` | |/ _ \		   ,'        `.    \  /
- \ V  V /| | | | (_| | |  __/		   |  O        \___/  |
-  \_/\_/ |_| |_|\__,_|_|\___|  	    ^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
-			
-----------------------------------
-//WhaleTheDvaa// //Installation//
-----------------------------------
-
----------------------																		
-//Nox Installation//																	  
----------------------																		
-																				
-# WhaleTheDvaa uses Nox as an emulator to allow you to run it as intended 
-# The following instructions involve the installation of the Nox Emulator
-
-# The Nox Emulator will need to be downloaded, this can be found on their website https://www.bignox.com/
+WhaleTheDvaa uses Nox as an emulator to allow you to run it as intended 
+The following instructions involve the installation of the Nox Emulator
+The Nox Emulator will need to be downloaded, this can be found on their website https://www.bignox.com/
 																				
 1. Run the Nox Emulator
 																				
@@ -38,13 +21,4 @@ __      _| |__   __ _| | ___ 		     ___:____     |"\/"|
 6. Install the application by dragging the .APK file over to the Emulator window and following the prompts.
 
 
-Click WhaleTheDvaa to start the application and;
-
-   ___     _     __       _           _     _               _ 
-  / _ \___| |_  / _\_ __ | | __ _ ___| |__ (_)_ __   __ _  / \
- / /_\/ _ \ __| \ \| '_ \| |/ _` / __| '_ \| | '_ \ / _` |/  /
-/ /_\\  __/ |_  _\ \ |_) | | (_| \__ \ | | | | | | | (_| /\_/ 
-\____/\___|\__| \__/ .__/|_|\__,_|___/_| |_|_|_| |_|\__, \/   
-                   |_|                              |___/   
-^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~ 
-#################################################################################################################################################################
+Click WhaleTheDvaa to start the application.
