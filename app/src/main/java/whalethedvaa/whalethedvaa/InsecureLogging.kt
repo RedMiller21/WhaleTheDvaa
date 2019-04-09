@@ -21,8 +21,8 @@ class InsecureLogging : AppCompatActivity() {
 
             when(level) {                                           //Uses different txt files for the three difficulties
                 1 -> fileName = "InsecureLogging_1_Easy.txt"
-                2 -> fileName = "InsecureLogging_3_Killer.txt"
-                3 -> fileName = "InsecureLogging_2_Medium.txt"
+                2 -> fileName = "InsecureLogging_2_Medium.txt"
+                3 -> fileName = "InsecureLogging_3_Killer.txt"
             }
 
             //This code reads in the text using a buffered reader
