@@ -45,7 +45,7 @@ class sqli_easy : AppCompatActivity() {
           //  val email = db.rawDao().getUserEasy(query)
 
             if (searchText > 0.toString()) {
-                val successText = "YAS CONGRATS"
+                val successText = "YAS CONGRATS - 4M4Z1NG"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {
