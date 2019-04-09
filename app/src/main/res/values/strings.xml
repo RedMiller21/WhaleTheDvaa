@@ -166,7 +166,7 @@
     </string>
 
     <string name="PoorAuthFurtherReading">
-        Due to the need to store data or protect devices, methods of authentication are needed but most methods can have vulnerabilities if not programed correctly. By exploiting the poor authentication code, access to sensitive data can be gained. Although due to human error even the better authentication methods can become poor whether it be storing passwords and pins in easy to access places.
+        Due to the need to protect the sensitive data stored on devices, methods of authentication are needed but most methods can have vulnerabilities if not programmed correctly. By exploiting poor authentication methods, access to sensitive data can be gained. Although, due to human error, even the better authentication methods can become poor if an end user stores their passwords and pins in easy to access places.
         <a href="https://blog.appknox.com/understanding-owasp-top-10-mobile-poor-authorization-and-authentication">\'Understanding OWASP Top 10 Mobile: Poor Authorization and Authentication\', AppKnox</a>
         <a href="https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/">\'How to Create a Strong Password (and Remember It)\', Chris Hoffman</a>
     </string>
