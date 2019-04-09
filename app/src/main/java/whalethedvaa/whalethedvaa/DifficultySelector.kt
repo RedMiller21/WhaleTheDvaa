@@ -12,10 +12,11 @@ import kotlinx.android.synthetic.main.activity_difficulty_selector.*
 
 class DifficultySelector : AppCompatActivity() {
     var totalFlags: String = "" //Initialise string to store all entered flags
+    private var selector : Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_difficulty_selector)
-        val selector = intent.getIntExtra("vulnerability", 0)
+        selector = intent.getIntExtra("vulnerability", 0)
         VulnText.text = intent.getStringExtra("name")
 
         if (getIntent().getBooleanExtra("crash", false)) {
@@ -140,6 +141,13 @@ class DifficultySelector : AppCompatActivity() {
         builder.setMessage("Here you can select the difficulty of your chosen vulnerability to exploit - easy, medium, or 'killer'. \nYou can also view how your chosen vulnerability can be mitigated, or go to the progress page and update your progress by entering your captured flags.")
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+
+    override fun onStart(){
+        super.onStart()
+        val mProg = getSharedPreferences("progress", 0) //Load flags found previously by user
+        totalFlags = mProg.getString("level", "0,0,0,0,0")
+        updateBtns(selector)
     }
 }
 
