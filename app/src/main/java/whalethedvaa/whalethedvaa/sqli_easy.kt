@@ -21,6 +21,7 @@ class sqli_easy : AppCompatActivity() {
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
+        informationDialog()
 
         // declare instance of database
         var db = Room.databaseBuilder(
@@ -45,7 +46,7 @@ class sqli_easy : AppCompatActivity() {
           //  val email = db.rawDao().getUserEasy(query)
 
             if (searchText > 0.toString()) {
-                val successText = "YAS CONGRATS"
+                val successText = "YAS CONGRATS - 4M4Z1NG"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {

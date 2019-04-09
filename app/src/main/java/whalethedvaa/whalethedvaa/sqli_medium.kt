@@ -16,6 +16,7 @@ class sqli_medium : AppCompatActivity() {
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
 
+        informationDialog()
 
         // declare instance of database
         var db = Room.databaseBuilder(
