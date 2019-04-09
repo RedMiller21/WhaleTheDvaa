@@ -2,7 +2,8 @@
 
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#222A35"
         android:textColor="#FFFFFF"
@@ -19,7 +20,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
-            android:text="Reset"
+            android:text="Clear"
             android:layout_height="wrap_content"
             android:id="@+id/ResetBtn"
             android:background="#203864" android:textColor="#FFFFFF"

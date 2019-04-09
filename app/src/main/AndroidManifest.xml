@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="whalethedvaa.whalethedvaa">
+          xmlns:tools="http://schemas.android.com/tools" package="whalethedvaa.whalethedvaa">
 
     <application
             android:allowBackup="true"
@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".MyApplication"
-            >
+            tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".PoorAuthenticationKiller">
         </activity>
         <activity android:name=".PoorAuthenticationMed">

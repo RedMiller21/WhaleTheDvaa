@@ -25,7 +25,7 @@ public class MyExceptionHandler implements Thread.UncaughtExceptionHandler {
         PendingIntent pendingIntent = PendingIntent.getActivity(MyApplication.getInstance().getBaseContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
         AlarmManager mgr = (AlarmManager) MyApplication.getInstance().getBaseContext().getSystemService(Context.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pendingIntent);
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 10, pendingIntent);
 
         activity.finish();
         System.exit(2);

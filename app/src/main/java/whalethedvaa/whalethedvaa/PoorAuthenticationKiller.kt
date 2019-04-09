@@ -9,23 +9,25 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_poor_authentication_killer.*
 
-abstract class PoorAuthenticationKiller : AppCompatActivity() {
+class PoorAuthenticationKiller : AppCompatActivity() {
 
     var Numbers : Array<Int> = arrayOf(0,0,0,0,0,0)
     var check: Boolean = true
     var point: Int = 0
     var Operations: Array<Char> = arrayOf('W','H','A','L','E','S')
     var point2: Int = 0
+    var default: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poor_authentication_killer)
         Thread.setDefaultUncaughtExceptionHandler( MyExceptionHandler(this))
-
+        var crashed: Boolean = false
         if (getIntent().getBooleanExtra("crash", false)) {
             Toast.makeText(this, "Moby had his revenge", Toast.LENGTH_LONG).show()
             FlagText.text = "WH413L0RD"
+            crashed = true
         }
 
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
@@ -59,7 +61,14 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
         InstructionsBtn.setOnClickListener { instructionsDialog() }
 
         //Back button will move back to the vulnerability selection activity
-        BackBtn.setOnClickListener { onBackPressed() }
+        BackBtn.setOnClickListener {
+            if(crashed == true) {
+                intent = Intent(this, TheWhala::class.java)
+                startActivity(intent)
+            }else{
+                onBackPressed()
+            }
+        }
         //instructionsDialog()
 
 
@@ -136,29 +145,40 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
         dialog.show()
     }
 
-
     private fun reset() {
         PinOutput.text = ""
+        for(i in 0..5){
+            Numbers[i] = 0
+            Operations[i] = 'W'
+            }
+        point = 0
+        point2 = 0
     }
 
     private fun numPadInput(num: Char) {
         val text: String = PinOutput.text.toString()
-        val charText: CharArray = text.toCharArray()
 
         var a = 0
         when(num) {
             '=' ->{
                 var final = Numbers[0]
-                val length = point-1
-                for (i in 1..length){
+                val length = point
+                for (i in 0..length){
                     when(Operations[i]){
-                        '+' -> final += Numbers[i]
-                        '-' -> final -= Numbers[i]
-                        '/' -> final /= Numbers[i]
-                        'X' -> final *= Numbers[i]
+                        '+' -> final += Numbers[i+1]
+                        '-' -> final -= Numbers[i+1]
+                        '/' -> final = (final/Numbers[i+1])
+                        'X' -> final *= Numbers[i+1]
                     }
                 }
                 PinOutput.text = final.toString()
+                for(i in 0..5){
+                    Numbers[i] = 0
+                    Operations[i] = 'W'
+                }
+                point = 0
+                point2 = 0
+                Numbers[0] = final
             }
 
             '+','-' ,'X','/'  ->{
@@ -168,17 +188,9 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
                     check == false
                     Operations[point2] = num
                     point2++
-                        println(text)
-                        println(num)
-                        for (i in charText.indices) {
-                            charText[i] = num
-                        }
-
-                        //println(charText.toString())
-                        val newText = String(charText)
-
-                        println(newText)
-                        PinOutput.text = newText
+                    point++
+                    val newText = text + num.toString()
+                    PinOutput.text = newText
                 }
             }
 
@@ -194,21 +206,10 @@ abstract class PoorAuthenticationKiller : AppCompatActivity() {
                     Numbers[point] += a
                 }
 
-                println(text)
-                println(num)
-                for (i in charText.indices) {
-                    charText[i] = num
-                }
-
-                //println(charText.toString())
-                val newText = String(charText)
-
-                println(newText)
+                val newText = text + num.toString()
                 PinOutput.text = newText
 
             }
-
-
         }
     }
 

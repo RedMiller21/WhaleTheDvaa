@@ -268,7 +268,7 @@
         of the information would be obscured. This would make it much harder for someone to quickly glance over the code and find the important information.
     </string>
     <string name="pakinstructions">Due to the many ways applications can be coded errors can occur, which can lead to
-        sensitive being revealled, whether this be through error handling being left in.
+        sensitive being revealed, whether this be through error handling being left in.
     </string>
     <string name="hint1KPA">Computers are logicical machines, if they are not programmed to catch logical errors, they
         have a tendency to crash
