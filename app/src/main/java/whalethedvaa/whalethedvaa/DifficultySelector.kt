@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import com.example.paulb.whale2fa.tfaEasy
-import com.example.paulb.whale2fa.tfaKiller
-import com.example.paulb.whale2fa.tfaMedium
 import kotlinx.android.synthetic.main.activity_difficulty_selector.*
 
 class DifficultySelector : AppCompatActivity() {
@@ -19,8 +16,8 @@ class DifficultySelector : AppCompatActivity() {
         selector = intent.getIntExtra("vulnerability", 0)
         VulnText.text = intent.getStringExtra("name")
 
-        if (getIntent().getBooleanExtra("crash", false)) {
-            Toast.makeText(this, "App restarted after crash", Toast.LENGTH_LONG).show();
+        if (intent.getBooleanExtra("crash", false)) {
+            Toast.makeText(this, "App restarted after crash", Toast.LENGTH_LONG).show()
         }
 
         val mProg = getSharedPreferences("progress", 0) //Load flags found previously by user

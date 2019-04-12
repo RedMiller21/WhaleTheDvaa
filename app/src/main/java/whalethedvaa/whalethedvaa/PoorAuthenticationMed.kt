@@ -1,6 +1,7 @@
 package whalethedvaa.whalethedvaa
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -43,6 +44,13 @@ class PoorAuthenticationMed : AppCompatActivity() {
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener { onBackPressed() }
+
+        //Flags button
+        flagsBtn.setOnClickListener{
+            val intent = Intent(this, ProgressPage::class.java)
+            startActivity(intent)
+        }
+
         instructionsDialog()
     }
 
@@ -164,7 +172,7 @@ class PoorAuthenticationMed : AppCompatActivity() {
     }
 
     private fun newPin(): String {
-        val st = (0..5).random()
+        val st = (1..5).random()
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("stateKey", st)

@@ -1,14 +1,12 @@
 package whalethedvaa.whalethedvaa
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_further_reading.*
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
-
+import kotlinx.android.synthetic.main.activity_further_reading.*
 
 
 class FurtherReading : AppCompatActivity(){
