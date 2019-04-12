@@ -23,16 +23,15 @@
     <ProgressBar
             android:id="@+id/totalProgress"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="386dp"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:indeterminate="false"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.888" android:layout_marginTop="8dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtTotal"
             android:progressBackgroundTint="#beceea"
-            android:progressTint="#4472c4"/>
+            android:progressTint="#4472c4"
+            app:layout_constraintStart_toStartOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="@+id/tableLayout"/>
     <TableLayout
             android:layout_width="374dp"
             android:layout_height="110dp"
