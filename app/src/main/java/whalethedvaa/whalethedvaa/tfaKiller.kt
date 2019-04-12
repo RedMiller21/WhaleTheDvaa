@@ -1,12 +1,10 @@
-package com.example.paulb.whale2fa
+package whalethedvaa.whalethedvaa
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_tfa_killer.*
-import whalethedvaa.whalethedvaa.ProgressPage
-import whalethedvaa.whalethedvaa.R
 import java.text.SimpleDateFormat
 import java.util.*
 

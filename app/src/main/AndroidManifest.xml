@@ -16,13 +16,13 @@
         <activity android:name=".PoorAuthenticationMed">
         </activity>
         <activity
-                android:name="com.example.paulb.whale2fa.tfaKiller"
+                android:name=".tfaKiller"
                 android:label="@string/title_activity_tfa_killer"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="com.example.paulb.whale2fa.tfaMedium">
+        <activity android:name=".tfaMedium">
         </activity>
-        <activity android:name="com.example.paulb.whale2fa.tfaEasy">
+        <activity android:name=".tfaEasy">
         </activity>
         <activity android:name=".PoorAuthentication">
         </activity>
