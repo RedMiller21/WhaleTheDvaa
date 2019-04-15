@@ -146,7 +146,8 @@
     </string>
 
     <string name="SQliMediumInfo">You have received a sample of a database that has been compromised. The development team have been known to use common data obfuscation methods!
-        Your job is to decode the text in order to reveal a password, this password is your flag!
+        Your job is to decode the text in order to reveal a password, this password is your flag! \n Not that when using an emulator you must hold down your mouse, or trackpad, as if using a touchscreen
+        and hit copy to copy text to your clipboard. This text can then be pasted outside of the emulator environment.
     </string>
 
     <string name="InsecureLoggingFurtherReading">
