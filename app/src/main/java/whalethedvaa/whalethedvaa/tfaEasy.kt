@@ -1,4 +1,4 @@
-package com.example.paulb.whale2fa
+package whalethedvaa.whalethedvaa
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -8,8 +8,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_tfa_easy.*
-import whalethedvaa.whalethedvaa.ProgressPage
-import whalethedvaa.whalethedvaa.R
 import java.util.*
 
 class tfaEasy : AppCompatActivity() {

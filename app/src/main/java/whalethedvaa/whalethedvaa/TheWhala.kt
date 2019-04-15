@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_the_whala.*
 
 
@@ -102,9 +100,9 @@ class TheWhala : AppCompatActivity() {
         // Set the alert dialog title
         builder.setTitle(chosenInst)
             .setNegativeButton("Back") { _, _ -> instructionsDialog() }
-        var subInstructions = arrayOf("null")
+        var subInstructions : Array<String> = arrayOf("null")
         when (chosenInst) {
-            "What its whale about" -> {
+            "What it's whale about" -> {
                 builder.setMessage(R.string.AboutTheWhale)
             }
             "Flags/Progression" -> {
