@@ -37,19 +37,18 @@ class sqli_easy : AppCompatActivity() {
 
         SQL_Login.setOnClickListener {
             //no validation on search text
-            var searchText = findViewById<TextView>(R.id.SQL_Email)
+           // var searchText = findViewById<TextView>(R.id.SQL_Email)
 
             var email = "whale@whalemail.sea"
 
-            val stringText = searchText.toString();
-          //  val email = db.rawDao().getUserEasy(query)
+            val stringText = SQL_Email.text.toString()
 
             if (stringText == email) {
                 val successText = "YAS CONGRATS"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {
-                val badtext = "Email is not linked to an account" +
+                val badtext = "Email is not linked to an account " +
                         "Flag - 4M4Z1NG"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = badtext
