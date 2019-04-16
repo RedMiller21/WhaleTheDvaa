@@ -49,19 +49,19 @@
     <string name="instructions">instructions
     </string>
     <string name="hint1EPA">People sometimes use a name of someone they know or a significant date as their as their
-        pin.
+        PIN.
     </string>
     <string name="hint2EPA">Dates can be formatted in several different ways eg.
-        the 4th of march 2019 can be:
-        04 03 2019
+        the 4th of March 2019 can be:
+        04 03 2019,
         4.3.2019 or 4.3.19
     </string>
     <string name="hint3EPA">On some devices the number pad has letters on each key.
     </string>
-    <string name="hint1MPA">When hiding codes in the phone book people often name the contact in accordance with the
+    <string name="hint1MPA">When hiding codes in the phone book, people often name the contact in accordance with the
         company or site that it is used for
     </string>
-    <string name="hint2MPA">When hiding codes as a contact the name will sometimes be the code in a word form however
+    <string name="hint2MPA">When hiding codes as a contact, the name will sometimes be the code in a word form, however
         the contact can be left empty
     </string>
     <string name="tfamitigations">These tokens should be completely randomised and should not follow any distinguishable
@@ -70,22 +70,22 @@
         create a unique token not based on any pattern or other value as to avoid repetition or the chances of this
         token falling into the wrong hands and being used by an attacker to access a user\'s account.
     </string>
-    <string name="pamitigations">Due to the fact that the authentication of pins and passwords can only be as strong as
-        the user\'s pin or password this can be problematic if the user stores their pins in obvious places or use
-        words/phrases that are easily identifiable to the user. This can be prevented by using pins that do not relate
-        to the user in any way. Increasing the size of pins also helps as there can be far more combinations for possible pins that
+    <string name="pamitigations">Due to the fact that the authentication of PINs and passwords can only be as strong as
+        the user\'s PIN or password, this can be problematic if the user stores their PINs in obvious places or use
+        words/phrases that are easily identifiable to the user. This can be prevented by using PINs that do not relate
+        to the user in any way. Increasing the size of PINs also helps as there can be far more combinations for possible PINs that
         an attacker will have to try.
     </string>
-    <string name="paeinstructions">However safe a log-in system can be made, if a user does not hide their pins or
+    <string name="paeinstructions">However safe a log-in system is, if a user does not hide their PINs or
         creates their
-        pins from easily identifiable information, the system can be easily bypassed.
+        PINs from easily accessible information, the system can be easily bypassed.
 
-        To gain the flag use the user\'s social media account to figure out their pin
+        To gain the flag use the user\'s social media account to figure out their PIN
     </string>
-    <string name="paminstructions">Due to the number of passwords and pins people have to remember, ways of noting down
-        pins are
-        often done such as including a contact in their phone to remind them of their pin. Using the user phone book on
-        this emulator search the contacts to find the hidden pin code
+    <string name="paminstructions">Due to the number of passwords and PINs people have to remember, ways of noting down
+        PINs are
+        often done such as including a contact in their phone to remind them of their PIN. Using the user phone book on
+        this emulator search the contacts to find the hidden PIN code
     </string>
     <string name="sqliEInfo">You have been provided the email whale@whalemail.sea, use this login to gain as much
         information as possible. This level shows how user data is stored insecurely and poorly verified. This field
@@ -168,7 +168,7 @@
 
     <string name="PoorAuthFurtherReading">
         Due to the need to protect the sensitive data stored on devices, methods of authentication are needed but most methods can have vulnerabilities if not programmed correctly. By exploiting poor authentication methods, access to sensitive data can be gained.
-        Although, due to human error, even the better authentication methods can become poor if an end user stores their passwords and pins in easy to access places.\n
+        Although, due to human error, even the better authentication methods can become poor if an end user stores their passwords and PINs in easy to access places.\n
         \n<a href="https://blog.appknox.com/understanding-owasp-top-10-mobile-poor-authorization-and-authentication">\'Understanding OWASP Top 10 Mobile: Poor Authorization and Authentication\', AppKnox</a>\n
         \n<a href="https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/">\'How to Create a Strong Password (and Remember It)\', Chris Hoffman</a>
     </string>
@@ -271,8 +271,8 @@
         Another step to secure hardcode is to use build in development tools such as Minify and Proguard to ensure that if anyone was to unpack and decompile the apk file, much
         of the information would be obscured. This would make it much harder for someone to quickly glance over the code and find the important information.
     </string>
-    <string name="pakinstructions">Due to the many ways applications can be coded errors can occur, which can lead to
-        sensitive being revealed, whether this be through error handling being left in.
+    <string name="pakinstructions">Due to the many ways applications can be coded, errors can occur which can lead to
+        sensitive information being revealed, as a result of error handling being left in.
     </string>
     <string name="hint1KPA">Computers are logical machines, if they are not programmed to catch logical errors, they
         have a tendency to crash
