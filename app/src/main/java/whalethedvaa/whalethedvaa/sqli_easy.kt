@@ -1,15 +1,12 @@
 package whalethedvaa.whalethedvaa
 
-import android.arch.persistence.db.SimpleSQLiteQuery
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli_easy.*
-import org.w3c.dom.Text
 
 
 class sqli_easy : AppCompatActivity() {
@@ -36,8 +33,6 @@ class sqli_easy : AppCompatActivity() {
 
 
         SQL_Login.setOnClickListener {
-            //no validation on search text
-           // var searchText = findViewById<TextView>(R.id.SQL_Email)
 
             var email = "whale@whalemail.sea"
 
@@ -75,9 +70,6 @@ class sqli_easy : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
-
-    private fun CheckEmail(searchText: String) {
     }
 
     private fun informationDialog() {
