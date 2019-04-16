@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_sqli_easy.*
+import org.w3c.dom.Text
 
 
 class sqli_easy : AppCompatActivity() {
@@ -36,23 +37,22 @@ class sqli_easy : AppCompatActivity() {
 
         SQL_Login.setOnClickListener {
             //no validation on search text
-            var searchText = SQL_Email.text.toString()
+            var searchText = findViewById<TextView>(R.id.SQL_Email)
 
-            val query = SimpleSQLiteQuery(
-                "SELECT COUNT(*) FROM Emails WHERE emailAddress= ?",
-                arrayOf(searchText)
-            )
+            var email = "whale@whalemail.sea"
 
+            val stringText = searchText.toString();
           //  val email = db.rawDao().getUserEasy(query)
 
-            if (searchText > 0.toString()) {
-                val successText = "YAS CONGRATS - 4M4Z1NG"
+            if (stringText == email) {
+                val successText = "YAS CONGRATS"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
                 textView.text = successText
             } else {
                 val badtext = "Email is not linked to an account" +
                         "Flag - 4M4Z1NG"
                 val textView: TextView = findViewById<TextView>(R.id.txtSuccessMsg)
+                textView.text = badtext
 
             }
         }
