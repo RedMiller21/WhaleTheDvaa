@@ -24,11 +24,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnPoorAuth"
             android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginBottom="392dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"
-    />
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/BackBtn"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/readingTitle"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"
@@ -48,39 +48,35 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnHardCoding"
             android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginBottom="224dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnInsecureLogging"
-            app:layout_constraintStart_toStartOf="@+id/btnInsecureLogging"/>
+            app:layout_constraintStart_toStartOf="@+id/btnInsecureLogging" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnInsecureLogging"/>
     <Button
             android:text="  Insecure Logging  "
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnInsecureLogging"
             android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginBottom="312dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/btnPoorAuth"
-            app:layout_constraintEnd_toEndOf="@+id/btnPoorAuth"/>
+            app:layout_constraintEnd_toEndOf="@+id/btnPoorAuth" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnPoorAuth"/>
     <Button
             android:text="2 FA"
             android:layout_width="0dp"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:id="@+id/btn2FA"
             android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginBottom="548dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnSQLi" app:layout_constraintStart_toStartOf="@+id/btnSQLi"/>
+            app:layout_constraintEnd_toEndOf="@+id/btnSQLi" app:layout_constraintStart_toStartOf="@+id/btnSQLi"
+            android:layout_marginBottom="24dp" app:layout_constraintBottom_toTopOf="@+id/btnSQLi"/>
     <Button
             android:text="SQLi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnSQLi"
             android:background="#4472C4" android:textColor="#FFFFFF"
-            android:layout_marginBottom="468dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnPoorAuth"
-            app:layout_constraintStart_toStartOf="@+id/btnPoorAuth"/>
+            app:layout_constraintStart_toStartOf="@+id/btnPoorAuth" android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPoorAuth"/>
 
 
 </android.support.constraint.ConstraintLayout>
