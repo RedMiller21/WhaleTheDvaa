@@ -29,7 +29,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad1"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -40,7 +40,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad2"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -51,7 +51,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad3"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/DivideBtn"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -78,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad4"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -89,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad5"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -100,7 +100,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad6"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/MultiBtn"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -127,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad7"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -138,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad8"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -149,18 +149,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad9"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:layout_weight="1">
                 <Button
-                         android:text="-"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_marginBottom="8dp"
-                         android:layout_marginStart="8dp"/>
+                        android:text="-"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="8dp" android:id="@+id/MinusBtn"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -181,7 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/NumPad0"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -192,7 +192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/EqualsBtn"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -203,7 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/PlusBtn"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -225,7 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/BackBtn"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -237,7 +237,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp" android:id="@+id/ResetBtn"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
