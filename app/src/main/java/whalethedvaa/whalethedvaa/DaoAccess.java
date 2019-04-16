@@ -2,7 +2,6 @@ package whalethedvaa.whalethedvaa;
 
 import android.arch.persistence.room.*;
 
-
 public @Dao
 interface DaoAccess {
 
