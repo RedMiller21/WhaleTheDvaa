@@ -23,11 +23,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnPoorAuth"
-            android:background="#203864" android:textColor="#FFFFFF"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginBottom="392dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
     />
     <Button
             android:text="Back"
@@ -44,48 +44,43 @@
 
     <Button
             android:text="  Hard Coding  "
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnHardCoding"
-            android:background="#203864" android:textColor="#FFFFFF"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginBottom="224dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnInsecureLogging"
+            app:layout_constraintStart_toStartOf="@+id/btnInsecureLogging"/>
     <Button
             android:text="  Insecure Logging  "
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnInsecureLogging"
-            android:background="#203864" android:textColor="#FFFFFF"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginBottom="312dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-    />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnPoorAuth"
+            app:layout_constraintEnd_toEndOf="@+id/btnPoorAuth"/>
     <Button
             android:text="2 FA"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="46dp"
             android:id="@+id/btn2FA"
-            android:background="#203864" android:textColor="#FFFFFF"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginBottom="548dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnSQLi" app:layout_constraintStart_toStartOf="@+id/btnSQLi"/>
     <Button
             android:text="SQLi"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnSQLi"
-            android:background="#203864" android:textColor="#FFFFFF"
+            android:background="#4472C4" android:textColor="#FFFFFF"
             android:layout_marginBottom="468dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnPoorAuth"
+            app:layout_constraintStart_toStartOf="@+id/btnPoorAuth"/>
 
 
 </android.support.constraint.ConstraintLayout>
