@@ -3,7 +3,7 @@
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#222A35"
         android:textColor="#FFFFFF"
@@ -82,5 +82,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" android:textColor="@color/colorWhite"
             android:hint="NGUgMzEgNDMgMzMgMmQgNTcgMzQgNGU=" android:text="NGUgMzEgNDMgMzMgMmQgNTcgMzQgNGU="
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
+    <TextView
+            android:text="The Whale Mail databases have been breached! You have been provided with a sample of the data the hacker has gained."
+            android:layout_width="348dp"
+            android:layout_height="89dp"
+            android:id="@+id/title" android:textSize="18sp"
+            android:textColor="@color/colorWhite" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="37dp" android:layout_marginTop="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
 </android.support.constraint.ConstraintLayout>
