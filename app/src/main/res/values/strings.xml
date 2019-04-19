@@ -281,4 +281,5 @@
         Once the password has been displayed from the database, this is your flag!</string>
     <string name="hint2KPA">Think what number operations have certain requirements</string>
     <string name="hint3KPA">0 is a mysterious number. In case the app is programed correctly use this button to crash the app</string>
+    <string name="disclaimer">This application is for educational purposes only</string>
 </resources>

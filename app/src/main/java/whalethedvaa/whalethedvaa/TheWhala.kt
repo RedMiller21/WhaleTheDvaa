@@ -83,7 +83,8 @@ class TheWhala : AppCompatActivity() {
             "What it's whale about",
             "The Vulnerabilities/Mitigations",
             "Flags/Progression",
-            "All the buttons under the sea"
+            "All the buttons under the sea",
+            "Disclaimer"
         )
         builder.setTitle("Instructions")
             .setItems(subInstructions) { _, which ->
@@ -114,6 +115,7 @@ class TheWhala : AppCompatActivity() {
             "The Vulnerabilities/Mitigations" -> {
                 subInstructions = arrayOf("Vulnerabilities", "Mitigations")
             }
+            "Disclaimer" -> {disclaimerDialog(true)}
         }
         if (!subInstructions.contains("null")) {
             builder.setItems(subInstructions) { _, which ->
@@ -164,16 +166,27 @@ class TheWhala : AppCompatActivity() {
         val st = sharedPreferences.getInt("stateKey", 0)
         if (st == 0) {
             set()
+            disclaimerDialog(false)
         }
     }
 
     private fun set() {
-        val st = (0..5).random()
+        val st = (1..5).random()
         val sharedPreferences = getSharedPreferences("appInfo", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("stateKey", st)
         editor.apply()
     }
 
+    private fun disclaimerDialog(caller: Boolean){
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
+        builder.setTitle("Disclaimer!!")
+                .setMessage(R.string.disclaimer)
+        if(caller){
+            builder.setNegativeButton("Back") { _, _ -> instructionsDialog() }
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
 
 }
