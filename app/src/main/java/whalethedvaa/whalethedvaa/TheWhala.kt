@@ -119,13 +119,13 @@ class TheWhala : AppCompatActivity() {
         }
         if (!subInstructions.contains("null")) {
             builder.setItems(subInstructions) { _, which ->
-                furtherInstrDialog(subInstructions[which], chosenInst)
-                println(subInstructions[which])
-            }
-        }
+                furtherInstrDialog(subInstructions[which], chosenInst)}
 
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+            }
+        if(chosenInst != "Disclaimer") {
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
     }
 
     private fun furtherInstrDialog(choosenInst: String, lastInst: String) {
@@ -181,8 +181,8 @@ class TheWhala : AppCompatActivity() {
     private fun disclaimerDialog(caller: Boolean){
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         builder.setTitle("Disclaimer!!")
-                .setMessage(R.string.disclaimer)
-        if(caller){
+                builder.setMessage(R.string.disclaimer)
+        if(caller == true){
             builder.setNegativeButton("Back") { _, _ -> instructionsDialog() }
         }
         val dialog: AlertDialog = builder.create()
