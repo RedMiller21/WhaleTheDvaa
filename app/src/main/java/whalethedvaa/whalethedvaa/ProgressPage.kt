@@ -70,7 +70,7 @@ class ProgressPage : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, R.style.whaleDialog)
         // Set the alert dialog title
         builder.setTitle("Progression Information")
-        builder.setMessage("Example Information")
+        builder.setMessage("Here you can view your progress overall, as well as broken down by difficulty level.\nSelect 'Enter Flag' to update your progress, or 'Reset Progress' to clear all the flags you have entered so far.")
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
