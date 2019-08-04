@@ -86,7 +86,7 @@
 09-08 23:14:49.386 D/GTalkService( 292): handlePackageInstalled: re-initialize providers
 09-08 23:15:01.386 D/GTalkService( 292): [RawStanzaProvidersMgr] ##### searchProvidersFromIntent
 09-08 23:15:21.386 D/GTalkService( 292): [RawStanzaProvidersMgr] no intent receivers found
-09-08 23:15:30.400 3684-3684/WhaleCo.WhaleBook I/System.out: DEV: APP_CRASH - DUMPED://data/anr/traces.txt
+09-08 23:15:30.400 3684-3684/WhaleCo.WhaleBook I/System.out: DEV: APP_CRASH - DUMPED://data/anr/traces.txt : PASS - T4STY-K3LP
 09-08 23:15:36.396 I/dalvikvm( 171): Wrote stack traces to '/data/anr/traces.txt'
 09-08 23:15:59.396 I/Process ( 171): Sending signal. PID: 265 SIG: 3
 09-08 23:15:59.396 I/dalvikvm( 265): threadid=4: reacting to signal 3

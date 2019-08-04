@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.activity_poor_authentication_med.*
 class PoorAuthenticationMed : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        constructionDialog()
+
         setContentView(R.layout.activity_poor_authentication)
         val level = intent.getIntExtra("Level", 0) //level is the difficulty setting 1 easy 2 medium and 3 hard
         println(level) //comment out, debug for level variable
@@ -40,7 +43,7 @@ class PoorAuthenticationMed : AppCompatActivity() {
         HintBtn.setOnClickListener { hintSelectionDialog() }
 
         //Call instructions dialog creation function
-        InstructionsBtn.setOnClickListener { instructionsDialog() }
+        //InstructionsBtn.setOnClickListener { instructionsDialog() }
 
         //Back button will move back to the vulnerability selection activity
         BackBtn.setOnClickListener { onBackPressed() }
@@ -51,7 +54,7 @@ class PoorAuthenticationMed : AppCompatActivity() {
             startActivity(intent)
         }
 
-        instructionsDialog()
+        //instructionsDialog()
     }
 
     private fun instructionsDialog() {
@@ -179,5 +182,15 @@ class PoorAuthenticationMed : AppCompatActivity() {
         editor.apply()
         return setPin()
     }
+
+    private fun constructionDialog(){
+        val builder = AlertDialog.Builder(this, R.style.whaleDialog)
+        // Set the alert dialog title
+        builder.setTitle("UNDER CONSTRUCTION")
+        builder.setMessage("This area is currently under construction, so it currently does not work! Luckily the flag is right here! - C4PTB1RD23Y3")
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
 }
 

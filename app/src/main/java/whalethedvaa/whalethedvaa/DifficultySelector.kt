@@ -146,5 +146,7 @@ class DifficultySelector : AppCompatActivity() {
         totalFlags = mProg.getString("level", "0,0,0,0,0")
         updateBtns(selector)
     }
+
+
 }
 
